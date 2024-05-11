@@ -32,22 +32,12 @@ fetchSheet
     })
     .then((rows) => {
         document.querySelector('#object_title').innerText = rows[0]['Tiêu đề']
-        document.querySelector('#object_content').innerText = rows[0]['Nội dung']
         document.querySelector('#object_title1').innerText = rows[0]['Tiêu đề bảng']
         document.querySelector('#object_content1').innerText = rows[0]['Nội dung bảng']
         document.querySelector('#object_title2').innerText = rows[1]['Tiêu đề bảng']
         document.querySelector('#object_content2').innerText = rows[1]['Nội dung bảng']
         document.querySelector('#object_title3').innerText = rows[2]['Tiêu đề bảng']
         document.querySelector('#object_content3').innerText = rows[2]['Nội dung bảng']
-        c = 0
-        document.querySelectorAll('.object').forEach((t) => {
-            if (t.offsetHeight > c) {
-                c = t.offsetHeight
-            }
-        })
-        document.querySelectorAll('.object').forEach((t) => {
-            t.setAttribute('style', `height:${c}px`)
-        })
     });
 
 
@@ -60,7 +50,6 @@ fetchSheet
         let d = ""
         document.querySelector('#timeline_title').innerText = rows[0]['Tiêu đề']
         rows.forEach((t) => {
-            console.log('1');
             d +=
                 `<div class="timeline_con">
                     <h3 class="vam_content" style="width:30%">${t.time}</h3>
