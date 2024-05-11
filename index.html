@@ -1,222 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
 
-</html>
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link id="shortcut_icon" rel="shortcut icon" type="image/ico" href="./Photo/Icon.png">
-    <!-- Title & ico img -->
-    <title>Profile</title>
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Document</title>
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <!-- Css style -->
-    <link rel="stylesheet" href="./staric/index.css">
-    <link rel="stylesheet" href="./staric/loadweb.css">
+    <!-- Front text-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
-    <div class="Menu-nav" style="display: none;">
-        <div style="display: flex;justify-content: end;padding: .5rem; font-size: 1.5rem;">
-            <i class="bi bi-x-lg" onclick="X()"></i>
+    <section id="header1412a1">
+        <div class="header1412a1">
+            <div class="header1412a1-logo">
+                <img src="https://edustorge.ubtrobot.com/ucode-new-website/ubt-competition-official-website/v1.5.2/cdn-statics/img/logo-blank.cd18e3b.png"
+                    style="height: 100%;width: auto;">
+            </div>
+            <ul class="header1412a1-list">
+                <li class="home"><a href="">Giới thiệu</a></li>
+                <li class="create"><a href="">Mốc thời gian</a></li>
+                <li class="contact"><a href="">Giải thưởng</a></li>
+                <li class="home"><a href="">Q&A</a></li>
+            </ul>
         </div>
-        <div class="menunav">
-            <a class="home acc" href="#banner">Giới thiệu</a>
-            <a class="template" href="#d551412a1">Dự án</a>
-            <a class="template" href="#d551412a2">khóa học đã học</a>
-            <a class="create" href="#d551412a3">Kỹ năng</a>
-            <a class="contact" href="#tongquan">Tổng quát</a>
+    </section>
+    <section id="intro" style="position: relative;">
+        <div id="intro_background-wrap">
+            <img src="" id="intro_background">
+            <img src="" id="intro_img">
         </div>
-    </div>
-    <div class="loadweb">
-        <div></div>
-    </div>
-    <div id="mainintro"></div>
-    <main class="main-wrap">
-        <section id="header1412a1">
-            <div class="header1412a1">
-                <div class="menu" style="display: none;">
-                    <i class="bi bi-list"></i>
+        <div class="vam_wrap" style="height: 638px;">
+            <div class="vam_con" style="width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: start;">
+                <img style="width: 70%;" id="intro_logo">
+                <h3 style="margin-top: 16px;" class="vam_title" id="intro_title"></h3>
+                <p style="width: 100%;margin: 16px 0;" class="vam_content" id="intro_content"></p>
+                <button class="vam_button" id="intro_link" style="margin-top: 16px;">Tham gia ngay</button>
+            </div>
+        </div>
+    </section>
+    <section id="introduce" style="position: relative;">
+        <div id="introduce_background-wrap">
+            <img src="" id="introduce_img">
+        </div>
+        <div class="vam_wrap" style="display: flex;justify-content: end;">
+            <div class="vam_con"
+                style="width: 40%;margin-right: 10%;    height: 638px;display: flex;flex-direction: column;justify-content: center;align-items: start;">
+
+                <h3 class="vam_title" id="introduce_title" style="margin: 16px 0;"></h3>
+                <p style="margin: 16px 0;" class="vam_content" id="introduce_content"></p>
+                <button class="vam_button" style="margin-top: 16px;"><a href="#object">xem thêm</a></button>
+            </div>
+        </div>
+    </section>
+    <section id="object" style="position: relative;padding: 50px 0;">
+        <div class="vam_wrap">
+            <h1 class="vam_title" style="text-align: center;" id="object_title"></h1>
+            <p class="vam_content" style="text-align: center" id="object_content"></p>
+        </div>
+        <div class="vam_wrap" style="display: flex;justify-content: space-between;height: 100%;">
+            <div class="object">
+                <div>
+                    <h3 id="object_title1"></h3>
+                    <p id="object_content1" class="vam_content"></p>
                 </div>
-                <div class="header1412a1-logo">
-                    <img style="height: 100%;width: auto;" src="./staric/Image/Logo.png" alt="">
+            </div>
+            <div class="object">
+                <div>
+                    <h3 id="object_title2"></h3>
+                    <p id="object_content2" class="vam_content"></p>
                 </div>
-                <ul class="header1412a1-list">
-                    <a class="home acc" href="#banner">Giới thiệu</a>
-                    <a class="template" href="#d551412a1">Dự án</a>
-                    <a class="template" href="#d551412a2">khóa học đã học</a>
-                    <a class="create" href="#d551412a3">Kỹ năng</a>
-                    <a class="contact" href="#tongquan">Tổng quát</a>
+            </div>
+            <div class="object">
+                <div>
+                    <h3 id="object_title3"></h3>
+                    <p id="object_content3" class="vam_content"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="timeline">
+        <div id="timeline_load">
+            <h3 class="vam_title" id="timeline_title"
+                style="color: white;background: unset;-webkit-text-fill-color:unset;text-align: center;padding-bottom: 16px;">
+            </h3>
+        </div>
+    </section>
+    <section id="organizational">
+        <div class="vam_wrap2">
+            <h3 class="vam_title" style="margin-bottom: 16px;" id="organizational_title"></h3>
+        </div>
+    </section>
+    <section id="prize">
+        <div class="vam_wrap2 prize_wrap">
+            <div style="flex: 1;">
+                <h3 class="vam_title">Cơ cấu Giải thưởng</h3>
+                <p class="vam_content">Vòng sơ loại:</p>
+                <ul>
+                    <li>03 giải nhất (mỗi bảng 01 giải): mỗi giải 30.000.000 VNĐ và quà tặng từ BTC và nhà tài trợ</li>
+                    <li>03 giải nhì (mỗi bảng 01 giải): mỗi giải 10.000.000 VNĐ và quà tặng từ BTC và nhà tài trợ</li>
+                    <li>06 giải ba (mỗi bảng 02 giải): mỗi giải 2.000.000 VNĐ và quà tặng từ BTC và nhà tài trợ</li>
+                    <li>06 giải khuyến khích (mỗi bảng 02 giải): mỗi giải 1.000.000 VNĐ và quà tặng từ BTC và nhà tài
+                        trợ</li>
+                    <li>Các giải tiềm năng: quà tặng từ BTC và nhà tài trợ</li>
+                </ul>
+                <p class="vam_content">Vòng chung kết:</p>
+                <ul>
+                    <li>03 giải nhất (mỗi bảng 01 giải): mỗi giải 60.000.000 VNĐ kèm Kỷ niệm chương (xác nhận đội thi,
+                        đơn
+                        vị) và quà tặng từ BTC và nhà tài trợ</li>
+                    <li>03 giải nhì (mỗi bảng 01 giải): mỗi giải 10.000.000 VNĐ kèm Kỷ niệm chương và quà tặng từ BTC và
+                        nhà
+                        tài trợ</li>
+                    <li>03 giải ba (mỗi bảng 01 giải): mỗi giải 5.000.000 VNĐ kèm Kỷ niệm chương và quà tặng từ BTC và
+                        nhà
+                        tài trợ</li>
+                    <li> 09 giải khuyến khích (mỗi bảng 03 giải): mỗi giải 2.000.000 VNĐ kèm Kỷ niệm chương và quà tặng
+                        từ
+                        BTC và nhà tài trợ</li>
+                    <li> Các giải tiềm năng: quà tặng từ BTC và nhà tài trợ</li>
                 </ul>
             </div>
-        </section>
-        <div class="main">
-            <section id="banner">
-                <div class="banner__background">
-                    <img src="./staric/Image/banner-lg.jpg" alt="">
-                </div>
-                <div class="banner__content">
-                    <div class="banner__content-wrap">
-                        <p class="Title__non">Thông tin cá nhân</p>
-                        <h4 class="TT__name">Họ và Tên: <p></p>
-                        </h4>
-                        <h4 class="TT__class">Lớp học: <p></p>
-                        </h4>
-                        <h4 class="TT__date">Năm nhập học: <p></p>
-                        </h4>
-                        <h4 class="TT__address">Địa chỉ: <p></p>
-                        </h4>
-                        <div class="banner_button">
-                            <a href="https://airobotic.edu.vn/" target="_blank">Xem các khóa học khác</a>
-                            <a href="#d551412a2">Các khóa học đã học</a>
-                        </div>
-                        <div id="slick__banner" class="row"></div>
-                        <p class="jhgjf" style="padding: .5rem 0; font-size: 1.1rem;">Học tất cả các khóa học sẽ có đủ
-                            các huy hiệu.</p>
-                    </div>
-                </div>
-            </section>
-            <section id="d551412a1">
-                <div class="d551412a1">
-                    <div class="d551412a1-wrap row">
-                        <div class="d551412a1__left col-lg-6">
-                            <div class="d551412a1-left-content">
-                                <p class="Title__non"> Dự án đã làm </p>
-                                <div class="Title__main"> Sản Phẩm Học Tập</div>
-                                <div class="Content__main">Hình ảnh những mô hình nổi bật ứng dụng thông minh của khóa
-                                    học AI Robotic mà học
-                                    viên Nguyễn Minh Khôi đã hoàn thành trong quá trình học tập. </div>
-                                <div class="Content__main"> Các dự án làm tại khóa học AI Robotic </div>
-                            </div>
-                        </div>
-                        <div class="d551412a1__right col-lg-6">
-                            <div class="d551412a1-right-slick row">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="d551412a2">
-                <div class="d551412a2">
-                    <div class="d551412a2-wrap row">
-                        <div class="d551412a2__left col-lg-6">
-                            <div class="d551412a2-left-img">
-                                <img src="https://lh3.googleusercontent.com/d/1DaNF3GCz7KY4smZFpQZ0iflpYM2yLFbZ" alt="">
-                            </div>
-                        </div>
-                        <div class="d551412a2__right col-lg-6">
-                            <div class="d551412a2-right-wrap">
-                                <div class="Title__main"> Khóa học đã học</div>
-                                <div class="d551412a2-right__content" style="padding: 1rem 0;"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="d551412a3" style="border-bottom: 1px solid rgb(216, 216, 216);border-top: unset;">
-                <div class="d551412a3">
-                    <div class="d551412a3-wrap row">
-                        <div class="d551412a3__left col-lg-6">
-                            <div class="d551412a3-right-wrap">
-                                <div class="Title__main"> Kĩ năng cá nhân</div>
-                                <div class="d551412a3-right__content" style="padding: 1rem 0;"></div>
-                            </div>
-                        </div>
-                        <div class="d551412a3__right col-lg-6">
-                            <div class="d551412a3-left-img">
-                                <img src="./staric/Image/Profiling-amico.png" class="indetro">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="tongquan" id="tongquan">
-                <div class="tongquan_wrap row">
-                    <div class="tongquan_video col-lg-6">
-                        <iframe id="iframevideo" src="" style="width: 90%; height: auto;aspect-ratio: 16/9;"
-                            allow="autoplay"></iframe>
-                    </div>
-                    <div class="tongquan_content col-lg-6">
-                        <div class="tongquan_text">
-                            <h1 class="Title__main" style="color: var(--color-text);font-weight: 400;">Báo cáo tổng quát
-                            </h1>
-                            <p id="contentbctq"></p>
-                        </div>
-                        <div class="tongquan_image"></div>
-                    </div>
-                </div>
-            </section>
-            <section style="padding-top: 50px;background-color: #f8f8f8;">
-                <div class="row" style="width: 90%;
-                margin: 0 auto;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;">
-                    <div class="col-lg-6 hg">
-                        <h1 style="font-size: 1.5em;color: var(--color-text)">Nơi hoạt động</h1>
-                        <ul style="padding: 1rem 0;">
-                            <li>Địa chỉ: Số 10, Huỳnh Văn Nghệ, P. Bửu Long, Tp. Biên Hòa - Tỉnh Đồng Nai</li>
-                            <li>Tụ sở chính: T&A LAB, Trường Đại Học Lạc Hồng</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 hg">
-                        <h1 style="font-size: 1.5em;color: var(--color-text)">Liên hệ</h1>
-                        <ul style="padding: 1rem 0;">
-                            <li>Số Điện Thoại: 0946734111</li>
-                            <li>Email: nmson@lhu.edu.vn</li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-3 hg">
-                        <h1 style="font-size: 1.5em;color: var(--color-text)">Các liên kết khác</h1>
-                        <ul style="padding: 1rem 0;">
-                            <li><a class="ft12" href="https://airobotic.edu.vn/#dk">Đăng kí học</a></li>
-                            <li><a class="ft12"
-                                    href="https://s4h.edu.vn/tintuc/chuong-trinh-ai-robotic-sach-ai-super-assistant/">Xem
-                                    thêm về chúng tôi </a></li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-            <section id="ft1412c1" style=" background-color: #f8f8f8;">
-                <div class="ft1412c1">
-                    <div class="ft1412c1-wrap">
-                        <div class="ft1412c1-dot"></div>
-                        <div class="ft1412c1-content row">
-                            <div class="ft1412c1-text col-lg-6 dd">
-                                <p>© Product created by T&A Lab</p>
-                            </div>
-                            <div class="ft1412c1-icon col-lg-6 dd" style="justify-content: end;">
-                                <p style="margin-right: 1rem;">Theo dõi: </p>
-                                <a href="https://www.facebook.com/profile.php?id=100071172378187" target="_blank">
-                                    <i class="bi bi-facebook"></i>
-                                </a>
-                                <a href="https://www.youtube.com/@Share4Happy" target="_blank">
-                                    <i class="bi bi-youtube"></i>
-                                </a>
-                                <a href="https://www.tiktok.com/@ai.robot8" target="_blank">
-                                    <i class="bi bi-tiktok"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <div style="flex: .8;display: flex;flex-direction: column;gap: 16px;">
+                <img id="prize_logo"
+                    src="https://edustorge.ubtrobot.com/ucode-new-website/ubt-competition-official-website/v1.5.2/cdn-statics/img/logo-blank.cd18e3b.png">
+                <img id="prize_img"
+                    src="https://aimkt.misacdn.net/app/oom1sjoa/attachment/0d1316f6-3131-486c-99b3-a64aa8e7569d.jpg">
+            </div>
         </div>
-    </main>
-    <!-- Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Slick -->
+    </section>
+    <section id="addprize" style="padding: 30px 0;">
+        <div class="vam_wrap2 addprize_wrap">
+            <div style="flex: 1;">
+                <p class="vam_content">Bên cạnh đó, các đội đạt giải cao ở mỗi bảng của Vòng chung kết
+                    sẽ
+                    được tập huấn nội
+                    dung thi quốc tế để
+                    đáp ứng yêu cầu của Cuộc thi ROBO GENIUS 2024 thế giới tại Trung Quốc vào tháng 11/2024. Đặc biệt,
+                    mỗi
+                    đội đạt kết quả cao nhất của từng bảng sau bài kiểm tra tập huấn thi quốc tế sẽ được tài trợ toàn bộ
+                    chi
+                    phí (di chuyển và ăn ở) cho chuyến thi quốc tế.
+                    Ngoài ra, các đội tham gia còn nhận được giấy chứng nhận của BTC và hãng UBTECH.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="doitac" style="padding: 50px 0 ;">
+        <div class="vam_wrap2">
+            <h3 class="vam_title" style="text-align: center;">Đơn vị phối hợp</h3>
+            <div id="doitac_load" style="padding: 50px;"></div>
+        </div>
+    </section>
+    <section id="time" style="padding: 50px 0;">
+        <div class="vam_wrap2">
+            <h1 class="vam_title" style="text-align: center;padding: 16px 0;" id="time_title"></h1>
+            <div id="countdown" class="time_clock">
+                <div id="days">00</div>
+                <div id="hours">00</div>
+                <div id="minutes">00</div>
+                <div id="seconds">00</div>
+            </div>
+            <div class="time_video">
+                <div class="time_background"></div>
+                <iframe id="iframevideo" src="" allow="autoplay"></iframe>
+            </div>
+        </div>
+    </section>
+    <section id="question"
+        style="padding: 50px 0;background-size: contain;background-position: center;background-repeat: no-repeat;background-image: url(https://aimkt.misacdn.net/admin/template/assets/landing-pages-v2/86c9615c-cc08-4a41-bec4-8a39fae0a2f1.png);">
+        <div class="vam_wrap2" id="question_load">
+            <h3 class="vam_title"
+                style="color: white;background: unset;-webkit-text-fill-color:unset;text-align: center;">Q&A: Một số câu
+                hỏi thường gặp</h3>
+            <div class="question_div">
+                <p class="vam_content">Chi phí tham dự như thế nào?</p>
+                <i class="bi bi-plus-circle"></i>
+            </div>
+        </div>
+    </section>
+    <section id="footer">
+        <div class="vam_wrap2 footer_wrap">
+            <div>
+                <h3>VỀ CHÚNG TÔI</h3>
+                <p>Hiệp hội Phần mềm và Dịch vụ CNTT Việt Nam – VINASA là một tổ chức phi chính phủ, đại diện cho cộng
+                    đồng các doanh nghiệp hoạt động trong lĩnh vực phần mềm và Dịch vụ CNTT tại Việt Nam. </p>
+                <p> Từ khi thành lập năm 2002 đến nay, VINASA đã có hơn 500 doanh nghiệp Hội viên, chiếm hơn 70% tổng
+                    doanh thu của ngành phần mềm và dịch vụ CNTT Việt Nam.</p>
+                <p>VINASA có quan hệ hợp tác với các Hiệp hội CNTT trong khu vực và trên thế giới là thành viên của
+                    Hiệp hội Công nghiệp điện toán Châu Á – Châu Đại Dương – ASOCIO, Liên minh dịch vụ CNTT thế giới –
+                    WITSA; Liên minh CNTT khu vực Châu Á – Thái Bình Dương, đồng thời VINASA còn có quan hệ mật thiết
+                    với các tổ chức lớn thuộc các</p>
+            </div>
+            <div>
+                <h3>LIÊN HỆ</h3>
+                <p>Văn phòng Hà Nội: Tầng 11, tòa nhà Cung Trí thức thành phố, 01 Tôn Thất Thuyết, Cầu Giấy, Hà Nội
+                    Điện thoại: (024) 3577 2336 - 3577 2338; Fax: (024) 3577 2337</p>
+                <p>Văn phòng HCM: Tầng 4, Tòa nhà QTSC, 97-101 Nguyễn Công Trứ, P. Nguyễn Thái Bình, Q. 1, TP.HCM
+                    Điện thoại: (028) 3821 2001</p>
+            </div>
+            <div style="flex: .6;">
+                <h3 style="margin-bottom: 10px;">SOCIAL</h3>
+                <div style="display: flex;gap: 16px;">
+                    <a target="_blank" href="https://info.vinasa.org.vn/vietfutureaward"><i
+                            class="bi bi-facebook"></i></a>
+                    <a target="_blank" href=""><i class="bi bi-youtube"></i></a>
+                    <a target="_blank" href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <!-- Fetch-sheet-->
     <script src="https://cdn.statically.io/gh/tr1nh/fetch-sheet.js/master/fetch-sheet.min.js"></script>
-    <!-- Main Js -->
-    <script src="./staric/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
