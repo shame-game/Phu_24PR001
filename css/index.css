@@ -300,6 +300,44 @@ body {
     position: relative;
 }
 
+.object_button {
+    cursor: pointer;
+    position: absolute;
+    top: -50%;
+    transform: translate(0, 50%);
+    background-color: #051b37cc;
+    padding: 12px;
+    color: white;
+    left: 0;
+    border-radius: 10px 0 10px 0;
+    box-shadow: #4d90fe57 0px 2px 8px 0px;
+    transition: all .3s linear;
+}
+
+.object_button.ac {
+    background-color: white;
+    color: #00a4e3;
+    animation: ob1 .3s linear forwards;
+}
+
+@keyframes ob1 {
+    0% {
+        opacity: 1;
+        left: 20px;
+    }
+
+    100% {
+        opacity: 0;
+        left: 200px;
+    }
+}
+
+.object_button:hover {
+    background-color: white;
+    color: #00a4e3;
+    left: 20px;
+}
+
 
 #object h3 {
     font-size: 22px;
@@ -834,6 +872,22 @@ body {
     bottom: -30px;
     font-size: 16px;
     color: black;
+}
+
+#days {
+    background-image: linear-gradient(140deg, #ff00a5, #94207f);
+}
+
+#hours {
+    background-image: linear-gradient(140deg, #94207f, #b700c8);
+}
+
+#minutes {
+    background-image: linear-gradient(140deg, #b700c8, #8d00bb);
+}
+
+#seconds {
+    background-image: linear-gradient(140deg, #8d00bb, #6400dd);
 }
 
 #days::before {

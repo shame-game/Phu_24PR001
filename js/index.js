@@ -11,7 +11,6 @@ loginBtn.addEventListener('click', () => {
     container.classList.remove("active");
 });
 
-
 fetchSheet
     .fetch({
         gSheetId: '1w0ZWTWCwLovFMRhTHiYAS9yst4qptwjLRcI2GncXUjI',
@@ -169,42 +168,35 @@ fetchSheet
     })
     .then((rows) => {
         let r = ''
-        rows.forEach((t) => {
+        let t = ''
+        let y = ''
+        let u = ''
+        let i = ''
+        rows.forEach((tab) => {
             r +=
-                `<div>
-                    <img style="width:100%" src="${t['Hình ảnh logo đơn vị phối hợp']}"/>
+                `<div style="width:16%;display:flex;justify-content: center;align-items: center;">
+                    <img style="width:80%" src="${tab['Hình ảnh logo đơn vị chỉ đạo']}"/>
+                </div>`
+            t +=
+                `<div style="width:16%;display:flex;justify-content: center;align-items: center;">
+                    <img style="width:80%" src="${tab['Hình ảnh logo đơn vị đồng hành']}"/>
+                </div>`
+            y +=
+                `<div style="width:16%;display:flex;justify-content: center;align-items: center;">
+                    <img style="width:80%" src="${tab['Hình ảnh logo đơn vị đồng tổ chức']}"/>
+                </div>`
+            u +=
+                `<div style="width:16%;display:flex;justify-content: center;align-items: center;">
+                    <img style="width:80%" src="${tab['Hình ảnh logo đơn vị truyền thông']}"/>
+                </div>`
+            i +=
+                `<div style="width:16%;display:flex;justify-content: center;align-items: center;">
+                    <img style="width:80%" src="${tab['Hình ảnh logo đơn vị tổ chức']}"/>
                 </div>`
         })
-        document.querySelector('#doitac_load').innerHTML += r
-        $('#doitac_load').slick({
-            infinite: true,
-            slidesToShow: 5,
-            slidesToScroll: 1,
-            arrows: true,
-            pauseOnHover: false,
-            prevArrow: '<span class="prev"><i class="bi-chevrond-left"></i></span>',
-            nextArrow: '<span class="next"><i class="bi-chevrond-right"></i></span>',
-            responsive: [
-                {
-                    breakpoint: 1280,
-                    settings: {
-                        slidesToShow: 3,
-                        slidesToScroll: 1,
-                        prevArrow: '',
-                        nextArrow: '',
-                        arrows: false,
-                        dots: true,
-                    },
-                },
-                {
-                    breakpoint: 1000,
-                    settings: {
-                        slidesToShow: 1,
-                        dots: true,
-                        arrows: false,
-                    },
-                }
-            ]
-        });
+        document.querySelector('#chidao_load').innerHTML += r
+        document.querySelector('#donghanh_load').innerHTML += t
+        document.querySelector('#tochuc_load').innerHTML += y
+        document.querySelector('#truyenthong_load').innerHTML += u
+        document.querySelector('#tochucc_load').innerHTML += i
     });
-
