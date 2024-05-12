@@ -90,6 +90,13 @@ fetchSheet
         })
         document.querySelector('#timeline_list-wrap').innerHTML = d
     });
+
+jQuery(document).ready(function ($) {
+    $(".slider-img").on("click", function () {
+        $(".slider-img").removeClass("active");
+        $(this).addClass("active");
+    });
+});
 fetchSheet
     .fetch({
         gSheetId: '1w0ZWTWCwLovFMRhTHiYAS9yst4qptwjLRcI2GncXUjI',
