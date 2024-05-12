@@ -1,4 +1,16 @@
 
+const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
+
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
+
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+});
+
 
 fetchSheet
     .fetch({
@@ -48,15 +60,36 @@ fetchSheet
     })
     .then((rows) => {
         let d = ""
+        let i = 1
         document.querySelector('#timeline_title').innerText = rows[0]['Tiêu đề']
         rows.forEach((t) => {
-            d +=
-                `<div class="timeline_con">
-                    <h3 class="vam_content" style="width:30%">${t.time}</h3>
-                    <h3 class="vam_content" style="flex:1">${t.content}</h3>
-            </div>`
+            if (i % 2 === 0) {
+                d +=
+                    `<div class="timeline_items">
+                    <div class="timeline_item-main l">
+                        <h2>${t.time}</h2>
+                        <div class="timeline_item-content">
+                            <p>${t.content}</p>
+                        </div>
+                        <span class="timeline_item-index l">${i}</span>
+                    </div>
+                </div>`
+            } else {
+                d +=
+                    `<div class="timeline_items">
+                    <div class="timeline_item-main c">
+                        <span class="timeline_item-index c">${i}</span>
+
+                        <div class="timeline_item-content">
+                            <p>${t.content}</p>
+                        </div>
+                        <h2>${t.time}</h2>
+                    </div>
+                </div>`
+            }
+            i++
         })
-        document.querySelector('#timeline_load').innerHTML += d
+        document.querySelector('#timeline_list-wrap').innerHTML = d
     });
 fetchSheet
     .fetch({
@@ -121,11 +154,12 @@ fetchSheet
     })
     .then((rows) => {
         document.querySelector('#organizational_title').innerText = rows[0]['Tiêu đề']
+        document.querySelector('#organizational_titlep').innerText = rows[0]['Tiêu đề phụ']
         let r = ''
         rows.forEach((t) => {
             r += `<p class="vam_content">${t['Nội dung']}</p>`
         })
-        document.querySelector('#organizational>.vam_wrap2').innerHTML += r
+        document.querySelector('#organizational_content1').innerHTML += r
     });
 
 fetchSheet
