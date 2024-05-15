@@ -4,16 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Robo G Việt Nam 2024</title>
     <!-- Slick -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Front text-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Questrial&display=swap"
+        rel="stylesheet">
+
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="./css/tailwind.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/sukien.css" />
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./css/loading.css" />
+    <!-- wowJS -->
+    <link rel="stylesheet" href=".css/animate.css" />
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
@@ -21,11 +31,13 @@
     <section id="header1412a1">
         <div class="header1412a1">
             <div class="header1412a1-logo">
-                <img src="https://edustorge.ubtrobot.com/ucode-new-website/ubt-competition-official-website/v1.5.2/cdn-statics/img/logo-blank.cd18e3b.png"
+                <img id="header_logo"
+                    src="https://edustorge.ubtrobot.com/ucode-new-website/ubt-competition-official-website/v1.5.2/cdn-statics/img/logo-blank.cd18e3b.png"
                     style="height: 100%;width: auto;">
             </div>
             <ul class="header1412a1-list">
                 <li class="home"><a href="#intro">Giới thiệu</a></li>
+                <li class="contact"><a href="#object">Đăng ký</a></li>
                 <li class="create"><a href="#timeline">Mốc thời gian</a></li>
                 <li class="contact"><a href="#prize">Giải thưởng</a></li>
                 <li class="home"><a href="#question">Q&A</a></li>
@@ -47,7 +59,8 @@
                 <img style="width: 70%;" id="intro_logo">
                 <h3 style="margin-top: 16px;" class="vam_title" id="intro_title"></h3>
                 <p style="width: 100%;margin: 16px 0;" class="vam_content" id="intro_content"></p>
-                <button class="vam_button" id="intro_link" style="margin-top: 16px;">Tham gia ngay</button>
+                <button class="vam_button" id="intro_link" style="margin-top: 16px;"><a href="#object">Tham gia
+                        ngay</a></button>
             </div>
         </div>
     </section>
@@ -74,7 +87,7 @@
         <path class="elementor-shape-fill" opacity="0.3" fill="url(#MyGradient2)"
             d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z">
         </path>
-        <path class="elementor-shape-fill" opacity="0.5" fill="url(#MyGradient3)"
+        <path class="elementor-shape-fill" opacity="1" fill="url(#MyGradient3)"
             d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z">
         </path>
         <defs>
@@ -83,75 +96,62 @@
                 <stop offset="100%" stop-color="rgb(144, 118, 231)" />
             </linearGradient>
             <linearGradient id="MyGradient2">
-                <stop offset="0%" stop-color="var(--color-main)" />
-                <stop offset="100%" stop-color="rgb(73, 30, 184)" />
+                <stop offset="0%" stop-color="#a6d2ff" />
+                <stop offset="100%" stop-color="#a6d2ff" />
             </linearGradient>
             <linearGradient id="MyGradient3">
-                <stop offset="0%" stop-color="var(--color-logo)" />
-                <stop offset="100%" stop-color="var(--color-main)" />
+                <stop offset="0%" stop-color="#a6d2ff" />
+                <stop offset="100%" stop-color="var(--color-text)" />
 
             </linearGradient>
         </defs>
     </svg>
     <section id="object">
-        <div id="object_top"
-            style="padding-top: 50px;background-image: linear-gradient(180deg,#bb69ba,var(--color-logo),rgb(129, 68, 186));">
+        <div id="object_top">
             <div style="display: flex;justify-content: center;">
-                <span style="background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, .3), rgba(240, 239, 241, .1), hsla(0, 0%, 100%, 0));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                position: relative;
-                font-size: 56px;">Đối tượng tham gia</span>
+                <span class="vam_titleup1"></span>
             </div>
-            <h1 class="vam_title"
-                style="padding-bottom: 50px;color: white;background: none;-webkit-text-fill-color:unset;text-align: center;"
-                id="object_title">
-            </h1>
-            <div class="vam_wrap2" style="display: flex;justify-content: space-between;height: 100%;">
+            <h4 class="vam_title1" id="object_title">
+            </h4>
+            <div class="vam_wrap2 object_img-wrap">
                 <div class="object">
-                    <div style="margin-bottom: 0;">
-                        <img src="https://lh3.googleusercontent.com/d/1VC4skimthlKeOb9cdGtRhqh8zgeqFo9H"
-                            style="aspect-ratio: 3/2;object-fit: cover;width: 100%;border-radius: 10px 10px 0 0;">
+                    <div class="object_wrapimg">
+                        <img>
                     </div>
                 </div>
                 <div class="object">
-                    <div style="margin-bottom: 0;">
-                        <img src="https://lh3.googleusercontent.com/d/10yD1C0_LUYAeiEcLWq57E6Ss2_wt3Vs4"
-                            style="aspect-ratio: 3/2;object-fit: cover;width: 100%;border-radius: 10px 10px 0 0;">
+                    <div class="object_wrapimg">
+                        <img>
                     </div>
                 </div>
                 <div class="object">
-                    <div style="margin-bottom: 0;">
-                        <img src="https://lh3.googleusercontent.com/d/1YNOY8BSu7gW7a2lIZeqR6od1pKhSwB5q"
-                            style="aspect-ratio: 3/2;object-fit: cover;width: 100%;border-radius: 10px 10px 0 0;">
+                    <div class="object_wrapimg">
+                        <img>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="vam_wrap2" style="display: flex;justify-content: space-between;height: 100%;">
+        <div class="vam_wrap2 object_content-wrap">
             <div class="object">
-                <div
-                    style="position: relative;margin-top: 0;border-radius: 0 0 10px 10px;box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;;padding: 22px;">
+                <div class="object_wrapcontent">
+                    <p id="object_content1" class="vam_content"></p>
                     <a target="_blank" href="https://forms.gle/pYkZiaFH3EpxEJtD7 " id="object_title1"
                         class="object_button"></a>
-                    <p id="object_content1" class="vam_content"></p>
                 </div>
             </div>
             <div class="object">
-                <div
-                    style="position: relative;margin-top: 0;border-radius: 0 0 10px 10px;box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;;padding: 22px;">
+                <div class="object_wrapcontent">
+                    <p id="object_content2" class="vam_content"></p>
                     <a target="_blank" href="https://forms.gle/ko3fduTh8UtBVM1e6" id="object_title2"
                         class="object_button"></a>
-                    <p id="object_content2" class="vam_content"></p>
                 </div>
             </div>
             <div class="object">
-                <div
-                    style="position: relative;margin-top: 0;border-radius: 0 0 10px 10px;box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;;padding: 22px;">
+                <div class="object_wrapcontent">
+                    <p id="object_content3" class="vam_content"></p>
                     <a target="_blank" href="https://forms.gle/5DcdVTHQtXm6ttay8 " id="object_title3"
                         class="object_button"></a>
-                    <p id="object_content3" class="vam_content"></p>
                 </div>
             </div>
         </div>
@@ -159,19 +159,16 @@
     <section id="organizational">
         <div class="vam_wrap2">
             <div style="display: flex;justify-content: center;">
-                <span style="background-image: -webkit-linear-gradient(top, hsl(319.02deg 68.97% 45.49% / 32%), rgb(198 35 146 / 18%), hsl(0deg 0% 100% / 0%));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                position: relative;
-                font-size: 56px;">Hình thức tổ chức thi</span>
+                <span class="vam_titleup2" id="organizational_titleup"></span>
             </div>
-            <h1 class="vam_title" style="padding-bottom: 50px ;text-align: center;" id="organizational_title">
+            <h1 class="vam_title1" style="padding-bottom: 50px ;text-align: center;" id="organizational_title">
             </h1>
         </div>
-        <div class="vam_wrap2" style="display: flex;position: relative;">
-            <div id="organizational_img1" style="flex: 1;"><img src="./photo/1640665614044 (1).png"
-                    style="width: 100%;"></div>
-            <div style="flex: 1;">
+        <div class="vam_wrap2 repo" style="display: flex;position: relative;">
+            <div id="organizational_img1" style="flex: 1;"><img
+                    style="width: 95%;aspect-ratio: 1/1;object-fit: cover;border-radius: 16px;position: relative;z-index: 2;">
+            </div>
+            <div class="organizational_content" style="flex: 1;">
                 <h4 style="margin-bottom: 16px;margin-left: 30px;" id="organizational_titlep"></h4>
                 <div id="organizational_content1">
                 </div>
@@ -181,11 +178,11 @@
     <div style="overflow: hidden;max-width: 100%;">
         <svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);height: 80px;width: 200%;"
             viewBox="0 0 1000 100" preserveAspectRatio="none">
-            <path class="elementor-shape-fill" opacity="0.2" fill="url(#MyGradient1)"
+            <path class="elementor-shape-fill" opacity="0.2" fill="url(#MyGradien1)"
                 d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z">
 
             </path>
-            <path class="elementor-shape-fill" opacity="0.3" fill="url(#MyGradient2)"
+            <path class="elementor-shape-fill" opacity=".3" fill="url(#MyGradien2)"
                 d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z">
             </path>
 
@@ -202,82 +199,66 @@
         </svg>
         <svg xmlns="http://www.w3.org/2000/svg" style="height: 80px;width: 200%;" viewBox="0 0 1000 100"
             preserveAspectRatio="none">
-            <path class="elementor-shape-fill" opacity="0.2" fill="url(#MyGradient1)"
+            <path class="elementor-shape-fill" opacity="0.3" fill="url(#MyGradien1)"
                 d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z">
 
             </path>
-            <path class="elementor-shape-fill" opacity="0.3" fill="url(#MyGradient2)"
-                d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z">
-            </path>
-
             <defs>
-                <linearGradient id="MyGradient1">
-                    <stop offset="0%" stop-color="rgb(67, 22, 219)" />
-                    <stop offset="100%" stop-color="rgb(144, 118, 231)" />
+                <linearGradient id="MyGradien1">
+                    <stop offset="0%" stop-color="#7cdafa" />
+                    <stop offset="100%" stop-color="#1aafe6" />
                 </linearGradient>
-                <linearGradient id="MyGradient2">
-                    <stop offset="0%" stop-color="var(--color-main)" />
-                    <stop offset="100%" stop-color="#e7e0f9" />
+                <linearGradient id="MyGradien2">
+                    <stop offset="0%" stop-color="#c5e0ff" />
+                    <stop offset="100%" stop-color="#a59fff" />
                 </linearGradient>
             </defs>
         </svg>
     </div>
-    <section id="timeline" style="overflow: hidden;padding-bottom: 0;">
+    <section id="timeline" style="overflow: hidden;padding-bottom: 130px;">
 
-        <div id="timeline_load">
-            <div style="display: flex;justify-content: center;">
-                <span style="background-image: -webkit-linear-gradient(top, hsl(319.02deg 68.97% 45.49% / 32%), rgb(198 35 146 / 18%), hsl(0deg 0% 100% / 0%));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                position: relative;
-                font-size: 56px;">Thời gian và sự kiện</span>
-            </div>
-            <h1 class="vam_title" style="padding-bottom: 50px ;text-align: center;" id="timeline_title">
-            </h1>
+
+        <div style="display: flex;justify-content: center;">
+            <span class="vam_titleup1" id="timeline_titleup">Thời gian và sự kiện</span>
         </div>
+        <h3 class="vam_title1"
+            style="padding-bottom: 50px;color: white;background: none;-webkit-text-fill-color:unset;text-align: center;"
+            id="timeline_title"></h3>
 
-        <div style="width: 100%;overflow-x: auto;overflow-y: hidden;padding: 50px ;" id="scrool_x">
+        <div style="width: 100%;overflow: hidden;;padding: 50px ;" id="scrool_x">
             <div id="timeline_list-wrap" style="position: relative;">
             </div>
         </div>
 
     </section>
-    <section id="prize" style="padding: 50px 0;background-image: linear-gradient(180deg,#fffafe,#c0a5e3);">
+    <section id="prize" style="padding: 50px 0;background-image: linear-gradient(180deg,#ecfafe,#c0a5e3);">
         <div class="vam_wrap2">
             <div style="display: flex;justify-content: center;">
-                <span style="background-image: -webkit-linear-gradient(top, hsl(319.02deg 68.97% 45.49% / 32%), rgb(198 35 146 / 18%), hsl(0deg 0% 100% / 0%));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                position: relative;
-                font-size: 56px;">Cơ cấu giải thưởng</span>
+                <span class="vam_titleup2" id="prize_titleup">Cơ cấu giải thưởng</span>
             </div>
             <h1 class="vam_title" style="padding-bottom: 50px ;text-align: center;" id="prize_title">Cơ cấu giải thưởng
             </h1>
         </div>
         <div class="vam_wrap2 prize_wrap">
-            <div class="container" id="container">
+            <div class="containers" id="container">
                 <div class="form-container sign-up">
                     <form>
                         <h1><i id="bac" class="bi bi-trophy-fill"></i> Vòng chung kết</h1>
-                        <div class="social-icons">
-                            <a href="#" class="icon"><i style="color: #d5d522;" class="bi bi-award-fill"></i> 03 giải
-                                nhất (mỗi bảng 01 giải):
-                                mỗi giải 30.000.000 VNĐ và quà
-                                tặng từ BTC và nhà tài trợ</a>
-                            <a href="#" class="icon"><i style="color: #c8c8c0;" class="bi bi-award-fill"></i> 03 giải
-                                nhì (mỗi bảng 01 giải):
-                                mỗi giải 10.000.000 VNĐ và quà tặng
-                                từ BTC và nhà tài trợ </a>
-                            <a href="#" class="icon"><i style="color: #ba740a;" class="bi bi-award-fill"></i> 06 giải ba
-                                (mỗi bảng 02 giải): mỗi
-                                giải 2.000.000 VNĐ và quà tặng
-                                từ BTC và nhà tài trợ</a>
-                            <a href="#" class="icon"><i class="bi bi-award-fill"></i> 06 giải khuyến khích (mỗi bảng 02
-                                giải): mỗi giải 1.000.000 VNĐ và
-                                quà tặng từ BTC và nhà tài trợ</a>
-                            <a href="#" class="icon"><i class="bi bi-award-fill"></i> 06 giải khuyến khích (mỗi bảng 02
-                                giải): mỗi giải 1.000.000 VNĐ và
-                                quà tặng từ BTC và nhà tài trợ</a>
+                        <div class="social-icons" id="">
+                            <p><i style="color: #d5d522;" class="bi bi-award-fill"></i><b>03 giải nhất
+                                    (mỗi bảng 01 giải):</b>
+                                mỗi giải 60.000.000 VNĐ kèm Kỷ niệm chương (xác nhận đội thi, đơn vị) và quà tặng từ BTC
+                                và nhà tài trợ</p>
+                            <p><i style="color: #c8c8c0;" class="bi bi-award-fill"></i><b>03 giải nhì (mỗi bảng 01
+                                    giải):</b>
+                                mỗi giải 10.000.000 VNĐ kèm Kỷ niệm chương và quà tặng từ BTC và nhà tài trợ</p>
+                            <p><i style="color: #ba740a;" class="bi bi-award-fill"></i><b>03 giải ba (mỗi bảng 01
+                                    giải):</b>
+                                mỗi giải 5.000.000 VNĐ kèm Kỷ niệm chương và quà tặng từ BTC và nhà tài trợ.</p>
+                            <p><i class="bi bi-award-fill"></i><b>09 giải khuyến khích (mỗi bảng 03 giải):</b> mỗi giải
+                                2.000.000 VNĐ kèm Kỷ niệm chương và quà tặng từ BTC và nhà tài trợ.</p>
+                            <p><i class="bi bi-award-fill"></i><b>Các giải tiềm năng:</b> quà tặng từ BTC và nhà tài
+                                trợ.</p>
                         </div>
                     </form>
                 </div>
@@ -285,38 +266,38 @@
                     <form>
                         <h1><i id="vang" class="bi bi-trophy-fill"></i> Vòng sơ loại</h1>
                         <div class="social-icons">
-                            <a href="#" class="icon"><i style="color: #d5d522;" class="bi bi-award-fill"></i> 03 giải
-                                nhất (mỗi bảng 01 giải):
+                            <p><i style="color: #d5d522;" class="bi bi-award-fill"></i> <b>03 giải
+                                    nhất (mỗi bảng 01 giải):</b>
                                 mỗi giải 30.000.000 VNĐ và quà
-                                tặng từ BTC và nhà tài trợ</a>
-                            <a href="#" class="icon"><i style="color: #c8c8c0;" class="bi bi-award-fill"></i> 03 giải
-                                nhì (mỗi bảng 01 giải):
+                                tặng từ BTC và nhà tài trợ</p>
+                            <p><i style="color: #c8c8c0;" class="bi bi-award-fill"></i> <b>03 giải
+                                    nhì (mỗi bảng 01 giải):</b>
                                 mỗi giải 10.000.000 VNĐ và quà tặng
-                                từ BTC và nhà tài trợ </a>
-                            <a href="#" class="icon"><i style="color: #ba740a;" class="bi bi-award-fill"></i> 06 giải ba
-                                (mỗi bảng 02 giải): mỗi
+                                từ BTC và nhà tài trợ </p>
+                            <p><i style="color: #ba740a;" class="bi bi-award-fill"></i> <b>06 giải ba
+                                    (mỗi bảng 02 giải):</b> mỗi
                                 giải 2.000.000 VNĐ và quà tặng
-                                từ BTC và nhà tài trợ</a>
-                            <a href="#" class="icon"><i class="bi bi-award-fill"></i> 06 giải khuyến khích (mỗi bảng 02
-                                giải): mỗi giải 1.000.000 VNĐ và
-                                quà tặng từ BTC và nhà tài trợ</a>
-                            <a href="#" class="icon"><i class="bi bi-award-fill"></i> 06 giải khuyến khích (mỗi bảng 02
-                                giải): mỗi giải 1.000.000 VNĐ và
-                                quà tặng từ BTC và nhà tài trợ</a>
+                                từ BTC và nhà tài trợ</p>
+                            <p><i class="bi bi-award-fill"></i> <b>06 giải khuyến khích (mỗi bảng 02
+                                    giải):</b> mỗi giải 1.000.000 VNĐ và
+                                quà tặng từ BTC và nhà tài trợ</p>
+                            <p><i class="bi bi-award-fill"></i> <b>06 giải khuyến khích (mỗi bảng 02
+                                    giải):</b> mỗi giải 1.000.000 VNĐ và
+                                quà tặng từ BTC và nhà tài trợ</p>
                         </div>
                     </form>
                 </div>
                 <div class="toggle-container">
                     <div class="toggle">
                         <div class="toggle-panel toggle-left"
-                            style="background-image: url(https://lh3.googleusercontent.com/d/18myhaGkFLM39Dv2VxdCRqjkCQtEa9OY5);background-size:cover">
+                            style="background-image: url(https://lh3.googleusercontent.com/d/1GT5QM5IakPfn8fWilc3FsInTOcVrr7Aa);background-size:cover">
                             <div style="position: absolute;
                             width: 100%;
                             height: 100%;
                             background-image: linear-gradient(140deg, #05205bd6, #ea0c8bb3);"></div>
                             <h1 style="position: relative;">Giải thưởng sơ loại</h1>
                             <p style="position: relative;">Nhấn để xem chi tiết giải thưởng sơ loại</p>
-                            <button style="position: relative;" class="hidden" id="login">Vòng sơ loại</button>
+                            <button style="position: relative;" class="hiddens" id="login">Vòng sơ loại</button>
                         </div>
                         <div class="toggle-panel toggle-right"
                             style="background-image: url(https://lh3.googleusercontent.com/d/1lR8JL0yBIb5sat9ORqK_cdaMCVVVBx43);background-size:cover">
@@ -326,7 +307,7 @@
                             background-image: linear-gradient(70deg, #05205bd6, #ea0c8bb3);"></div>
                             <h1 style="position: relative;">Giải thưởng chung kết</h1>
                             <p style="position: relative;">Nhấn để xem chi tiết giải thưởng chung kết</p>
-                            <button style="position: relative;" class="hidden" id="register">Vòng chung kết</button>
+                            <button style="position: relative;" class="hiddens" id="register">Vòng chung kết</button>
                         </div>
                     </div>
                 </div>
@@ -338,7 +319,7 @@
                 <div style="position: absolute;
                 width: 100%;
                 height: 100%;
-                background-image: linear-gradient(70deg, #05205bd6, #83024bad);left: 0;
+                background-image: linear-gradient(70deg, #05205beb, #66003ae8);left: 0;
     top: 0;"></div>
                 <div style="flex: 1;">
                     <p class="vam_content" style="position: relative;color: white;">Bên cạnh đó, các đội đạt giải cao ở
@@ -364,35 +345,42 @@
     <section id="doitac" style="padding: 50px 0 ;">
         <div class="vam_wrap2">
             <h3 class="vam_title" style="text-align: center;">Đơn vị chỉ đạo</h3>
-            <div id="chidao_load" style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;"></div>
+            <div id="chidao_load" style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;">
+            </div>
         </div>
         <div class="vam_wrap2">
             <h3 class="vam_title" style="text-align: center;">Đơn vị đồng hành và tài trợ</h3>
-            <div id="donghanh_load" style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;"></div>
+            <div id="donghanh_load"
+                style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;"></div>
         </div>
         <div class="vam_wrap2">
             <h3 class="vam_title" style="text-align: center;">Đơn vị đồng tổ chức</h3>
-            <div id="tochuc_load" style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;"></div>
-        </div>
-        <div class="vam_wrap2">
-            <h3 class="vam_title" style="text-align: center;">Đơn vị tài trợ truyền thông</h3>
-            <div id="truyenthong_load" style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;"></div>
+            <div id="tochuc_load" style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;">
+            </div>
         </div>
         <div class="vam_wrap2">
             <h3 class="vam_title" style="text-align: center;">Đơn vị tổ chức</h3>
-            <div id="tochucc_load" style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;"></div>
+            <div id="tochucc_load"
+                style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;"></div>
         </div>
+        <div class="vam_wrap2">
+            <h3 class="vam_title" style="text-align: center;">Đơn vị tài trợ truyền thông</h3>
+            <div id="truyenthong_load"
+                style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;"></div>
+        </div>
+
     </section>
+
+
+
+
     <section id="time" style="padding: 50px 0;">
         <div class="vam_wrap2">
             <div style="display: flex;justify-content: center;">
-                <span style="background-image: -webkit-linear-gradient(top, hsl(319.02deg 68.97% 45.49% / 32%), rgb(198 35 146 / 18%), hsl(0deg 0% 100% / 0%));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                position: relative;
-                font-size: 56px;">Thời gian còn lại đăng ký</span>
+                <span class="vam_titleup2">Thời gian còn lại đăng ký</span>
             </div>
-            <h1 class="vam_title" style="padding-bottom: 50px ;text-align: center;" id="time_title">Cơ cấu giải thưởng
+            <h1 class="vam_title" style="padding-bottom: 50px ;text-align: center;" id="time_title">Cơ cấu giải
+                thưởng
             </h1>
             <div id="countdown" class="time_clock">
                 <div id="days">00</div>
@@ -406,49 +394,72 @@
             </div>
         </div>
     </section>
-    <svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);height: 80px;width: 100%;"
-        viewBox="0 0 1000 100" preserveAspectRatio="none">
-        <path class="elementor-shape-fill" opacity="0.2" fill="url(#MyGradient1)"
-            d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z">
-
-        </path>
-        <path class="elementor-shape-fill" opacity="0.3" fill="url(#MyGradient2)"
-            d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z">
-        </path>
-        <path class="elementor-shape-fill" opacity="0.5" fill="url(#MyGradient3)"
-            d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z">
-        </path>
-        <defs>
-            <linearGradient id="MyGradient1">
-                <stop offset="0%" stop-color="rgb(67, 22, 219)" />
-                <stop offset="100%" stop-color="rgb(144, 118, 231)" />
-            </linearGradient>
-            <linearGradient id="MyGradient2">
-                <stop offset="0%" stop-color="var(--color-main)" />
-                <stop offset="100%" stop-color="rgb(73, 30, 184)" />
-            </linearGradient>
-            <linearGradient id="MyGradient3">
-                <stop offset="0%" stop-color="var(--color-logo)" />
-                <stop offset="100%" stop-color="rgb(73, 30, 184)" />
-
-            </linearGradient>
-        </defs>
-    </svg>
-    <div style=" padding: 50px 0;background-image: linear-gradient(180deg, #b171bc,  #ae6df4,#6d7cf4);">
+    <div style="padding: 50px 0">
         <div class="vam_wrap2">
             <div style="display: flex;justify-content: center;">
-                <span style="background-image: -webkit-linear-gradient(top, hsla(0, 0%, 100%, .3), rgba(240, 239, 241, .1), hsla(0, 0%, 100%, 0));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-                position: relative;
-                font-size: 56px;">Thư viện hình ảnh</span>
+                <span class="vam_titleup2">Thư viện hình ảnh</span>
             </div>
-            <h3 class="vam_title"
-                style="padding-bottom: 50px;color: white;background: none;-webkit-text-fill-color:unset;text-align: center;"
+            <h3 class="vam_title1"
+                style="padding-bottom: 50px;color: var(--color-text);background: none;-webkit-text-fill-color:unset;text-align: center;"
                 id="object_title">Thư viện hình ảnh
             </h3>
         </div>
-        <section id="image" class="slider-container">
+        <section class="biggame-s2b-wrapper bg-blue" style="background-color: unset;">
+            <div class="container">
+                <div class="biggame-s2b flex reverse">
+                    <div class="biggame-s2b-slider sinhnhat-s2b-slider p-16 w-1/2">
+                        <div class="main-slide">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <img src="https://lh3.googleusercontent.com/d/1_8uBLfUEcKq1eeQI7RxT5xQqG4KtP8pZ "
+                                                alt="slide_1" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <img src="https://lh3.googleusercontent.com/d/1ePDLxG8CfG7oICcJb_k4pQOMAaJxgqJU"
+                                                alt="slide_1" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <img src="https://lh3.googleusercontent.com/d/1GT5QM5IakPfn8fWilc3FsInTOcVrr7Aa"
+                                                alt="slide_1" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <img src="https://lh3.googleusercontent.com/d/1kLehzET_CZPnxUJnFFlIG929OUYnG2pE"
+                                                alt="slide_1" loading="lazy" />
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div>
+                                            <img src="
+                                            https://lh3.googleusercontent.com/d/1fldAOuQAZhtMrkzKSldwAv30xEvO2DZF"
+                                                alt="slide_1" loading="lazy" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sinhnhat-s2b-content text-justify flex flex-col justify-center items-center w-1/2">
+                        <p>
+                            Với mong muốn tạo ra sân chơi khoa học và công nghệ hướng đến mục tiêu thực làm - thực học
+                            dành cho học sinh/sinh viên, BTC phát động cuộc thi “ROBO GENIUS 2024” với chủ đề “Khám phá
+                            AI” trên toàn quốc. Thông qua cuộc thi, trên tinh thần của giáo dục STEAM và tiến bộ của
+                            công nghệ AI, học sinh sẽ trực tiếp thiết kế sáng tạo các mô hình AI theo yêu cầu của BTC.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--<section id="image" class="slider-container">
 
             <div class="slider-images">
                 <div class="slider-img">
@@ -508,64 +519,53 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
     </div>
 
-    <section id="question"
-        style="padding: 50px 0;background-size: cover;background-position: center;background-repeat: no-repeat;background-image: url(https://aimkt.misacdn.net/admin/template/assets/landing-pages-v2/86c9615c-cc08-4a41-bec4-8a39fae0a2f1.png);">
+    <section id="question">
         <div class="vam_wrap2" id="question_load">
-            <h3 class="vam_title"
-                style="color: white;background: unset;-webkit-text-fill-color:unset;text-align: center;">Q&A: Một số câu
+            <h3 class="vam_title">
+                Q&A: Một số câu
                 hỏi thường gặp</h3>
-            <div class="question_div">
-                <p class="vam_content">Chi phí tham dự như thế nào?</p>
-                <i class="bi bi-plus-circle"></i>
-            </div>
         </div>
     </section>
-    <section id="footer" style="background-color: #061e27;">
+    <section id="footer">
         <div
             style="width: 100%;display: flex;justify-content: center;background-color: var(--color-text);position: relative;">
-            <img style="height: 100%;width: auto;"
+            <!--<img style="height: 100%;width: auto;"
                 src="https://edustorge.ubtrobot.com/ucode-new-website/ubt-competition-official-website/v1.5.2/cdn-statics/img/footer-1.0afcd93.png">
             <div
                 style="width: 2px;background-color: white;height: 90%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
-            </div>
+            </div>-->
             <img
                 src="https://edustorge.ubtrobot.com/ucode-new-website/ubt-competition-official-website/v1.5.2/cdn-statics/img/footer-1.0afcd93.png">
         </div>
         <div class="vam_wrap2 footer_wrap" style="color: white;padding: 50px 0;">
-            <div>
-                <h3>VỀ CHÚNG TÔI</h3>
-                <p>Hiệp hội Phần mềm và Dịch vụ CNTT Việt Nam – VINASA là một tổ chức phi chính phủ, đại diện cho cộng
-                    đồng các doanh nghiệp hoạt động trong lĩnh vực phần mềm và Dịch vụ CNTT tại Việt Nam. </p>
-                <p> Từ khi thành lập năm 2002 đến nay, VINASA đã có hơn 500 doanh nghiệp Hội viên, chiếm hơn 70% tổng
-                    doanh thu của ngành phần mềm và dịch vụ CNTT Việt Nam.</p>
-                <p>VINASA có quan hệ hợp tác với các Hiệp hội CNTT trong khu vực và trên thế giới là thành viên của
-                    Hiệp hội Công nghiệp điện toán Châu Á – Châu Đại Dương – ASOCIO, Liên minh dịch vụ CNTT thế giới –
-                    WITSA; Liên minh CNTT khu vực Châu Á – Thái Bình Dương, đồng thời VINASA còn có quan hệ mật thiết
-                    với các tổ chức lớn thuộc các</p>
+            <div id="load_about">
+                <h2>About Robo Genius</h2>
+                <p>The Robo Genius Artificial Intelligence and Robotics Global Challenge is an international robotics
+                    and artificial intelligence event system. Robo Genius covers robotics, artificial intelligence,
+                    online programming, and other categories, meeting the advanced development needs of students.
+                </p>
             </div>
             <div>
-                <h3>LIÊN HỆ</h3>
-                <p>Văn phòng Hà Nội: Tầng 11, tòa nhà Cung Trí thức thành phố, 01 Tôn Thất Thuyết, Cầu Giấy, Hà Nội
-                    Điện thoại: (024) 3577 2336 - 3577 2338; Fax: (024) 3577 2337</p>
-                <p>Văn phòng HCM: Tầng 4, Tòa nhà QTSC, 97-101 Nguyễn Công Trứ, P. Nguyễn Thái Bình, Q. 1, TP.HCM
-                    Điện thoại: (028) 3821 2001</p>
+                <h2>Vietnam Robo Genius</h2>
+                <p>The Vietnam Robo Genius National Championship 2024 will be hosted by IPPG to select and sponsor teams
+                    representing Vietnam to participate in the international Robo Genius Global Challenge using advanced
+                    humanoid AI robots from UBTECH gathering 10,000+ participants from countries around the world.</p>
             </div>
             <div style="flex: .6;">
-                <h3 style="margin-bottom: 10px;">SOCIAL</h3>
+                <h2 style="margin-bottom: 10px;">SOCIAL</h2>
                 <div style="display: flex;gap: 16px;">
-                    <a target="_blank" href="https://info.vinasa.org.vn/vietfutureaward"><i
-                            class="bi bi-facebook"></i></a>
-                    <a target="_blank" href=""><i class="bi bi-youtube"></i></a>
-                    <a target="_blank" href=""><i class="bi bi-linkedin"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/ubtechvietnam/"><i class="bi bi-facebook"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/@ubtechvietnam"><i class="bi bi-youtube"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/company/ubtechvietnam/"><i
+                            class="bi bi-linkedin"></i></a>
                 </div>
 
             </div>
         </div>
-        <div
-            style="width: 100%;display: flex;justify-content: center;align-items: center;background-color: black;color: white;padding: 20px 0;">
+        <div class="bottom_ft">
             <p style="margin: 0;">©2012-2024 Ubtech Robotics Corp. All rights reserved . </p>
         </div>
     </section>
@@ -574,6 +574,14 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://cdn.statically.io/gh/tr1nh/fetch-sheet.js/master/fetch-sheet.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/swiper-bundle.min.js" type="text/javascript"></script>
+    <script src="./js/event.js" type="text/javascript"></script>
+    <script src="./js/training.js" type="text/javascript"></script>
+    <script src="./js/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="./js/index.js"></script>
 </body>
 
