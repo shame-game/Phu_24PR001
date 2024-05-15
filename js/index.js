@@ -77,9 +77,12 @@ fetchSheet
         document.querySelector('#object_content2').innerText = rows[1]['Nội dung bảng']
         document.querySelector('#object_title3').innerText = rows[2]['Tiêu đề bảng']
         document.querySelector('#object_content3').innerText = rows[2]['Nội dung bảng']
+        //   document.querySelector('#object_title4').innerText = rows[3]['Tiêu đề bảng']
+        //    document.querySelector('#object_content4').innerText = rows[3]['Nội dung bảng']
         document.querySelectorAll('.object_wrapimg>img')[0].src = rows[0]['Hình ảnh']
         document.querySelectorAll('.object_wrapimg>img')[1].src = rows[1]['Hình ảnh']
         document.querySelectorAll('.object_wrapimg>img')[2].src = rows[2]['Hình ảnh']
+        //   document.querySelectorAll('.object_wrapimg>img')[3].src = rows[3]['Hình ảnh']
     });
 
 
