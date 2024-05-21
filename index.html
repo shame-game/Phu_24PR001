@@ -10,534 +10,694 @@
     <!-- Front text-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Questrial&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
 
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/tailwind.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/sukien.css" />
-    <link rel="stylesheet" href="./css/swiper-bundle.min.css" />
-    <link rel="stylesheet" href="./css/loading.css" />
-    <!-- wowJS -->
-    <link rel="stylesheet" href=".css/animate.css" />
+    <link rel="stylesheet" href="./css/loadweb.css" />
     <link rel="stylesheet" href="./css/index.css">
 </head>
 
-<body style="overflow-x: hidden;">
+<body>
+    <div id="pdfViewer" style="display: none;">
+        <div id="pdfViewer-wrap">
+
+        </div>
+    </div>
+    <div class="loadweb">
+        <div></div>
+    </div>
+    <div id="mainintro"></div>
+    <section id="popup" style="display: none;">
+        <div class="box-wrap">
+            <div class="box">
+                <div class="box-content">
+                    <div id="outpopup"><i class="bi bi-box-arrow-left"></i>Thoát</div>
+                    <h1 id="dethitenbang">Đề Thi Bảng A</h1>
+                    <div class="scroll_rela">
+                        <div class="scroll_rela_title" style="flex: .5;">
+                            <div style="position: sticky;top: 0;">
+                                <h1>Đề thi vòng sơ loại</h1>
+                                <p>Đề thi ở Vòng sơ loại hoàn toàn mở cho các đội thi</p>
+                            </div>
+                        </div>
+                        <div class="scroll_rela_content" id="vongloai"
+                            style="flex: 1.5;text-align: justify;padding: 0 30px;">
+                            <p> • Đề thi ở Vòng sơ loại hoàn toàn mở cho các đội ở mỗi bảng thi với yêu cầu chung là
+                                giới thiệu sản phẩm mô hình thiết kế với thành phần chính dựa trên các bộ giáo cụ AI
+                                Robotics của UBTECH bằng cách nộp trực tuyến các tài liệu cần thiết như sau:</p>
+                            <p><b>1. Video giới thiệu tác phẩm</b> <br>
+                                Đội thi cần giới thiệu tác phẩm của mình bằng miệng và phát
+                                biểu trình diễn trong video (không quá 5 phút, tiếng Việt hoặc tiếng Anh).<br>
+                                <b>2. Báo cáo dự án</b> <br>
+                                a. Giới thiệu thiết kế bề ngoài, chức năng và khái niệm của công việc.<br>
+                                b. Các vấn đề gặp phải trong việc xây dựng phần cứng hoặc phần mềm lập trình và các
+                                giải<br>
+                                pháp tương ứng
+                                (không quá 1500 từ).<br>
+                                <b>3. Chương trình mã hóa</b><br>
+                                Đội thi cần chụp ảnh màn hình đầy đủ của chương trình và tải nó lên.<br>
+                                <b>4. Tài liệu bổ sung khác (nếu có)</b><br>
+                                Slide, poster, hướng dẫn, v.v.<br>
+
+                                • Dựa trên các tài liệu nộp trực tuyến đúng quy định, Ban giám khảo sẽ đánh giá (kết hợp
+                                chấm điểm<br>
+                                chuyên môn và điểm bình chọn qua mạng xã hội) và lựa chọn những đội thi xuất sắc bước
+                                tiếp
+                                vào vòng chung kết.<br>
+                                ◦ Điểm chuyên môn từ BGK chiếm 80% tổng số điểm và tối đa 80 điểm.<br>
+                                ◦ Điểm bình chọn qua mạng xã hội chiếm 20% tổng số điểm và tối đa 20 điểm.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="scroll_rela">
+                        <div class="scroll_rela_title" style="flex: .5;">
+                            <div style="position: sticky;top: 0;">
+                                <h1>Đề thi vòng chung kết</h1>
+                                <p>Đề thi ở Vòng sơ loại hoàn toàn mở cho các đội thi</p>
+                            </div>
+                        </div>
+                        <div class="scroll_rela_content" id="chungket" style="flex: 1.5;padding: 0 30px;">
+                            <p>
+                                • Đề thi ở Vòng chung kết có 02 phần: cơ bản và nâng cao<br>
+                                - Phần cơ bản: chỉ bao gồm các nhiệm vụ cố định (biết trước)<br>
+                                - Phần nâng cao: ngoài các nhiệm vụ cố định còn có thêm một số nhiệm vụ trực tiếp do BTC
+                                và BGK ra đề ngay tại buổi thi đấu (không biết trước).<br>
+                                • Mỗi bảng có 1 chủ đề và bộ đề thi-bảng điểm cho phần thi cơ bản (đính kèm thiết kế sa
+                                bàn và các mô hình nhiệm vụ trên sa bàn).<br>
+                                • Thời gian tối đa hoàn thành mỗi đề thi ở mỗi lượt (lần) thi được quy định cho mỗi
+                                bảng.<br>
+                                • Các đội được phép lắp ráp, lập trình và chuẩn bị Robot AI trước khi bắt đầu thi đấu
+                                cho tất cả các phần thi.<br>
+                                • Sau khi bốc thăm đề thi và thứ tự thi đấu, các đội có thời gian để cập nhật Robot AI
+                                tại khu vực tập trung.<br>
+                                • Các Robot AI sẽ được BTC kiểm tra tại khu vực cách ly.<br>
+                                • Đến lượt thi đấu, các đội mang Robot AI của mình từ khu vực cách ly đến khu vực thi
+                                đấu và thực hiện nhiệm vụ. Sau khi ký xác nhận vào danh sách kết quả, các đội mang Robot
+                                AI trở lại khu vực cách ly.<br>
+                                • Sau khi tất cả các đội thi trong bảng hoàn thành nhiệm vụ ở một lượt, các đội nhận lại
+                                Robot AI và có thời gian cập nhật Robot AI tại khu vực tập trung để chuẩn bị cho lượt
+                                thi đấu tiếp theo (nếu có).<br>
+                                • Mỗi đội sẽ nhận được điểm ở mỗi nhiệm vụ tương ứng với mức độ hoàn thành. Điểm số cho
+                                mỗi phần thi sẽ dựa vào lượt thực hiện tốt nhất của mỗi đội.<br>
+                                • Điểm cuối cùng của cuộc thi vòng chung kết là tổng điểm của 2 phần thi. Trong trường
+                                hợp các đội xuất sắc bằng điểm nhau sẽ tính đến các tiêu chí phụ để căn cứ vào đó chọn
+                                ra đội được giải thưởng tương ứng của bảng đấu.<br>
+                            </p>
+                            <p>
+                                <b>CHỦ ĐỀ: THU THẬP TÀI NGUYÊN</b><br>
+                                • Thông qua chủ đề Thu Thập Tài Nguyên, đề thi bảng A yêu cầu Robot AI thực hiện các
+                                nhiệm
+                                vụ thu thập các mô hình thi đấu khác nhau được đặt ở các vị trí khác nhau trên sa bàn
+                                tương ứng với các mẫu tài nguyên nước, đất, khoáng chất, di tích sự sống và mang chúng
+                                về đúng khu vực quy định cho từng loại đồng thời phải tránh các vật cản cố định trên sa
+                                bàn.<br>
+                                • Các đội thi được phép sử dụng các thiết bị kết nối không dây bất kì để lập trình điều
+                                khiển Robot AI trong thời gian thi đấu (nhưng các thí sinh không được phép chạm vào
+                                Robot AI)..<br>
+                                <b>• Sản phẩm khuyến nghị: bộ giáo cụ AI Smart Life và máy tính bảng với ứng dụng uKit
+                                    Edu.</b><br>
+                            </p>
+                            <img style="width: 100%;padding: 16px 0;"
+                                src="https://lh3.googleusercontent.com/d/1RW1VJktMCCS2IYugs8XZrdgnMrDmXaUa">
+                            <p>
+                                <b>Thách thức cần giải quyết</b><br>
+                                • Giải pháp chiến thuật thực hiện các nhiệm vụ<br>
+                                • Giải pháp thiết kế Robot AI<br>
+                                • Giải pháp lập trình cho Robot AI thực hiện các nhiệm vụ<br>
+                                - Khả năng di chuyển<br>
+                                - Khả năng tránh vật cản (nếu lập trình tự động)<br>
+                                - Khả năng nhận diện màu sắc (nếu lập trình tự động)<br>
+                                - Khả năng lấy và mang vật thể về đúng vị trí (nếu lập trình tự động)<br>
+                                • Kỹ năng điều khiển Robot AI thực hiện các nhiệm vụ (mỗi thí sinh trong đội chỉ được
+                                phép tham gia điều khiển tối đa 1 lượt thi ở mỗi phần thi nếu lập trình điều khiển trực
+                                tiếp)<br>
+                                - Di chuyển<br>
+                                - Tránh vật cản<br>
+                                - Lấy và mang vật thể về đúng vị trí<br>
+                            </p>
+                            <div style="padding-top: 50px;display: flex;">
+                                <button class="buttonvam"><a href="https://forms.gle/pYkZiaFH3EpxEJtD7"
+                                        target="_blank">Đăng
+                                        ký</a></button>
+                                <button class="buttonvam"><a href="https://forms.gle/pYkZiaFH3EpxEJtD7"
+                                        target="_blank">Xem bảng điểm</a></button>
+                                <button class="buttonvam"><a href="https://forms.gle/pYkZiaFH3EpxEJtD7"
+                                        target="_blank">Tải đề thi chi tiết</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background"></div>
+    </section>
     <section id="header1412a1">
         <div class="header1412a1">
             <div class="header1412a1-logo">
-                <img id="header_logo"
-                    src="https://edustorge.ubtrobot.com/ucode-new-website/ubt-competition-official-website/v1.5.2/cdn-statics/img/logo-blank.cd18e3b.png"
-                    style="height: 100%;width: auto;">
+                <img id="header_logo" src="" style="height: 100%;width: auto;">
             </div>
             <ul class="header1412a1-list">
                 <li class="home"><a href="#intro">Giới thiệu</a></li>
-                <li class="contact"><a href="#object">Đăng ký</a></li>
-                <li class="create"><a href="#timeline">Mốc thời gian</a></li>
+                <li class="contact"><a href="#dieukien">Đăng ký</a></li>
                 <li class="contact"><a href="#prize">Giải thưởng</a></li>
+                <li class="create"><a href="#timeline">Mốc thời gian</a></li>
                 <li class="home"><a href="#question">Q&A</a></li>
             </ul>
         </div>
     </section>
-    <section id="intro" style="position: relative;">
+
+    <section id="intro">
         <div id="intro_background-wrap">
             <img src="" id="intro_background">
-            <img src="" id="intro_img">
+            <div
+                style="position: absolute;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.603);top: 0;left: 0;">
+            </div>
         </div>
-        <div class="vam_wrap" style="height: 638px;">
-            <div class="vam_con" style="width: 50%;
+        <div class="vam_wrap" style="height: 100vh;">
+            <div class="vam_con" style="width: 70%;
             height: 100%;
             display: flex;
             justify-content: center;
             flex-direction: column;
-            align-items: start;">
-                <img style="width: 70%;" id="intro_logo">
-                <h3 style="margin-top: 16px;" class="vam_title" id="intro_title"></h3>
-                <p style="width: 100%;margin: 16px 0;" class="vam_content" id="intro_content"></p>
-                <button class="vam_button" id="intro_link" style="margin-top: 16px;"><a href="#object">Tham gia
-                        ngay</a></button>
+            align-items: center;margin: 0 auto;">
+                <img id="intro_logo">
+                <h3 style="margin-top: 16px;" class="vam_title2" id="intro_title"></h3>
+                <p class="vam_content" id="intro_content"></p>
+                <div id="intro_anim">
+                    <button class="vam_button1" id="intro_link"><a href="#thamgiangay">Tham gia
+                            ngay</a></button>
+                    <button class="vam_button1" id="intro_down"><a onclick="downloadZip()">Tải thể lệ cuộc
+                            thi</a></button>
+                </div>
             </div>
         </div>
     </section>
-    <section id="introduce" style="position: relative;">
-        <div id="introduce_background-wrap">
-            <img src="" id="introduce_img">
-        </div>
-        <div class="vam_wrap" style="display: flex;justify-content: end;">
-            <div class="vam_con"
-                style="width: 40%;margin-right: 10%;    height: 638px;display: flex;flex-direction: column;justify-content: center;align-items: start;">
-
-                <h3 class="vam_title" id="introduce_title" style="margin: 16px 0;"></h3>
-                <p style="margin: 16px 0;" class="vam_content" id="introduce_content"></p>
-                <button class="vam_button" style="margin-top: 16px;"><a href="#object">xem thêm</a></button>
+    <section id="introduce" style="position: relative;padding-bottom: 80px">
+        <div class="vam_wrap" style="display: flex;flex-direction: column;align-items: center;">
+            <div class="scroll-thongdiep_title" style="padding: 50px 0;">
+                <span>Mục tiêu</span>
+                <h1>Mục tiêu của cuộc thi Robo G 2024</h1>
             </div>
-        </div>
-    </section>
-    <svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);height: 80px;width: 100%;"
-        viewBox="0 0 1000 100" preserveAspectRatio="none">
-        <path class="elementor-shape-fill" opacity="0.2" fill="url(#MyGradient1)"
-            d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z">
-
-        </path>
-        <path class="elementor-shape-fill" opacity="0.3" fill="url(#MyGradient2)"
-            d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z">
-        </path>
-        <path class="elementor-shape-fill" opacity="1" fill="url(#MyGradient3)"
-            d="M766.1,28.9c-200-57.5-266,65.5-395.1,19.5C242,1.8,242,5.4,184.8,20.6C128,35.8,132.3,44.9,89.9,52.5C28.6,63.7,0,0,0,0 h1000c0,0-9.9,40.9-83.6,48.1S829.6,47,766.1,28.9z">
-        </path>
-        <defs>
-            <linearGradient id="MyGradient1">
-                <stop offset="0%" stop-color="rgb(67, 22, 219)" />
-                <stop offset="100%" stop-color="rgb(144, 118, 231)" />
-            </linearGradient>
-            <linearGradient id="MyGradient2">
-                <stop offset="0%" stop-color="#a6d2ff" />
-                <stop offset="100%" stop-color="#a6d2ff" />
-            </linearGradient>
-            <linearGradient id="MyGradient3">
-                <stop offset="0%" stop-color="#a6d2ff" />
-                <stop offset="100%" stop-color="var(--color-text)" />
-
-            </linearGradient>
-        </defs>
-    </svg>
-    <section id="object">
-        <div id="object_top">
-            <div style="display: flex;justify-content: center;">
-                <span class="vam_titleup1"></span>
-            </div>
-            <h4 class="vam_title1" id="object_title">
-            </h4>
-            <div class="vam_wrap2 object_img-wrap">
-                <div class="object">
-                    <div class="object_wrapimg">
-                        <img>
+            <!-- <p style="margin: 16px 0;" class="vam_content" id="introduce_content"></p>-->
+            <div class="introduce_mt-wrap row">
+                <div class="col-lg-4 col-md-6 introd-vam_boxwrap">
+                    <div>
+                        <div class="introd-vam_i"><i class="bi bi-fire"></i></div>
+                        <h1>Lan Tỏa Tinh Thần Khoa Học</h1>
+                        <p>Truyền cảm hứng và lan tỏa tinh thần khoa học tới người dân nói chung và học sinh/sinh viên,
+                            giáo viên nói riêng.</p>
                     </div>
                 </div>
-                <div class="object">
-                    <div class="object_wrapimg">
-                        <img>
+                <div class="col-lg-4 col-md-6 introd-vam_boxwrap">
+                    <div>
+                        <div class="introd-vam_i"><i class="bi bi-cpu-fill"></i></div>
+                        <h1>Tiếp Cận Công Nghệ</h1>
+                        <p>Tiếp cận với các tiến bộ khoa học công nghệ kỹ thuật thông qua các bộ giáo cụ UBTECH AI
+                            Robotics .</p>
                     </div>
                 </div>
-                <div class="object">
-                    <div class="object_wrapimg">
-                        <img>
+                <div class="col-lg-4 col-md-6 introd-vam_boxwrap">
+                    <div>
+                        <div class="introd-vam_i"><i class="bi bi-people-fill"></i></div>
+                        <h1>Sân Chơi Hiện Đại</h1>
+                        <p>Tạo sân chơi và nền tảng giao lưu thi đấu hiện đại, nơi học sinh/sinh viên có thể đưa những
+                            kiến thức và kỹ năng đạt được vào thực tiễn, chuẩn bị tốt hơn cho tương lai và có khả năng
+                            biến đổi thế giới.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 introd-vam_boxwrap">
+                    <div>
+                        <div class="introd-vam_i"><i class="bi bi-award-fill"></i></div>
+                        <h1>Bồi Dưỡng Tài Năng </h1>
+                        <p>Phát hiện, bồi dưỡng các tài năng và phát huy hết tiềm năng của học sinh/sinh viên để trau
+                            dồi khoa học kỹ thuật công nghệ và đổi mới sáng tạo cho tương lai.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 introd-vam_boxwrap">
+                    <div>
+                        <div class="introd-vam_i"><i class="bi bi-globe-central-south-asia"></i></div>
+                        <h1>Tuyển Chọn Đội Tuyển</h1>
+                        <p>Tuyển chọn các đội đại diện Việt Nam tham gia vòng chung kết cuộc thi ROBO G 2024 thế giới
+                            tại Thẩm Quyến vào tháng 11/2024.</p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="vam_wrap2 object_content-wrap">
-            <div class="object">
-                <div class="object_wrapcontent">
-                    <p id="object_content1" class="vam_content"></p>
-                    <a target="_blank" href="https://forms.gle/pYkZiaFH3EpxEJtD7 " id="object_title1"
-                        class="object_button"></a>
-                </div>
-            </div>
-            <div class="object">
-                <div class="object_wrapcontent">
-                    <p id="object_content2" class="vam_content"></p>
-                    <a target="_blank" href="https://forms.gle/ko3fduTh8UtBVM1e6" id="object_title2"
-                        class="object_button"></a>
-                </div>
-            </div>
-            <div class="object">
-                <div class="object_wrapcontent">
-                    <p id="object_content3" class="vam_content"></p>
-                    <a target="_blank" href="https://forms.gle/5DcdVTHQtXm6ttay8 " id="object_title3"
-                        class="object_button"></a>
-                </div>
-            </div>
-        </div>
-        <!-- <div class="vam_wrap2">
-            <div>
-
-                <div class="object" style="display: flex;">
-                    <div class="object_wrapimg"
-                        style="margin: 0;width: 40%;;margin-left: 16px;box-shadow: rgba(132, 189, 255, 0.55);border-radius: 16px 0 0 16px;overflow: hidden;">
-                        <img style="aspect-ratio: 16/9;border-radius: unset;">
-                    </div>
-                    <div class="object_wrapcontent" style="margin-left: 0;">
-                        <p id="object_content4" class="vam_content"></p>
-                        <a target="_blank" href="https://forms.gle/5DcdVTHQtXm6ttay8 " id="object_title4"
-                            class="object_button"></a>
-                    </div>
-                </div>
-            </div>
-        </div>-->
     </section>
-    <section id="organizational">
-        <div class="vam_wrap2">
-            <div style="display: flex;justify-content: center;">
-                <span class="vam_titleup2" id="organizational_titleup"></span>
+    <section id="dieukien">
+        <div class="dieukien_top-wrap vam_wrap">
+            <div class="scroll-thongdiep_title">
+                <span>Điều kiện tham gia</span>
+                <h1>Cuộc thi dành cho tất cả thí sinh đang học tập tại Việt Nam</h1>
+                <ul>
+                    <li id="thamgiangay">
+                        <p><span style="color: var(--color-main);font-weight: 600;">1. </span>Thí sinh chỉ có thể là
+                            thành viên của 01 đội thi duy nhất (ngoại trừ trường hợp có thể tham gia đồng thời
+                            01 đội
+                            thi ở bảng C và 01 đội thi ở bảng C* Đặc biệt). Tất cả thành viên trong đội thi phải trong
+                            phạm vi độ tuổi cho phép.</p>
+                    </li>
+                    <li>
+                        <p><span style="color: var(--color-main);font-weight: 600;">2. </span>Giáo viên hướng dẫn có
+                            thể
+                            tham gia nhiều đội thi. Giáo viên hướng dẫn phải có chứng chỉ giáo viên chương trình
+                            AI
+                            Robotics hoặc huấn luyện viên của UBTECH.</p>
+                    </li>
+                    <li>
+                        <p><span style="color: var(--color-main);font-weight: 600;">3. </span>Khi đăng ký tham gia thi
+                            đấu, các thí sinh phải chấp thuận các luật lệ, quy tắc, nội quy và điều kiện của cuộc thi
+                            cùng các vấn đề liên quan. (xem thêm thể lệ thi đấu của cuộc thi)</p>
+                    </li>
+                </ul>
             </div>
-            <h1 class="vam_title1" style="padding-bottom: 50px ;text-align: center;" id="organizational_title">
-            </h1>
-        </div>
-        <div class="vam_wrap2 repo" style="display: flex;position: relative;">
-            <div id="organizational_img1" style="flex: 1;"><img
-                    style="width: 95%;aspect-ratio: 1/1;object-fit: cover;border-radius: 16px;position: relative;z-index: 2;">
-            </div>
-            <div class="organizational_content" style="flex: 1;">
-                <h4 style="margin-bottom: 16px;margin-left: 30px;" id="organizational_titlep"></h4>
-                <div id="organizational_content1">
-                </div>
-            </div>
-        </div>
-    </section>
-    <div style="overflow: hidden;max-width: 100%;">
-        <svg xmlns="http://www.w3.org/2000/svg" style="transform: rotate(180deg);height: 80px;width: 200%;"
-            viewBox="0 0 1000 100" preserveAspectRatio="none">
-            <path class="elementor-shape-fill" opacity="0.2" fill="url(#MyGradien1)"
-                d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z">
-
-            </path>
-            <path class="elementor-shape-fill" opacity=".3" fill="url(#MyGradien2)"
-                d="M734,67.3c-45.5,0-77.2-23.2-129.1-39.1c-28.6-8.7-150.3-10.1-254,39.1 s-91.7-34.4-149.2,0C115.7,118.3,0,39.8,0,39.8V0h1000v36.5c0,0-28.2-18.5-92.1-18.5C810.2,18.1,775.7,67.3,734,67.3z">
-            </path>
-
-            <defs>
-                <linearGradient id="MyGradient1">
-                    <stop offset="0%" stop-color="rgb(67, 22, 219)" />
-                    <stop offset="100%" stop-color="rgb(144, 118, 231)" />
-                </linearGradient>
-                <linearGradient id="MyGradient2">
-                    <stop offset="0%" stop-color="var(--color-main)" />
-                    <stop offset="100%" stop-color="#e7e0f9" />
-                </linearGradient>
-            </defs>
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" style="height: 80px;width: 200%;" viewBox="0 0 1000 100"
-            preserveAspectRatio="none">
-            <path class="elementor-shape-fill" opacity="0.3" fill="url(#MyGradien1)"
-                d="M473,67.3c-203.9,88.3-263.1-34-320.3,0C66,119.1,0,59.7,0,59.7V0h1000v59.7 c0,0-62.1,26.1-94.9,29.3c-32.8,3.3-62.8-12.3-75.8-22.1C806,49.6,745.3,8.7,694.9,4.7S492.4,59,473,67.3z">
-
-            </path>
-            <defs>
-                <linearGradient id="MyGradien1">
-                    <stop offset="0%" stop-color="#7cdafa" />
-                    <stop offset="100%" stop-color="#1aafe6" />
-                </linearGradient>
-                <linearGradient id="MyGradien2">
-                    <stop offset="0%" stop-color="#c5e0ff" />
-                    <stop offset="100%" stop-color="#a59fff" />
-                </linearGradient>
-            </defs>
-        </svg>
-    </div>
-    <section id="timeline" style="overflow: hidden;padding-bottom: 130px;">
-
-
-        <div style="display: flex;justify-content: center;">
-            <span class="vam_titleup1" id="timeline_titleup">Thời gian và sự kiện</span>
-        </div>
-        <h3 class="vam_title1"
-            style="padding-bottom: 50px;color: white;background: none;-webkit-text-fill-color:unset;text-align: center;"
-            id="timeline_title"></h3>
-
-        <div style="width: 100%;overflow: hidden;;padding: 50px ;" id="scrool_x">
-            <div id="timeline_list-wrap" style="position: relative;">
-            </div>
-        </div>
-
-    </section>
-    <section id="prize" style="padding: 50px 0;background-image: linear-gradient(180deg,#ecfafe,#c0a5e3);">
-        <div class="vam_wrap2">
-            <div style="display: flex;justify-content: center;">
-                <span class="vam_titleup2" id="prize_titleup">Cơ cấu giải thưởng</span>
-            </div>
-            <h1 class="vam_title" style="padding-bottom: 50px ;text-align: center;" id="prize_title">Cơ cấu giải thưởng
-            </h1>
-        </div>
-        <div class="vam_wrap2 prize_wrap">
-            <div class="containers" id="container">
-                <div class="form-container sign-up">
-                    <form>
-                        <h1><i id="bac" class="bi bi-trophy-fill"></i> Vòng chung kết</h1>
-                        <div class="social-icons" id="">
-                            <p><i style="color: #d5d522;" class="bi bi-award-fill"></i><b>03 giải nhất
-                                    (mỗi bảng 01 giải):</b>
-                                mỗi giải 60.000.000 VNĐ kèm Kỷ niệm chương (xác nhận đội thi, đơn vị) và quà tặng từ BTC
-                                và nhà tài trợ</p>
-                            <p><i style="color: #c8c8c0;" class="bi bi-award-fill"></i><b>03 giải nhì (mỗi bảng 01
-                                    giải):</b>
-                                mỗi giải 10.000.000 VNĐ kèm Kỷ niệm chương và quà tặng từ BTC và nhà tài trợ</p>
-                            <p><i style="color: #ba740a;" class="bi bi-award-fill"></i><b>03 giải ba (mỗi bảng 01
-                                    giải):</b>
-                                mỗi giải 5.000.000 VNĐ kèm Kỷ niệm chương và quà tặng từ BTC và nhà tài trợ.</p>
-                            <p><i class="bi bi-award-fill"></i><b>09 giải khuyến khích (mỗi bảng 03 giải):</b> mỗi giải
-                                2.000.000 VNĐ kèm Kỷ niệm chương và quà tặng từ BTC và nhà tài trợ.</p>
-                            <p><i class="bi bi-award-fill"></i><b>Các giải tiềm năng:</b> quà tặng từ BTC và nhà tài
-                                trợ.</p>
+            <div class="row dieukien_bottom">
+                <div class="col-xxl-3 col-lg-6 col-12">
+                    <div>
+                        <div>
+                            <div class="dieukien_title-bang">
+                                <h1>Bảng</h1>
+                                <img src="https://lh3.googleusercontent.com/d/1clJh1S7jwzUcACcod6TPdFWdKeik8S-J">
+                            </div>
+                            <p>Dành cho thí sinh trong nhóm tuổi 7-14 (sinh năm 2010-2017), mỗi đội thi gồm 2 thí sinh
+                                và 1 giáo viên hướng dẫn.</p>
                         </div>
-                    </form>
-                </div>
-                <div class="form-container sign-in">
-                    <form>
-                        <h1><i id="vang" class="bi bi-trophy-fill"></i> Vòng sơ loại</h1>
-                        <div class="social-icons">
-                            <p><i style="color: #d5d522;" class="bi bi-award-fill"></i> <b>03 giải
-                                    nhất (mỗi bảng 01 giải):</b>
-                                mỗi giải 30.000.000 VNĐ và quà
-                                tặng từ BTC và nhà tài trợ</p>
-                            <p><i style="color: #c8c8c0;" class="bi bi-award-fill"></i> <b>03 giải
-                                    nhì (mỗi bảng 01 giải):</b>
-                                mỗi giải 10.000.000 VNĐ và quà tặng
-                                từ BTC và nhà tài trợ </p>
-                            <p><i style="color: #ba740a;" class="bi bi-award-fill"></i> <b>06 giải ba
-                                    (mỗi bảng 02 giải):</b> mỗi
-                                giải 2.000.000 VNĐ và quà tặng
-                                từ BTC và nhà tài trợ</p>
-                            <p><i class="bi bi-award-fill"></i> <b>06 giải khuyến khích (mỗi bảng 02
-                                    giải):</b> mỗi giải 1.000.000 VNĐ và
-                                quà tặng từ BTC và nhà tài trợ</p>
-                            <p><i class="bi bi-award-fill"></i> <b>06 giải khuyến khích (mỗi bảng 02
-                                    giải):</b> mỗi giải 1.000.000 VNĐ và
-                                quà tặng từ BTC và nhà tài trợ</p>
+                        <div style="width: 100%;">
+                            <button class="dkthamgia" index="1" style="width: 90%;">
+                                <a style="text-align: center;">Đăng ký ngay</a>
+                            </button>
                         </div>
-                    </form>
+                    </div>
                 </div>
-                <div class="toggle-container">
-                    <div class="toggle">
-                        <div class="toggle-panel toggle-left"
-                            style="background-image: url(https://lh3.googleusercontent.com/d/1GT5QM5IakPfn8fWilc3FsInTOcVrr7Aa);background-size:cover">
-                            <div style="position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            background-image: linear-gradient(140deg, #05205bd6, #ea0c8bb3);"></div>
-                            <h1 style="position: relative;">Giải thưởng sơ loại</h1>
-                            <p style="position: relative;">Nhấn để xem chi tiết giải thưởng sơ loại</p>
-                            <button style="position: relative;" class="hiddens" id="login">Vòng sơ loại</button>
+                <div class="col-xxl-3 col-lg-6 col-12">
+                    <div>
+                        <div>
+                            <div class="dieukien_title-bang">
+                                <h1>Bảng</h1>
+                                <img src="https://lh3.googleusercontent.com/d/17HVlvHdkR5qvfesLEJ6HH4HCb_cYb7FX">
+                            </div>
+                            <p>Dành cho thí sinh trong nhóm tuổi 13-18 (sinh năm 2006-2011), mỗi đội thi gồm 2 thí sinh
+                                và 1 giáo viên hướng dẫn.</p>
                         </div>
-                        <div class="toggle-panel toggle-right"
-                            style="background-image: url(https://lh3.googleusercontent.com/d/1lR8JL0yBIb5sat9ORqK_cdaMCVVVBx43);background-size:cover">
-                            <div style="position: absolute;
-                            width: 100%;
-                            height: 100%;
-                            background-image: linear-gradient(70deg, #05205bd6, #ea0c8bb3);"></div>
-                            <h1 style="position: relative;">Giải thưởng chung kết</h1>
-                            <p style="position: relative;">Nhấn để xem chi tiết giải thưởng chung kết</p>
-                            <button style="position: relative;" class="hiddens" id="register">Vòng chung kết</button>
+                        <div style="width: 100%;">
+                            <button class="dkthamgia" index="2" style="width: 90%;">
+                                <a style="text-align: center;" target="_blank">Đăng ký ngay</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-lg-6 col-12">
+                    <div>
+                        <div>
+                            <div class="dieukien_title-bang">
+                                <h1>Bảng</h1>
+                                <img src="https://lh3.googleusercontent.com/d/1vy0sgs7Cp66SX51zK6ISaxEO1A6HHfwq">
+                            </div>
+                            <p>Dành cho thí sinh trong nhóm tuổi 15-23 (sinh năm 2001-2009), mỗi đội thi gồm 2-6 thí
+                                sinh và 1 giáo viên hướng dẫn. Riêng các đội ở bảng C đạt kết quả cao được tuyển chọn
+                                thi quốc tế thì cần trong nhóm tuổi 17-23 (sinh năm 2001-2007).</p>
+                        </div>
+                        <div style="width: 100%;">
+                            <button class="dkthamgia" index="3" style="width: 90%;">
+                                <a style="text-align: center;" target="_blank">Đăng ký ngay</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xxl-3 col-lg-6 col-12">
+                    <div>
+                        <div>
+                            <div class="dieukien_title-bang">
+                                <h1>Bảng</h1>
+                                <img src="https://lh3.googleusercontent.com/d/1zN9aYAh8VpDTOLoQoYEcXQP85kGZuDjA">
+                            </div>
+                            <p>Dành cho thí sinh trong nhóm tuổi 15-23 (sinh năm 2001-2009), mỗi đội thi gồm 2-6 thí
+                                sinh và 1 giáo viên hướng dẫn. Riêng các đội ở bảng C* Đặc biệt đạt kết quả cao được
+                                tuyển chọn thi quốc tế thì cần trong nhóm tuổi 17-23 (sinh năm 2001-2007).</p>
+                        </div>
+
+                        <div style="width: 100%;">
+                            <button class="dkthamgia" index="4" style="width: 90%;">
+                                <a style="text-align: center;" target="_blank">Đăng ký ngay</a>
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <section id="addprize" style="padding: 30px 0">
-            <div class="vam_wrap2 addprize_wrap"
-                style="background-image: url(https://lh3.googleusercontent.com/d/1xotCGZYgfEYp1vJuyk-BGWj90LzJ0-60);box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);;overflow: hidden;border-radius: 30px;border: 1px solid white;background-position: center;position: relative;">
-                <div style="position: absolute;
-                width: 100%;
-                height: 100%;
-                background-image: linear-gradient(70deg, #05205beb, #66003ae8);left: 0;
-    top: 0;"></div>
-                <div style="flex: 1;">
-                    <p class="vam_content" style="position: relative;color: white;">Bên cạnh đó, các đội đạt giải cao ở
-                        mỗi bảng của
-                        Vòng chung kết
-                        sẽ
-                        được tập huấn nội
-                        dung thi quốc tế để
-                        đáp ứng yêu cầu của Cuộc thi ROBO GENIUS 2024 thế giới tại Trung Quốc vào tháng 11/2024. Đặc
-                        biệt,
-                        mỗi
-                        đội đạt kết quả cao nhất của từng bảng sau bài kiểm tra tập huấn thi quốc tế sẽ được tài trợ
-                        toàn bộ
-                        chi
-                        phí (di chuyển và ăn ở) cho chuyến thi quốc tế.
-                        Ngoài ra, các đội tham gia còn nhận được giấy chứng nhận của BTC và hãng UBTECH.
-                    </p>
+    </section>
+    <section id="scroll">
+        <div class="vam_wrap">
+            <div class="scroll-thongdiep_title">
+                <span>Thông điệp ý nghĩa</span>
+                <h1>Thông điệp của cuộc thi RoBo G 2024</h1>
+                <p>Ban tổ chức (BTC) phát động cuộc thi “ROBO G 2024” với chủ đề “KHÁM PHÁ AI” trên toàn quốc, nhằm tạo
+                    sân chơi khoa học và công nghệ cho học sinh/sinh viên. Thông qua cuộc thi, học sinh/sinh viên sẽ
+                    trực tiếp thiết kế sáng tạo các mô hình AI theo yêu cầu của BTC, trên tinh thần giáo dục thực hành
+                    tích hợp và tiến bộ của công nghệ Robot và AI. Qua các hoạt động trong cuộc thi, người tham gia sẽ
+                    có cơ hội được tìm hiểu và luyện tập về:</p>
+            </div>
+        </div>
+        <div class="vam_wrap scroll-tuduy">
+            <div class="scroll-td_content" style="flex: 1.3;">
+                <h1>1. Các hệ thống tư duy</h1>
+                <div>
+                    <i class="bi bi-amd"></i>
+                    <p><b>Tư duy logic: </b>cách thức để xác định vấn đề đang xảy ra trong ngành
+                        khoa học.</p>
+                </div>
+                <div>
+                    <i class="bi bi-amd"></i>
+                    <p><b>Tư duy hệ thống: </b>nâng cao khả năng nhìn nhận vấn đề một cách hệ
+                        thống, thông qua đó đưa ra các yêu cầu đầy đủ và cần thiết để giải quyết các vấn đề được đặt ra
+                        một
+                        cách toàn diện.</p>
+                </div>
+                <div>
+                    <i class="bi bi-amd"></i>
+                    <p><b>Tư duy thiết kế: </b>nâng cao khả năng thiết kế sản phẩm một cách hiệu
+                        quả dựa trên yêu cầu thiết kế.</p>
+                </div>
+                <div>
+                    <i class="bi bi-amd"></i>
+                    <p><b>Tư duy sáng tạo: </b>nâng cao khả năng đưa ra các ý tưởng sáng tạo nhằm phục
+                        vụ giải quyết các vấn đề về khoa học cũng như cuộc sống thường ngày. </p>
                 </div>
             </div>
-        </section>
-    </section>
+            <div id="dotmb" style="height: 400px;width: 3px;background-color: var(--color-p);margin:0 16px ;"></div>
+            <div class="scroll-td_content" style="flex: 1.3;">
+                <h1>2. Các kỹ năng</h1>
+                <div>
+                    <i class="bi bi-amd"></i>
+                    <p><b>Kỹ năng toán học và vật lý: </b>rèn luyện các kiến thức toán, lý trong việc tính toán khoảng
+                        cách, bài toán quỹ đạo chuyển động, v.v.</p>
+                </div>
+                <div>
+                    <i class="bi bi-amd"></i>
+                    <p><b>Kỹ năng thiết kế và chế tạo: </b>rèn luyện việc hiện thực hóa các giải pháp, ý tưởng, đưa ra
+                        các sản phẩm mẫu.</p>
+                </div>
+                <div>
+                    <i class="bi bi-amd"></i>
+                    <p><b>Kỹ năng lập trình cơ bản: </b>sử dụng các ngôn ngữ lập trình phổ thông trên các thiết bị máy
+                        tính bảng/điện thoại, máy tính.</p>
+                </div>
+                <div>
+                    <i class="bi bi-amd"></i>
+                    <p><b>Kỹ năng quản lý công việc và làm việc nhóm: </b>rèn luyện khả năng nhận định khối lượng công
+                        việc, phân công, xây dựng dự án đạt được hiệu quả cao.</p>
+                </div>
+            </div>
 
-    <section id="doitac" style="padding: 50px 0 ;">
-        <div class="vam_wrap2">
-            <h3 class="vam_title" style="text-align: center;">Đơn vị chỉ đạo</h3>
-            <div id="chidao_load" style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;">
-            </div>
-        </div>
-        <div class="vam_wrap2">
-            <h3 class="vam_title" style="text-align: center;">Đơn vị đồng hành và tài trợ</h3>
-            <div id="donghanh_load"
-                style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;"></div>
-        </div>
-        <div class="vam_wrap2">
-            <h3 class="vam_title" style="text-align: center;">Đơn vị đồng tổ chức</h3>
-            <div id="tochuc_load" style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;">
-            </div>
-        </div>
-        <div class="vam_wrap2">
-            <h3 class="vam_title" style="text-align: center;">Đơn vị tổ chức</h3>
-            <div id="tochucc_load"
-                style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;"></div>
-        </div>
-        <div class="vam_wrap2">
-            <h3 class="vam_title" style="text-align: center;">Đơn vị tài trợ truyền thông</h3>
-            <div id="truyenthong_load"
-                style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;"></div>
+
         </div>
 
     </section>
-
-
-
-
-    <section id="time" style="padding: 50px 0;">
+    <section id="scroll-add" style="padding: 30px 0;">
         <div class="vam_wrap2">
-            <div style="display: flex;justify-content: center;">
-                <span class="vam_titleup2">Thời gian còn lại đăng ký</span>
-            </div>
-            <h1 class="vam_title" style="padding-bottom: 50px ;text-align: center;" id="time_title">Cơ cấu giải
-                thưởng
-            </h1>
-            <div id="countdown" class="time_clock">
-                <div id="days">00</div>
-                <div id="hours">00</div>
-                <div id="minutes">00</div>
-                <div id="seconds">00</div>
-            </div>
-            <div class="time_video">
-                <div class="time_background"></div>
-                <iframe id="iframevideo" src="" allow="autoplay"></iframe>
+            <div class="scroll-device_title scroll-thongdiep_title">
+                <span>Thiết bị thi đấu</span>
+                <h1 style="padding-bottom: 16px;">Yêu cầu về thiết bị dự thi RoBo G 2024</h1>
+                <div class="device_box">
+                    <div class="device_box-nav">
+                        <div class="device_box-nav_con acc" index="1">
+                            <span>Thiết bị</span>
+                            <p>SƠ LOẠI</p>
+                        </div>
+                        <div class="device_box-nav_con" index="2">
+                            <span>Thiết bị</span>
+                            <p>CHUNG KẾT</p>
+                        </div>
+                    </div>
+                    <div class="device_box-content">
+                        <div class="device_box-content-wrap">
+                            <div style="text-align: justify;" class="contentdevice">
+                                <h1>Ở Vòng sơ loại bảng A, B, C</h1>
+                                <div style="display: flex;align-items: start;padding: 10px 0;">
+                                    <div class="iconvam"></div>
+                                    <p style="flex: 1;">Các đội thi có thể sử dụng một hoặc nhiều phần cứng/phần
+                                        mềm
+                                        của các bộ giáo
+                                        cụ AI Robotics của UBTECH trong sản phẩm AI Robotics của mình.</p>
+                                </div>
+                                <div style="display: flex;align-items: start;padding: 10px 0;">
+                                    <div class="iconvam"></div>
+                                    <p style="flex: 1;">Các đội thi được phép bổ sung phần cứng của mình bằng các vật
+                                        liệu thông
+                                        thường của nhà sản xuất hoặc các vật phẩm khác, chẳng hạn như vật liệu cắt laser
+                                        hoặc vật liệu in 3D.</p>
+                                </div>
+                                <div style="display: flex;align-items: start;padding: 10px 0;">
+                                    <div class="iconvam"></div>
+                                    <p style="flex: 1;">Về nguyên tắc, không có hạn chế nào đối với việc sử dụng các
+                                        thiết bị kết hợp
+                                        với các bộ giáo cụ AI Robotics của UBTECH, ngoài những thiết bị gây ô nhiễm môi
+                                        trường và có hại cho sức khỏe hoặc an toàn xã hội.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="device_box-img">
+                            <img src="https://lh3.googleusercontent.com/d/1bvUZ4Is10OCRN9zzO1zO_t4-xvk1Omnm">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
+
     </section>
-    <div style="padding: 50px 0">
-        <div class="vam_wrap2">
-            <div style="display: flex;justify-content: center;">
-                <span class="vam_titleup2">Thư viện hình ảnh</span>
+    <section id="prize" style="padding: 50px 0;overflow: hidden;">
+        <div class="vam_wrap" style="padding: 50px 0">
+            <div class="scroll-thongdiep_title device">
+                <span>Giải thưởng</span>
+                <h1>Cơ cấu giải thưởng của cuộc thi</h1>
+                <p>Các đội đạt giải
+                    cao ở
+                    mỗi bảng của
+                    Vòng chung kết
+                    sẽ
+                    được tập huấn nội
+                    dung thi quốc tế để
+                    đáp ứng yêu cầu của Cuộc thi ROBO GENIUS 2024 thế giới tại Trung Quốc vào tháng 11/2024. Đặc
+                    biệt,
+                    mỗi
+                    đội đạt kết quả cao nhất của từng bảng sau bài kiểm tra tập huấn thi quốc tế sẽ được tài trợ
+                    toàn bộ
+                    chi
+                    phí (di chuyển và ăn ở) cho chuyến thi quốc tế.
+                    Ngoài ra, các đội tham gia còn nhận được giấy chứng nhận của BTC và hãng UBTECH.</p>
             </div>
-            <h3 class="vam_title1"
-                style="padding-bottom: 50px;color: var(--color-text);background: none;-webkit-text-fill-color:unset;text-align: center;"
-                id="object_title">Thư viện hình ảnh
-            </h3>
         </div>
-        <section class="biggame-s2b-wrapper bg-blue" style="background-color: unset;">
-            <div class="container">
-                <div class="biggame-s2b flex reverse">
-                    <div class="biggame-s2b-slider sinhnhat-s2b-slider p-16 w-1/2">
-                        <div class="main-slide">
-                            <div class="swiper">
-                                <div class="swiper-wrapper">
-                                    <!-- Slides -->
-                                    <div class="swiper-slide">
-                                        <div>
-                                            <img src="https://lh3.googleusercontent.com/d/1_8uBLfUEcKq1eeQI7RxT5xQqG4KtP8pZ "
-                                                alt="slide_1" loading="lazy" />
+        <div class="vam_wrap row">
+            <!---->
+            <div class="col-lg-4">
+                <div style="display: flex;flex-direction: column;align-items: center;height: 100%;"
+                    class="glowing-border b">
+                    <div
+                        style="position: relative;z-index: 99;display: flex;flex-direction: column;align-items: center;height: 100%;width: 100%;">
+                        <div class="name-ct">
+                            Robo G 2024
+                        </div>
+                        <div class="name-vong">
+                            <img src="https://lh3.googleusercontent.com/d/1SGXoMet8x60Z0dXNFsBc07fj8YJHwHHb" alt="">
+                            <p>Vòng sơ loại</p>
+                            <span style="font-weight: 600;">*Giải thưởng dành cho bảng A, B, C/C*</span>
+                        </div>
+                        <div class="giaithuong" style="width: 100%;">
+                            <div style="display: flex;flex-direction: column;align-items: center;padding: 16px;">
+                                <span style="font-size: 32px;"> <strong style="font-size: 34px;">03</strong> Giải
+                                    Nhất</span>
+                                <p class="chuthichall">- Mỗi giải trị giá -</p>
+                                <h3 style="font-size: 34px">30.000.000 VNĐ</h3>
+                            </div>
+                            <div style="display: flex;border-top: 2px solid var(--color-text);width: 100%;">
+                                <div
+                                    style="flex: 1;padding:5px 16px;;display: flex;border-right: .5px solid var(--color-text);display: flex;flex-direction: column;align-items: center;">
+                                    <span><strong style="font-size: 22px;">03</strong> Giải Nhì</span>
+                                    <p class="chuthichall">- Mỗi giải trị giá -</p>
+                                    <h3 style="font-size: 18px;">10.000.000 VNĐ</h3>
+                                </div>
+                                <div
+                                    style="flex: 1;padding:5px 16px;;display: flex;border-left: .5px solid var(--color-text);display: flex;flex-direction: column;align-items: center;">
+                                    <span><strong style="font-size: 22px;">06</strong> giải ba</span>
+                                    <p class="chuthichall">- Mỗi giải trị giá -</p>
+                                    <h3 style="font-size: 18px;">2.000.000 VNĐ</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="giaithuongp">
+                            <li><strong>06</strong> giải khuyến khích: 1.000.000 VNĐ</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8" id="giathuong">
+                <div style="display: flex;flex-direction: column;align-items: center;height: 100%;"
+                    class="glowing-border v">
+                    <div
+                        style="position: relative;z-index: 99;display: flex;flex-direction: column;align-items: center;height: 100%;width: 100%;">
+                        <div class="name-ct v">
+                            Robo G 2024
+                        </div>
+                        <div class="name-vong" style="width: 80%;">
+                            <img src="https://lh3.googleusercontent.com/d/1SEvgh-lsLh8AP7RZO2Nq2cwNAzRHgJoW" alt="">
+                            <p>Vòng chung kết</p>
+                            <div id="chuthichmb" style="width: 100%;display: flex;justify-content: space-between;">
+                                <span style="font-weight: 600;">*Giải thưởng dành cho bảng A, B, C</span>
+                                <span style="font-weight: 600;" id="cdacbietmb">*Giải thưởng dành cho bảng C Đặc
+                                    Biệt</span>
+                            </div>
+                        </div>
+                        <div style="display: flex;" id="chunketmb">
+                            <div style="flex: 1;">
+                                <div class="giaithuong v" style="width: 100%;">
+                                    <div
+                                        style="display: flex;flex-direction: column;align-items: center;padding: 16px;">
+                                        <span style="font-size: 32px;"> <strong style="font-size: 34px;">03</strong>
+                                            Giải
+                                            Nhất</span>
+                                        <p class="chuthichall">- Mỗi giải trị giá -</p>
+                                        <h3 style="font-size: 34px">60.000.000 VNĐ</h3>
+                                    </div>
+                                    <div style="display: flex;border-top: 2px solid var(--color-yellow);width: 100%;">
+                                        <div
+                                            style="flex: 1;padding:5px 16px;;display: flex;border-right: .5px solid var(--color-yellow);display: flex;flex-direction: column;align-items: center;">
+                                            <span><strong style="font-size: 22px;">03</strong> Giải Nhì</span>
+                                            <p class="chuthichall">- Mỗi giải trị giá -</p>
+                                            <h3 style="font-size: 18px;">10.000.000 VNĐ</h3>
+                                        </div>
+                                        <div
+                                            style="flex: 1;padding:5px 16px;;display: flex;border-left: .5px solid var(--color-yellow);display: flex;flex-direction: column;align-items: center;">
+                                            <span><strong style="font-size: 22px;">06</strong> giải ba</span>
+                                            <p class="chuthichall">- Mỗi giải trị giá -</p>
+                                            <h3 style="font-size: 18px;">5.000.000 VNĐ</h3>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide">
-                                        <div>
-                                            <img src="https://lh3.googleusercontent.com/d/1ePDLxG8CfG7oICcJb_k4pQOMAaJxgqJU"
-                                                alt="slide_1" loading="lazy" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div>
-                                            <img src="https://lh3.googleusercontent.com/d/1GT5QM5IakPfn8fWilc3FsInTOcVrr7Aa"
-                                                alt="slide_1" loading="lazy" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div>
-                                            <img src="https://lh3.googleusercontent.com/d/1kLehzET_CZPnxUJnFFlIG929OUYnG2pE"
-                                                alt="slide_1" loading="lazy" />
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div>
-                                            <img src="
-                                            https://lh3.googleusercontent.com/d/1fldAOuQAZhtMrkzKSldwAv30xEvO2DZF"
-                                                alt="slide_1" loading="lazy" />
-                                        </div>
+                                </div>
+                                <ul class="giaithuongp">
+                                    <li><strong>09</strong> giải khuyến khích: 2.000.000 VNĐ</li>
+                                </ul>
+                            </div>
+                            <div style="height: 300px;width: 3px;background-color: var(--color-yellow);margin:0 16px ;"
+                                id="fotmb">
+                            </div>
+                            <div style="flex: 1;">
+                                <div class="giaithuong v" style="width: 100%;">
+                                    <div
+                                        style="display: flex;flex-direction: column;align-items: center;padding: 16px;">
+                                        <span id="cdtmb">*Giải thưởng dành cho bảng C* Đặc Biệt</span>
+                                        <span style="font-size: 32px;"> <strong style="font-size: 34px;">01</strong>
+                                            Giải
+                                            Đặc Biệt</span>
+                                        <p class="chuthichall">- Tổng giá trị giải thưởng -</p>
+                                        <h3 style="font-size: 34px">120.000.000 VNĐ</h3>
+                                        <p style="text-align: justify;padding: 20px 0;">Cụ thể là 01 Robot AI hình người
+                                            Yanshee (trị giá
+                                            120.000.000 VNĐ) kèm Cúp vô địch, Kỷ
+                                            niệm chương (xác nhận đội thi, đơn vị) và quà tặng từ BTC và nhà tài trợ.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+        <div class="vam_wrap" style="padding: 30px 0;">
+            <div class="col-lg-12" style="padding: 0 10px;">
+                <div style="height: 100%;border: 3px solid var(--color-yellow);padding: 30px;" class="glowing-border">
+                    <p>- Ngoài các giải ở các vòng còn có thêm các giải tiềm năng được quà tặng từ BTC và nhà tài trợ.
+                    </p>
+                    <p>- Ở vòng sơ loại, các giải có thêm các phần quà tặng từ BTC và nhà tài trợ.</p>
+                    <p>- Ở vòng chung kết, các giải có thêm kỷ niệm chương và các phần quà tặng từ BTC và nhà tài trợ.
+                        Đối
+                        với
+                        giải nhất sẽ được tặng kèm cúp vô địch.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="timeline" style="padding: 50px 0">
+        <div class="vam_wrap">
+            <img id="timeline_img" style="width: 100%;"
+                src="https://lh3.googleusercontent.com/d/1l8htyWTHx6iGkslHn0QJjbdm7RoFkVJ1" alt="">
+        </div>
+    </section>
+    <section id="c661412b2" data-scroll-section>
+        <div class="c661412b2 vam_wrap2">
+            <div class="row c661412b2-wrap">
 
-                    <div class="sinhnhat-s2b-content text-justify flex flex-col justify-center items-center w-1/2">
-                        <p>
-                            Với mong muốn tạo ra sân chơi khoa học và công nghệ hướng đến mục tiêu thực làm - thực học
-                            dành cho học sinh/sinh viên, BTC phát động cuộc thi “ROBO GENIUS 2024” với chủ đề “Khám phá
-                            AI” trên toàn quốc. Thông qua cuộc thi, trên tinh thần của giáo dục STEAM và tiến bộ của
-                            công nghệ AI, học sinh sẽ trực tiếp thiết kế sáng tạo các mô hình AI theo yêu cầu của BTC.
-                        </p>
+                <div class="col-lg-6 c661412b2-left">
+                    <div class="c661412b2-contents">
+                        <div class="c661412b2-items-wrap">
+                            <div class="col-lg-12 c661412b2-title">
+                                <span>Thời gian đăng ký</span>
+                                <h1>Thời gian đăng ký còn lại</h1>
+                            </div>
+                            <div id="countdown" class="time_clock">
+                                <div id="days">00</div>
+                                <div id="hours">00</div>
+                                <div id="minutes">00</div>
+                                <div id="seconds">00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c661412b2-posi-ab">
+                        <div class="c661412b2-posi-ab_bg"></div>
+                        <img class="c661412b2-posi-ab_img"
+                            src="https://lh3.googleusercontent.com/d/1ePDLxG8CfG7oICcJb_k4pQOMAaJxgqJU">
+                    </div>
+                </div>
+                <div class="col-lg-6 c661412b2-right">
+                    <div class="c661412b2-posi-ab">
+                        <img src="https://lh3.googleusercontent.com/d/1ePDLxG8CfG7oICcJb_k4pQOMAaJxgqJU" alt="">
+                        <div class="c661412b2-posi-ab_bg"></div>
+                    </div>
+                    <div class="c661412b2-video">
+                        <i id="c661412b2-iframe_click" class="bi bi-play-circle-fill"></i>
                     </div>
                 </div>
             </div>
-        </section>
-        <!--<section id="image" class="slider-container">
-
-            <div class="slider-images">
-                <div class="slider-img">
-                    <img src="https://lh3.googleusercontent.com/d/10yD1C0_LUYAeiEcLWq57E6Ss2_wt3Vs4" alt="1" />
-                    <h1>Mike</h1>
-                    <div class="details">
-                        <h2>Mike</h2>
-                        <p>web3 Developer</p>
-                    </div>
-                </div>
-                <div class="slider-img">
-                    <img src="https://lh3.googleusercontent.com/d/10yD1C0_LUYAeiEcLWq57E6Ss2_wt3Vs4" alt="2" />
-                    <h1>samite</h1>
-                    <div class="details">
-                        <h2>samite</h2>
-                        <p>wordpress Developer</p>
-                    </div>
-                </div>
-                <div class="slider-img">
-                    <img src="https://lh3.googleusercontent.com/d/10yD1C0_LUYAeiEcLWq57E6Ss2_wt3Vs4" alt="3" />
-                    <h1>hashi</h1>
-                    <div class="details">
-                        <h2>hashi</h2>
-                        <p>java Developer</p>
-                    </div>
-                </div>
-                <div class="slider-img active">
-                    <img src="https://lh3.googleusercontent.com/d/10yD1C0_LUYAeiEcLWq57E6Ss2_wt3Vs4" alt="4" />
-                    <h1>kaity</h1>
-                    <div class="details">
-                        <h2>kaity</h2>
-                        <p>web Developer</p>
-                    </div>
-                </div>
-                <div class="slider-img">
-                    <img src="https://lh3.googleusercontent.com/d/10yD1C0_LUYAeiEcLWq57E6Ss2_wt3Vs4" alt="5" />
-                    <h1>lauren</h1>
-                    <div class="details">
-                        <h2>lauren</h2>
-                        <p>php Developer</p>
-                    </div>
-                </div>
-                <div class="slider-img">
-                    <img src="https://lh3.googleusercontent.com/d/10yD1C0_LUYAeiEcLWq57E6Ss2_wt3Vs4" alt="6" />
-                    <h1>ryan</h1>
-                    <div class="details">
-                        <h2>ryan</h2>
-                        <p>seo Developer</p>
-                    </div>
-                </div>
-                <div class="slider-img">
-                    <img src="https://lh3.googleusercontent.com/d/10yD1C0_LUYAeiEcLWq57E6Ss2_wt3Vs4" alt="7" />
-                    <h1>dakes</h1>
-                    <div class="details">
-                        <h2>dakes</h2>
-                        <p>sql Developer</p>
-                    </div>
-                </div>
+            <div class="c661412b2-background_click" style="display: none;"></div>
+            <div class="c661412b2-iframe_click" style="display: none;"></div>
+        </div>
+    </section>
+    <section id="doitac" style="padding: 50px 0 ;">
+        <div class="vam_wrap2">
+            <h3 class="title-non" style="text-align: center;color: var(--color-text);padding-top: 40px;">Đơn vị chỉ đạo
+            </h3>
+            <div id="chidao_load" style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;">
             </div>
-        </section>-->
-    </div>
-
+        </div>
+        <div class="vam_wrap2">
+            <h3 class="title-non" style="text-align: center;color: var(--color-text);padding-top: 40px;">Đơn vị đồng
+                hành
+                và tài trợ</h3>
+            <div id="donghanh_load"
+                style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;"></div>
+        </div>
+        <div class="vam_wrap2">
+            <h3 class="title-non" style="text-align: center;color: var(--color-text);padding-top: 40px;">Đơn vị tổ chức
+                và đồng tổ
+                chức</h3>
+            <div id="tochuc_load" style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;">
+            </div>
+        </div>
+        <div class="vam_wrap2">
+            <h3 class="title-non" style="text-align: center;color: var(--color-text);padding-top: 40px;">Đơn vị truyền
+                thông
+            </h3>
+            <div id="truyenthong_load"
+                style="padding: 50px;display: flex;flex-wrap: wrap;gap: .6%;justify-content: center;"></div>
+        </div>
+    </section>
     <section id="question">
         <div class="vam_wrap2" id="question_load">
             <h3 class="vam_title">
@@ -553,12 +713,12 @@
             <div
                 style="width: 2px;background-color: white;height: 90%;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
             </div>-->
-            <img
+            <img style="height: 100%; width: auto;"
                 src="https://edustorge.ubtrobot.com/ucode-new-website/ubt-competition-official-website/v1.5.2/cdn-statics/img/footer-1.0afcd93.png">
         </div>
         <div class="vam_wrap2 footer_wrap" style="color: white;padding: 50px 0;">
-            <div style="flex: .6;">
-                <img src="https://lh3.googleusercontent.com/d/1geSRPy5LX4ygeNcbOPZK1CIefhyHVIPQ" alt="">
+            <div style="flex: .6;" id="ft_logo-wrap">
+                <img id="ft_logo" src="https://lh3.googleusercontent.com/d/1geSRPy5LX4ygeNcbOPZK1CIefhyHVIPQ" alt="">
                 <div style="display: flex;gap: 16px;justify-content: center;padding: 30px 0;">
                     <a style="padding: 15px;
     aspect-ratio: 1 / 1;
@@ -597,8 +757,8 @@
 
             </div>
             <div id="load_about">
-                <h2>About Robo G</h2>
-                <p>Chào mừng bạn đến với cuộc thi ROBO G 2024 “Khám phá AI” BẢNG A do IPPG & UBTECH phối hợp tổ chức.
+                <h2>Về Cuộc Thi Robo G</h2>
+                <p>Chào mừng bạn đến với cuộc thi ROBO G 2024 “Khám phá AI” do IPPG & UBTECH phối hợp tổ chức.
                     Nhằm phát huy tinh thần đổi mới sáng tạo trong phương pháp học của học sinh phổ thông và ứng dụng
                     các kiến thức, kỹ năng về Lập trình, Công nghệ Robot và Trí tuệ nhân tạo đồng thời tạo sân chơi hữu
                     ích, thú vị cho các bạn học sinh và nhà trường, từ đó tiếp thêm động lực để cổ vũ cho sự sáng tạo,
@@ -606,11 +766,19 @@
                 </p>
             </div>
             <div>
-                <h2>THÔNG TIN LIÊN HỆ</h2>
-                <p>Fanpage: UBTECH AI & Robotics Việt Nam.</p>
-                <p>Email: RoboG@ipptech.com.vn.</p>
-                <p>Phone: 0915 594 103 ( Hotline: UBTECH Việt Nam ).</p>
-                <div style="display: flex;gap: 16px;padding: 10px;background-color: white;">
+                <h2>Thông Tin Liên Hệ</h2>
+                <p style="display: flex;gap: 10px;"><i style="font-size: 12px !important;"
+                        class="bi bi-facebook"></i>Fanpage:
+                    UBTECH AI & Robotics Việt
+                    Nam.</p>
+                <p style="display: flex;gap: 10px;"><i style="font-size: 12px !important;"
+                        class="bi bi-envelope-fill"></i>Email:
+                    RoboG@ipptech.com.vn.</p>
+                <p style="display: flex;gap: 10px;"><i style="font-size: 12px !important;"
+                        class="bi bi-telephone-fill"></i>Phone:
+                    0915 594 103 ( Hotline:
+                    UBTECH Việt Nam ).</p>
+                <div style="display: flex;gap: 16px;padding: 10px;background-color: white;width: 80%;margin-top: 20px;">
                     <div style="flex: 1;"><img
                             src="https://lh3.googleusercontent.com/d/1UsHT-SsPNDizafj3sBICKJZXpvyY5zCm"></div>
                     <div style="flex: 1;">
@@ -624,8 +792,8 @@
 
         </div>
         <div class="bottom_ft">
-            <p style="margin: 0;padding: 0 16px;">@2024 Được tổ chức bởi UBTECH và IPPTECH để tạo ra cuộc thi ( ROBO G
-                2024 ) Đấu trường
+            <p style="margin: 0;padding: 0 16px;">@2024 Được tổ chức bởi UBTECH và IPPTECH để tạo ra cuộc thi (ROBO G
+                2024) Đấu trường
                 AI đầu tiên sử dụng robot hình người.</p>
         </div>
     </section>
