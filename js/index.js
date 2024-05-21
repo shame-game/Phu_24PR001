@@ -43,11 +43,9 @@ function More() {
             wSheetName: 'main',
         })
         .then((rows) => {
-            console.log(rows);
+            // lấy bảng điểm 
             document.querySelectorAll('.showpoin').forEach((t) => {
-                console.log(t);
                 t.addEventListener("click", function () {
-                    console.log(t);
                     if (t.getAttribute('index') == '1') {
                         document.querySelector('#pdfViewer').style.display = "block";
                         const pdfUrl = rows[0]['Bảng A']; // Thay đổi đường dẫn đến tệp PDF của bạn tại đây
@@ -96,6 +94,71 @@ function More() {
                     else if (t.getAttribute('index') == '4') {
                         document.querySelector('#pdfViewer').style.display = "block";
                         const pdfUrl = rows[0]['Bảng C* đặc biệt']; // Thay đổi đường dẫn đến tệp PDF của bạn tại đây
+                        const pdfEmbed = `<embed src="${pdfUrl}" type="application/pdf" width="100%" height="100%">
+                <div id="out-pdfViewer"><i class="bi bi-box-arrow-left"></i>
+                <p>Thoát</p>
+            </div>`;
+                        document.querySelector('#pdfViewer-wrap').innerHTML = pdfEmbed;
+                        document.querySelector('body').setAttribute('style', 'overflow:hidden');
+                        document.querySelector('#out-pdfViewer').onclick = () => {
+                            document.querySelector('#pdfViewer').style.display = "none";
+                            document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                            document.querySelector('body').setAttribute('style', 'overflow:auto');
+                        }
+                    }
+                });
+            })
+            // lấy chi tiết đề
+            document.querySelectorAll('.showdetail').forEach((t) => {
+                t.addEventListener("click", function () {
+                    if (t.getAttribute('index') == '1') {
+                        document.querySelector('#pdfViewer').style.display = "block";
+                        const pdfUrl = rows[1]['Bảng A']; // Thay đổi đường dẫn đến tệp PDF của bạn tại đây
+                        const pdfEmbed = `<embed src="${pdfUrl}" type="application/pdf" width="100%" height="100%">
+                <div id="out-pdfViewer"><i class="bi bi-box-arrow-left"></i>
+                <p>Thoát</p>
+            </div>`;
+                        document.querySelector('#pdfViewer-wrap').innerHTML = pdfEmbed;
+                        document.querySelector('body').setAttribute('style', 'overflow:hidden');
+                        document.querySelector('#out-pdfViewer').onclick = () => {
+                            document.querySelector('#pdfViewer').style.display = "none";
+                            document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                            document.querySelector('body').setAttribute('style', 'overflow:auto');
+                        }
+                    }
+                    else if (t.getAttribute('index') == '2') {
+                        document.querySelector('#pdfViewer').style.display = "block";
+                        const pdfUrl = rows[1]['Bảng B']; // Thay đổi đường dẫn đến tệp PDF của bạn tại đây
+                        const pdfEmbed = `<embed src="${pdfUrl}" type="application/pdf" width="100%" height="100%">
+                <div id="out-pdfViewer"><i class="bi bi-box-arrow-left"></i>
+                <p>Thoát</p>
+            </div>`;
+                        document.querySelector('#pdfViewer-wrap').innerHTML = pdfEmbed;
+                        document.querySelector('body').setAttribute('style', 'overflow:hidden');
+                        document.querySelector('#out-pdfViewer').onclick = () => {
+                            document.querySelector('#pdfViewer').style.display = "none";
+                            document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                            document.querySelector('body').setAttribute('style', 'overflow:auto');
+                        }
+                    }
+                    else if (t.getAttribute('index') == '3') {
+                        document.querySelector('#pdfViewer').style.display = "block";
+                        const pdfUrl = rows[1]['Bảng C']; // Thay đổi đường dẫn đến tệp PDF của bạn tại đây
+                        const pdfEmbed = `<embed src="${pdfUrl}" type="application/pdf" width="100%" height="100%">
+                <div id="out-pdfViewer"><i class="bi bi-box-arrow-left"></i>
+                <p>Thoát</p>
+            </div>`;
+                        document.querySelector('#pdfViewer-wrap').innerHTML = pdfEmbed;
+                        document.querySelector('body').setAttribute('style', 'overflow:hidden');
+                        document.querySelector('#out-pdfViewer').onclick = () => {
+                            document.querySelector('#pdfViewer').style.display = "none";
+                            document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                            document.querySelector('body').setAttribute('style', 'overflow:auto');
+                        }
+                    }
+                    else if (t.getAttribute('index') == '4') {
+                        document.querySelector('#pdfViewer').style.display = "block";
+                        const pdfUrl = rows[1]['Bảng C* đặc biệt']; // Thay đổi đường dẫn đến tệp PDF của bạn tại đây
                         const pdfEmbed = `<embed src="${pdfUrl}" type="application/pdf" width="100%" height="100%">
                 <div id="out-pdfViewer"><i class="bi bi-box-arrow-left"></i>
                 <p>Thoát</p>
@@ -193,7 +256,7 @@ vams('.dkthamgia').forEach((t) => {
                     target="_blank">Đăng
                     ký</a></button>
             <button class="showpoin buttonvam" index="1">Xem bảng điểm</button>
-            <!--<button class="buttonvam showdetail" index='1'>Tải đề thi chi tiết</button>-->
+            <button class="buttonvam showdetail" index='1'>Tải đề thi chi tiết</button>
         </div>`
             More()
         }
@@ -251,7 +314,7 @@ vams('.dkthamgia').forEach((t) => {
                                         target="_blank">Đăng
                                         ký</a></button>
                                 <button class="showpoin buttonvam" index="2">Xem bảng điểm</button>
-                                <!-- <button class="buttonvam showdetail" index='2'>Tải đề thi chi tiết</button>-->
+                                <button class="buttonvam showdetail" index='2'>Tải đề thi chi tiết</button>
                             </div>`
             More()
         }
@@ -310,7 +373,7 @@ vams('.dkthamgia').forEach((t) => {
                             target="_blank">Đăng
                             ký</a></button>
                     <button class="showpoin buttonvam" index="3">Xem bảng điểm</button>
-                    <!-- <button class="buttonvam showdetail" index='3'>Tải đề thi chi tiết</button>-->
+                    <button class="buttonvam showdetail" index='3'>Tải đề thi chi tiết</button>
                 </div>`
 
             More()
@@ -369,7 +432,7 @@ vams('.dkthamgia').forEach((t) => {
                     <button class="buttonvam"><a href="https://forms.gle/xyQ8WACFfnGqcQTn9"
                             target="_blank">Đăng
                             ký</a></button>
-                            <!-- <button class="buttonvam showdetail" index='4'>Tải đề thi chi tiết</button> -->
+                    <!--<button class="buttonvam showdetail" index='4'>Tải đề thi chi tiết</button>-->
                 </div>`
             More()
         }
