@@ -2787,7 +2787,22 @@ body {
     align-items: center;
 }
 
+#imgugot::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background-image: url(https://lh3.googleusercontent.com/d/1P_xz5NBuUulqfxjIFIfGLlWEKAmYAsVL);
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background-size: cover;
+}
+
 @media (max-width: 982px) {
+    .hiddenlogo {
+        display: none;
+    }
+
     #outpopup {
         display: flex;
     }
