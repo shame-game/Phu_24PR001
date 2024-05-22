@@ -543,7 +543,7 @@ const intromain =
                                                                                                     <img src="https://lh3.googleusercontent.com/d/1PE-EtRbgsb7dBK3iPHG6INK8GPE4r1AZ">
                                                                                                 </div>
                                                                                                 <div class="intrologo-hiden">
-                                                                                                    <h2>Robo G</h2>
+                                                                                                    <h2>ROBO G</h2>
                                                                                                     <p> Việt Nam </p><span>2024</span>
                                                                                                 </div>
                                                                                             </div>
@@ -574,13 +574,14 @@ window.addEventListener("scroll", function (event) {
         position: sticky;`)
         document.querySelector('#header_logo').src = 'https://lh3.googleusercontent.com/d/1UsHT-SsPNDizafj3sBICKJZXpvyY5zCm'
         document.querySelector('.header1412a1-list').setAttribute('style', 'color:var(--color-text)')
-
+        document.querySelector('.s').classList.add('acc')
 
     } else {
         document.querySelector('#header1412a1').setAttribute('style', `height: 0;
         position: relative;`)
         document.querySelector('#header_logo').src = 'https://lh3.googleusercontent.com/d/1PE-EtRbgsb7dBK3iPHG6INK8GPE4r1AZ'
         document.querySelector('.header1412a1-list').setAttribute('style', 'color:white')
+        document.querySelector('.s').classList.remove('acc')
     }
 });
 
@@ -763,7 +764,7 @@ fetchSheet
         document.querySelector('#organizational_img1>img').src = rows[0]['Hình ảnh']
         document.querySelector('#organizational_content1').innerHTML += r
     });
-
+/*
 fetchSheet
     .fetch({
         gSheetId: '1w0ZWTWCwLovFMRhTHiYAS9yst4qptwjLRcI2GncXUjI',
@@ -808,7 +809,7 @@ fetchSheet
         document.querySelector('#tochuc_load').innerHTML += y
         document.querySelector('#truyenthong_load').innerHTML += u
         document.querySelector('#tochucc_load').innerHTML += i
-    });
+    });*/
 
 
 fetchSheet
