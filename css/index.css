@@ -2787,6 +2787,10 @@ body {
     align-items: center;
 }
 
+#imgugot {
+    overflow: hidden;
+}
+
 #imgugot::before {
     content: '';
     position: absolute;
