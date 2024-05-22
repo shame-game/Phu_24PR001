@@ -526,7 +526,7 @@ vams('.device_box-nav_con').forEach((t) => {
 vam('#c661412b2-iframe_click').addEventListener('click', () => {
     vam('.c661412b2-background_click').setAttribute('style', 'display:flex')
     vam('.c661412b2-iframe_click').setAttribute('style', 'display:flex')
-    var c661412b2Iframe = `<iframe class="c661412b2-iframe" src="https://drive.google.com/file/d/1HTbglh8_g1sfChlO7t8SPjmilkygdseD/preview" frameborder="0"
+    var c661412b2Iframe = `<iframe class="c661412b2-iframe" src="https://drive.google.com/file/d/1Sjr9qmwAUPVEG-_bcPlLBX1vN1xKLgXm/preview" frameborder="0"
                                                                                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
     vam('.c661412b2-iframe_click').innerHTML = c661412b2Iframe
     vam('.c661412b2-background_click').addEventListener('click', () => {
