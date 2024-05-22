@@ -6,7 +6,20 @@ const loginBtn = document.getElementById('login');
 const vam = document.querySelector.bind(document);
 const vams = document.querySelectorAll.bind(document);
 function downloadZip() {
-    // Đường dẫn của file zip bạn muốn tải
+    document.querySelector('#pdfViewer').style.display = "block";
+    const pdfUrl = 'https://drive.google.com/file/d/1-J2AOnjD4pt_XT2IBExcD_LSxm9PfY_G/preview'; // Thay đổi đường dẫn đến tệp PDF của bạn tại đây
+    const pdfEmbed = `<embed src="${pdfUrl}" type="application/pdf" width="100%" height="100%">
+                <div id="out-pdfViewer"><i class="bi bi-box-arrow-left"></i>
+                <p>Thoát</p>
+            </div>`;
+    document.querySelector('#pdfViewer-wrap').innerHTML = pdfEmbed;
+    document.querySelector('body').setAttribute('style', 'overflow:hidden');
+    document.querySelector('#out-pdfViewer').onclick = () => {
+        document.querySelector('#pdfViewer').style.display = "none";
+        document.querySelector('#pdfViewer-wrap').innerHTML = ''
+        document.querySelector('body').setAttribute('style', 'overflow:auto');
+    }
+    /*
     var zipUrl = '../The-le-thi-dau-Robo-G-2024-15052024-_1_.pdf';
 
     // Tạo một yêu cầu HTTP mới
@@ -32,7 +45,7 @@ function downloadZip() {
     };
 
     // Bắt đầu yêu cầu
-    xhr.send();
+    xhr.send();*/
 }
 
 
@@ -256,7 +269,7 @@ vams('.dkthamgia').forEach((t) => {
                     target="_blank">Đăng
                     ký</a></button>
             <button class="showpoin buttonvam" index="1">Xem bảng điểm</button>
-            <button class="buttonvam showdetail" index='1'>Tải đề thi chi tiết</button>
+            <button class="buttonvam showdetail" index='1'>Đề thi chi tiết</button>
         </div>`
             More()
         }
@@ -314,7 +327,7 @@ vams('.dkthamgia').forEach((t) => {
                                         target="_blank">Đăng
                                         ký</a></button>
                                 <button class="showpoin buttonvam" index="2">Xem bảng điểm</button>
-                                <button class="buttonvam showdetail" index='2'>Tải đề thi chi tiết</button>
+                                <button class="buttonvam showdetail" index='2'>Đề thi chi tiết</button>
                             </div>`
             More()
         }
@@ -373,7 +386,7 @@ vams('.dkthamgia').forEach((t) => {
                             target="_blank">Đăng
                             ký</a></button>
                     <button class="showpoin buttonvam" index="3">Xem bảng điểm</button>
-                    <button class="buttonvam showdetail" index='3'>Tải đề thi chi tiết</button>
+                    <button class="buttonvam showdetail" index='3'>Đề thi chi tiết</button>
                 </div>`
 
             More()
@@ -432,7 +445,7 @@ vams('.dkthamgia').forEach((t) => {
                     <button class="buttonvam"><a href="https://forms.gle/xyQ8WACFfnGqcQTn9"
                             target="_blank">Đăng
                             ký</a></button>
-                    <!--<button class="buttonvam showdetail" index='4'>Tải đề thi chi tiết</button>-->
+                    <!--<button class="buttonvam showdetail" index='4'>Đề thi chi tiết</button>-->
                 </div>`
             More()
         }
@@ -446,7 +459,7 @@ vams('.device_box-nav_con').forEach((t) => {
             t.classList.add('acc')
             if (t.getAttribute('index') == '1') {
                 vam('.contentdevice').innerHTML =
-                    `<h1>Ở vòng sơ loại</h1>
+                    `<h1>Ở vòng sơ loại bảng A, B, C/C*</h1>
                 <div style="display: flex;align-items: start;padding: 10px 0;">
                     <div class="iconvam"></div>
                     <p style="flex: 1;">Các đội thi có thể sử dụng một hoặc nhiều phần cứng/phần
