@@ -596,7 +596,7 @@ window.onscroll = () => {
 
 let w = screen.width
 if (w < 982) {
-    vam('#timeline_img').src = 'https://lh3.googleusercontent.com/d/10wQqbjrqKY8C6G__6Cp6F_4mEakqkQV8'
+    vam('#timeline_img').src = 'https://lh3.googleusercontent.com/d/1k7Vj1PoESNNB9SCrYqliJxbX1hlNdON9'
 }
 
 fetchSheet
