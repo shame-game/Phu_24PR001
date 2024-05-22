@@ -2791,6 +2791,7 @@ body {
     overflow: hidden;
 }
 
+
 #imgugot::before {
     content: '';
     position: absolute;
@@ -2800,6 +2801,14 @@ body {
     width: 100%;
     height: 100px;
     background-size: cover;
+}
+
+#prize h3 {
+    text-align: center;
+}
+
+#chunketmb {
+    width: 100%;
 }
 
 @media (max-width: 982px) {
