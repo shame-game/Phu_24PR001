@@ -188,8 +188,70 @@ function More() {
             })
         });
 }
+vams('.dkthamgia').forEach((t) => {
+    t.onclick = () => {
+        vam('#popup').setAttribute('style', 'display:block')
+        vam('.background').onclick = () => {
+            vam('#popup').setAttribute('style', 'display:none')
+            vam('body').setAttribute('style', 'overflow:auto')
+        }
+        vam('#outpopup').onclick = () => {
+            vam('#popup').setAttribute('style', 'display:none')
+            vam('body').setAttribute('style', 'overflow:auto')
+        }
+        vam('body').setAttribute('style', 'overflow:hidden')
+        if (t.getAttribute('index') == '1') {
+            vam('#dethitenbang').innerText = 'ĐỀ THI BẢNG A (Đang cập nhập)'
+            vam('#chungket').innerHTML =
+                `<div style="padding-top: 50px;display: flex;gap:16px;justify-content: center;">
+            <button class="buttonvam"><a href="https://forms.gle/pYkZiaFH3EpxEJtD7"
+                    target="_blank">Đăng
+                    ký</a></button>
+            <button class="showpoin buttonvam" index="1">Xem bảng điểm</button>
+            <!-- <button class="buttonvam showdetail" index='1'>Đề thi chi tiết</button> -->
+        </div>`
+            More()
+        }
+        else if (t.getAttribute('index') == '2') {
+            vam('#dethitenbang').innerText = 'ĐỀ THI BẢNG B (Đang cập nhập)'
+            vam('#chungket').innerHTML =
+                `
+                        <div style="padding-top: 50px;display: flex;gap:16px;justify-content: center;">
+                                <button class="buttonvam"><a href="https://forms.gle/ko3fduTh8UtBVM1e6"
+                                        target="_blank">Đăng
+                                        ký</a></button>
+                                <button class="showpoin buttonvam" index="2">Xem bảng điểm</button>
+                                <!--  <button class="buttonvam showdetail" index='2'>Đề thi chi tiết</button> -->
+                            </div>`
+            More()
+        }
+        else if (t.getAttribute('index') == '3') {
+            vam('#dethitenbang').innerText = 'ĐỀ THI BẢNG C (Đang cập nhập)'
+            vam('#chungket').innerHTML =
+                `<div style="padding-top: 50px;display: flex;gap:16px;justify-content: center;">
+                    <button class="buttonvam"><a href="https://forms.gle/5DcdVTHQtXm6ttay8"
+                            target="_blank">Đăng
+                            ký</a></button>
+                    <button class="showpoin buttonvam" index="3">Xem bảng điểm</button>
+                   <!-- <button class="buttonvam showdetail" index='3'>Đề thi chi tiết</button>-->
+                </div>`
 
-
+            More()
+        }
+        else if (t.getAttribute('index') == '4') {
+            vam('#dethitenbang').innerText = 'ĐỀ THI BẢNG C* ĐẶC BIỆT (Đang cập nhập)'
+            vam('#chungket').innerHTML =
+                `<div style="padding-top: 50px;display: flex;gap:16px;justify-content: center;">
+                    <button class="buttonvam"><a href="https://forms.gle/xyQ8WACFfnGqcQTn9"
+                            target="_blank">Đăng
+                            ký</a></button>
+                            <!-- <button class="buttonvam showdetail" index='4'>Tải đề thi chi tiết</button> -->
+                </div>`
+            More()
+        }
+    }
+})
+/*
 vams('.dkthamgia').forEach((t) => {
     t.onclick = () => {
         vam('#popup').setAttribute('style', 'display:block')
@@ -450,7 +512,7 @@ vams('.dkthamgia').forEach((t) => {
             More()
         }
     }
-})
+})*/
 
 vams('.device_box-nav_con').forEach((t) => {
     t.onclick = () => {
@@ -479,7 +541,7 @@ vams('.device_box-nav_con').forEach((t) => {
                     <p style="flex: 1;">Về nguyên tắc, không có hạn chế nào đối với việc sử dụng các
                         thiết bị kết hợp
                         với các bộ giáo cụ AI Robotics của UBTECH, ngoài những thiết bị gây ô nhiễm môi
-                        trường và có hại cho sức khỏe hoặc an toàn xã hội.</p>
+                         trường và có hại cho sức khỏe hoặc an toàn xã hội.</p>
                 </div>`
                 vam('.device_box-img>img').src = 'https://lh3.googleusercontent.com/d/1bvUZ4Is10OCRN9zzO1zO_t4-xvk1Omnm'
             }
