@@ -904,6 +904,10 @@ body {
     justify-content: center;
 }
 
+.introd-vam_i i::before {
+    font-size: 24px;
+}
+
 .introd-vam_boxwrap h1 {
     font-size: 22px;
     color: rgb(52, 71, 103);
@@ -1605,6 +1609,8 @@ body {
     min-height: 500px;
 }
 
+
+
 .device_box-content-wrap {
     width: calc(100% - 300px);
 }
@@ -1615,7 +1621,7 @@ body {
     width: 300px;
     right: -14px;
     height: calc(100% + 15px);
-    top: -14px;
+    top: -16px;
     width: 300px;
     clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
     background-color: var(--color-text);
@@ -1663,19 +1669,26 @@ body {
     overflow: hidden;
     clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: center;
+    background-color: white;
 }
 
 .device_box-img>img {
-    height: 70%;
     object-fit: cover;
     object-position: center;
-    width: auto;
+    height: 100%;
 }
 
 /* timeline */
 
+
+#itro-spanns {
+    color: white;
+    padding: 20px 0;
+    font-size: 22px;
+    font-weight: 900;
+}
 
 #timeline_load {
     display: flex;
@@ -2791,6 +2804,20 @@ body {
     overflow: hidden;
 }
 
+#loadcontent h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 16px 0;
+    color: var(--color-h1);
+}
+
+#loadcontent p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-p);
+    text-align: justify;
+    width: 98%;
+}
 
 #imgugot::before {
     content: '';
@@ -2914,6 +2941,10 @@ body {
 }
 
 @media (max-width: 640px) {
+    #prive_mb {
+        padding-bottom: 150px !important;
+    }
+
     .scroll-thongdiep_title>h1 {
         font-size: 24px;
     }
