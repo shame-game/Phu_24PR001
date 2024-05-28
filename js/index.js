@@ -626,20 +626,27 @@ fetchSheet
         let i = 1
         rows.forEach((t) => {
             if (t.ContentAll != '') {
-                items +=
-                    `
-                <li>
-                    <p><span style="color: var(--color-main);font-weight: 600;">${i}. </span>
-                    ${t.ContentAll}</p>
-                </li>
-            `
+                if (i == 1) {
+                    items +=
+                        `<li>
+                        <p style="font-weight: 600"><span style="color: var(--color-main);font-weight: 600;">${i}. </span>${t.ContentAll}</p>
+                    </li>`
+                } else {
+                    items +=
+                        `<li>
+                        <p><span style="color: var(--color-main);font-weight: 600;">${i}. </span>${t.ContentAll}</p>
+                    </li>`
+                }
             }
-            vam(`#dieukien${i}`).innerHTML +=
-                `<p>${t['Cotent']}</p>`
+            if (t.Cotent != '') {
+                vams(`#dieukien${i}`).forEach((c) => {
+                    c.innerHTML += `<p>${t.Cotent}</p>`
+                })
+            }
             i++
         })
-        vam('#loaddieukienall').innerHTML = items
 
+        vam('#loaddieukienall').innerHTML = items
     });
 
 
