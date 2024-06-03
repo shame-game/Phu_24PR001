@@ -1682,7 +1682,13 @@ body {
 }
 
 /* timeline */
+.donvi_load-wrap {
+    transition: all .3s linear;
+}
 
+.donvi_load-wrap:hover {
+    transform: scale(1.05);
+}
 
 #itro-spanns {
     color: white;
