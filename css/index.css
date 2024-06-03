@@ -2846,6 +2846,10 @@ body {
 }
 
 @media (max-width: 982px) {
+    #itro-spanns {
+        font-size: 18px;
+    }
+
     .hiddenlogo {
         display: none;
     }
@@ -2932,6 +2936,8 @@ body {
 }
 
 @media (max-width:778px) {
+
+
     .device_box-nav {
         width: 100%;
         display: flex;
@@ -2948,6 +2954,14 @@ body {
 }
 
 @media (max-width: 640px) {
+    #header_logo {
+        display: none;
+    }
+
+    #intro_logo {
+        width: 40%;
+    }
+
     #prive_mb {
         padding-bottom: 150px !important;
     }
@@ -2991,6 +3005,11 @@ body {
         flex-direction: column;
     }
 
+    #itro-spanns {
+        font-size: 14px;
+        text-align: center;
+    }
+
     .contentdevice p {
         font-size: 16px;
     }
@@ -3026,6 +3045,11 @@ body {
 }
 
 @media (max-width:400px) {
+    #intro_title {
+        font-size: 20px;
+        text-align: center;
+    }
+
     .giaithuong h3 {
         font-size: 12px !important;
     }
@@ -3036,5 +3060,23 @@ body {
 
     .chuthichall {
         font-size: 12px;
+    }
+
+    #intro_content {
+        font-size: 13px;
+        text-align: justify;
+    }
+
+    #intro_anim {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        width: 90%;
+    }
+
+    #intro .vam_button1 {
+        font-size: 14px;
+        text-align: center;
+        justify-content: center;
     }
 }
