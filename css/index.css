@@ -3079,4 +3079,8 @@ body {
         text-align: center;
         justify-content: center;
     }
+
+    #intro_logo {
+        width: 60%;
+    }
 }
