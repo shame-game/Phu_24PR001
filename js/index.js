@@ -51,8 +51,9 @@ fetchSheet
                         `<div style="padding-top: 50px;display: flex;gap:16px;justify-content: center;">
                     <button class="buttonvam"><a href="${rows[2]['Bảng A']}"
                     target="_blank">Đăng ký</a></button>
-                    <button class="showpoin buttonvam" index="1">Xem bảng điểm</button>
-                    <button class="buttonvam showdetail" index='1'>Đề thi chi tiết</button>
+                    <button class="showpoinvl buttonvam" index="1">Đề thi và bảng điểm (Vòng loại)</button>
+                    <button class="showpoin buttonvam" index="1">Xem bảng điểm (Chung kết)</button>
+                    <button class="buttonvam showdetail" index='1'>Đề thi chi tiết (Chung kết)</button>
                 </div>`
                     vam('#loadcontent').innerHTML = rows[3]['Bảng A']
                     More()
@@ -65,8 +66,9 @@ fetchSheet
                                 <button class="buttonvam"><a href="${rows[2]['Bảng B']}"
                                         target="_blank">Đăng
                                         ký</a></button>
-                                <button class="showpoin buttonvam" index="2">Xem bảng điểm</button>
-                                <button class="buttonvam showdetail" index='2'>Đề thi chi tiết</button> 
+                                        <button class="showpoinvl buttonvam" index="2">Đề thi và bảng điểm (Vòng loại)</button>
+                                <button class="showpoin buttonvam" index="2">Xem bảng điểm (Chung kết)</button>
+                                <button class="buttonvam showdetail" index='2'>Đề thi chi tiết (Chung kết)</button> 
                             </div>`
                     vam('#loadcontent').innerHTML = rows[3]['Bảng B']
                     More()
@@ -78,8 +80,9 @@ fetchSheet
                     <button class="buttonvam"><a href="${rows[2]['Bảng C']}"
                             target="_blank">Đăng
                             ký</a></button>
-                    <button class="showpoin buttonvam" index="3">Xem bảng điểm</button>
-                    <button class="buttonvam showdetail" index='3'>Đề thi chi tiết</button>
+                            <button class="showpoinvl buttonvam" index="3">Đề thi và bảng điểm (Vòng loại)</button>
+                    <button class="showpoin buttonvam" index="3">Xem bảng điểm (Chung kết)</button>
+                    <button class="buttonvam showdetail" index='3'>Đề thi chi tiết (Chung kết)</button>
                 </div>`
                     vam('#loadcontent').innerHTML = rows[3]['Bảng C']
                     More()
@@ -91,8 +94,9 @@ fetchSheet
                     <button class="buttonvam"><a href="${rows[2]['Bảng C++ đặc biệt']}"
                             target="_blank">Đăng
                             ký</a></button>
-                            <button class="showpoin buttonvam" index="4">Xem bảng điểm</button>
-                            <button class="buttonvam showdetail" index='4'>Đề thi chi tiết</button>
+                            <button class="showpoinvl buttonvam" index="4">Đề thi và bảng điểm (Vòng loại)</button>
+                            <button class="showpoin buttonvam" index="4">Xem bảng điểm (Chung kết)</button>
+                            <button class="buttonvam showdetail" index='4'>Đề thi chi tiết (Chung kết)</button>
                 </div>`
                     vam('#loadcontent').innerHTML = rows[3]['Bảng C++ đặc biệt']
                     More()
@@ -208,6 +212,19 @@ function More() {
                     }
                 });
             })
+            document.querySelectorAll('.showpoinvl').forEach((t) => {
+                t.onclick = () => {
+                    document.querySelector('#pdfViewer').style.display = "block";
+                    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1wXl2-KvY2in5kv_o1faG6UY7ZLu8kJq8/preview')
+                    document.querySelector('body').setAttribute('style', 'overflow:hidden');
+                    document.querySelector('#out-pdfViewer').onclick = () => {
+                        document.querySelector('#pdfViewer').style.display = "none";
+                        document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                        document.querySelector('body').setAttribute('style', 'overflow:auto');
+                    }
+                }
+            })
+
         });
 }
 
