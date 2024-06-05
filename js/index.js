@@ -123,16 +123,7 @@ vam('#Detail_Prize').onclick = () => {
         document.querySelector('body').setAttribute('style', 'overflow:auto');
     }
 }
-vam('#Detail_IF').onclick = () => {
-    document.querySelector('#pdfViewer').style.display = "block";
-    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1NtoJ4I5uvhzSfRvl91iZ7gr0AGaOakuq/preview')
-    document.querySelector('body').setAttribute('style', 'overflow:hidden');
-    document.querySelector('#out-pdfViewer').onclick = () => {
-        document.querySelector('#pdfViewer').style.display = "none";
-        document.querySelector('#pdfViewer-wrap').innerHTML = ''
-        document.querySelector('body').setAttribute('style', 'overflow:auto');
-    }
-}
+
 function More() {
     fetchSheet
         .fetch({
@@ -669,7 +660,13 @@ fetchSheet
                         `<li>
                         <p style="font-weight: 600"><span style="color: var(--color-main);font-weight: 600;">* </span>${t.ContentAll}</p>
                     </li>`
-                } else {
+                } else if (i == 5) {
+                    items +=
+                        `<li>
+                        <p style="font-weight: 600"><span style="color: var(--color-main);font-weight: 600;">** </span>${t.ContentAll}<span id="linkg"> (Xem thêm thông tin tập huấn và trải nghiệm)</span></p>
+                    </li>`
+                }
+                else {
                     items +=
                         `<li>
                         <p><span style="color: var(--color-main);font-weight: 600;">${i - 1}. </span>${t.ContentAll}</p>
@@ -683,8 +680,18 @@ fetchSheet
             }
             i++
         })
-
         vam('#loaddieukienall').innerHTML = items
+        vam('#linkg').onclick = () => {
+            document.querySelector('#pdfViewer').style.display = "block";
+            document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1NtoJ4I5uvhzSfRvl91iZ7gr0AGaOakuq/preview')
+            document.querySelector('body').setAttribute('style', 'overflow:hidden');
+            document.querySelector('#out-pdfViewer').onclick = () => {
+                document.querySelector('#pdfViewer').style.display = "none";
+                document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                document.querySelector('body').setAttribute('style', 'overflow:auto');
+            }
+        }
+
     });
 
 

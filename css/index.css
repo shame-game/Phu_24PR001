@@ -1114,6 +1114,11 @@ body {
 
 }
 
+#linkg {
+    color: var(--color-text);
+    cursor: pointer;
+}
+
 #scroll #scroll_title {
     font-size: 32px;
     color: var(--color-text);
