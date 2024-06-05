@@ -236,7 +236,7 @@ function More() {
             document.querySelectorAll('.showpoinvl').forEach((t) => {
                 t.onclick = () => {
                     document.querySelector('#pdfViewer').style.display = "block";
-                    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1wXl2-KvY2in5kv_o1faG6UY7ZLu8kJq8/preview')
+                    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1Y9I1NPztq1CK3TVj9sCz3YfaYa4Z0SqC/preview')
                     document.querySelector('body').setAttribute('style', 'overflow:hidden');
                     document.querySelector('#out-pdfViewer').onclick = () => {
                         document.querySelector('#pdfViewer').style.display = "none";
@@ -667,12 +667,12 @@ fetchSheet
                 if (i == 1) {
                     items +=
                         `<li>
-                        <p style="font-weight: 600"><span style="color: var(--color-main);font-weight: 600;">${i}. </span>${t.ContentAll}</p>
+                        <p style="font-weight: 600"><span style="color: var(--color-main);font-weight: 600;">* </span>${t.ContentAll}</p>
                     </li>`
                 } else {
                     items +=
                         `<li>
-                        <p><span style="color: var(--color-main);font-weight: 600;">${i}. </span>${t.ContentAll}</p>
+                        <p><span style="color: var(--color-main);font-weight: 600;">${i - 1}. </span>${t.ContentAll}</p>
                     </li>`
                 }
             }
