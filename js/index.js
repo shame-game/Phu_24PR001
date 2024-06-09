@@ -551,7 +551,7 @@ window.onscroll = () => {
 
 let w = screen.width
 if (w < 982) {
-    vam('#timeline_img').src = 'https://lh3.googleusercontent.com/d/1x5wPrSLPGD8AVoTXsDt63lqrnpIVIJJD'
+    vam('#timeline_img').src = 'https://lh3.googleusercontent.com/d/1WtwFk4o_Q3pU3JrLwaFDfz514iq4dV3F'
 }
 
 fetchSheet
@@ -660,7 +660,7 @@ fetchSheet
                         `<li>
                         <p style="font-weight: 600"><span style="color: var(--color-main);font-weight: 600;">* </span>${t.ContentAll}</p>
                     </li>`
-                } else if (i == 5) {
+                } else if (i == 6) {
                     items +=
                         `<li>
                         <p style="font-weight: 600"><span style="color: var(--color-main);font-weight: 600;">** </span>${t.ContentAll}<span id="linkg"> (Xem thêm thông tin tập huấn và trải nghiệm)</span></p>
@@ -788,7 +788,7 @@ fetchSheet
     .then((rows) => {
         vam('#prize_sTitle').innerText = rows[0]['shortTitle']
         vam('#prize_title').innerText = rows[0]['Title']
-        vam('#prize_mContent').innerText = rows[0]['Contentmain']
+        vam('#prize_mContent').innerHTML = rows[0]['Contentmain']
     });
 
 fetchSheet

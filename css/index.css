@@ -3061,10 +3061,39 @@ body {
 }
 
 @media (max-width:400px) {
+    .name-ct {
+        font-size: 24px;
+        padding: 10px;
+    }
+
     #intro_title {
         font-size: 20px;
         text-align: center;
     }
+
+    #chuthichmb>span {
+        font-size: 12px;
+    }
+
+    #d76,
+    #cdtmb {
+        font-size: 12px;
+        text-align: center;
+    }
+
+
+    .p67>strong {
+        font-size: 20px !important;
+    }
+
+    .p67 {
+        font-size: 20px !important;
+    }
+
+    .p67>img {
+        width: 50px !important;
+    }
+
 
     .giaithuong h3 {
         font-size: 12px !important;
