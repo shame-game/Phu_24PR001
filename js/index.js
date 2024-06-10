@@ -287,7 +287,6 @@ window.onload = () => {
 
 window.onscroll = () => {
     var scroll = document.querySelector('#timeline').getClientRects()[0];
-    console.log()
     if (scroll.top < -80) {
         document.querySelectorAll('.dot>div').forEach((t) => {
             t.classList.add('start')
@@ -335,7 +334,6 @@ fetchSheet
         wSheetName: 'intro',
     })
     .then((rows) => {
-        console.log(rows[0]['Nội dung']);
         document.querySelector('#intro_content').innerText = rows[0]['Nội dung']
         document.querySelector('#intro_title').innerText = rows[0]['Tiêu đề']
         document.querySelector('#intro_background').src = rows[0]['background']
