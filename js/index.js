@@ -422,7 +422,7 @@ fetchSheet
                 else if (i == 5) {
                     items +=
                         `<li>
-                        <p style="font-weight: 600; color:#c30000"><span style="color: var(--color-main);font-weight: 600;">4. </span>${t.ContentAll}<span id="linkg"> (Xem thêm thông tin tập huấn và trải nghiệm)</span></p>
+                        <p style="font-weight: 600; color:#c30000"><span style="color: var(--color-main);font-weight: 600;">4. </span>${t.ContentAll}</p>
                     </li>`
                 }
                 else {
