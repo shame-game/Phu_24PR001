@@ -27,6 +27,7 @@ function downloadZip() {
         })
 
 }
+/*
 fetchSheet
     .fetch({
         gSheetId: '1w0ZWTWCwLovFMRhTHiYAS9yst4qptwjLRcI2GncXUjI',
@@ -104,6 +105,7 @@ fetchSheet
             }
         })
     })
+        */
 function Loadlink(g) {
     let pdfEmbed =
         `<embed src="${g}" type="application/pdf" width="100%" height="100%">
@@ -124,110 +126,35 @@ vam('#Detail_Prize').onclick = () => {
     }
 }
 
-function More() {
-    fetchSheet
-        .fetch({
-            gSheetId: '1w0ZWTWCwLovFMRhTHiYAS9yst4qptwjLRcI2GncXUjI',
-            wSheetName: 'Tài liệu Thêm',
-        })
-        .then((rows) => {
+vam('#device').onclick = () => {
+    document.querySelector('#pdfViewer').style.display = "block";
+    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/10Xr5UI-QV5YMI2zF9Hq1wq4A1MQMSaPe/preview')
+    document.querySelector('body').setAttribute('style', 'overflow:hidden');
+    document.querySelector('#out-pdfViewer').onclick = () => {
+        document.querySelector('#pdfViewer').style.display = "none";
+        document.querySelector('#pdfViewer-wrap').innerHTML = ''
+        document.querySelector('body').setAttribute('style', 'overflow:auto');
+    }
+}
 
-            // lấy bảng điểm 
-            document.querySelectorAll('.showpoin').forEach((t) => {
+fetchSheet
+    .fetch({
+        gSheetId: '1w0ZWTWCwLovFMRhTHiYAS9yst4qptwjLRcI2GncXUjI',
+        wSheetName: 'Tài liệu Thêm',
+    })
+    .then((rows) => {
+        document.querySelector('.dkthamgia[index="1"]').setAttribute('href', `${rows[2]['Bảng A']}`);
+        document.querySelector('.dkthamgia[index="2"]').setAttribute('href', `${rows[2]['Bảng B']}`);
+        document.querySelector('.dkthamgia[index="3"]').setAttribute('href', `${rows[2]['Bảng C']}`);
+        document.querySelector('.dkthamgia[index="4"]').setAttribute('href', `${rows[2]['Bảng C++ đặc biệt']}`);
+        // lấy bảng điểm 
+        document.querySelectorAll('.showpoin').forEach((t) => {
 
-                t.addEventListener("click", function () {
+            t.addEventListener("click", function () {
 
-                    if (t.getAttribute('index') == '1') {
-                        document.querySelector('#pdfViewer').style.display = "block";
-                        document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[1]['Bảng A'])
-                        document.querySelector('body').setAttribute('style', 'overflow:hidden');
-                        document.querySelector('#out-pdfViewer').onclick = () => {
-                            document.querySelector('#pdfViewer').style.display = "none";
-                            document.querySelector('#pdfViewer-wrap').innerHTML = ''
-                            document.querySelector('body').setAttribute('style', 'overflow:auto');
-                        }
-                    }
-                    else if (t.getAttribute('index') == '2') {
-                        document.querySelector('#pdfViewer').style.display = "block";
-                        document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[1]['Bảng B'])
-                        document.querySelector('body').setAttribute('style', 'overflow:hidden');
-                        document.querySelector('#out-pdfViewer').onclick = () => {
-                            document.querySelector('#pdfViewer').style.display = "none";
-                            document.querySelector('#pdfViewer-wrap').innerHTML = ''
-                            document.querySelector('body').setAttribute('style', 'overflow:auto');
-                        }
-                    }
-                    else if (t.getAttribute('index') == '3') {
-                        document.querySelector('#pdfViewer').style.display = "block";
-                        document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[1]['Bảng C'])
-                        document.querySelector('body').setAttribute('style', 'overflow:hidden');
-                        document.querySelector('#out-pdfViewer').onclick = () => {
-                            document.querySelector('#pdfViewer').style.display = "none";
-                            document.querySelector('#pdfViewer-wrap').innerHTML = ''
-                            document.querySelector('body').setAttribute('style', 'overflow:auto');
-                        }
-                    }
-                    else if (t.getAttribute('index') == '4') {
-                        document.querySelector('#pdfViewer').style.display = "block";
-                        document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[1]['Bảng C++ đặc biệt'])
-                        document.querySelector('body').setAttribute('style', 'overflow:hidden');
-                        document.querySelector('#out-pdfViewer').onclick = () => {
-                            document.querySelector('#pdfViewer').style.display = "none";
-                            document.querySelector('#pdfViewer-wrap').innerHTML = ''
-                            document.querySelector('body').setAttribute('style', 'overflow:auto');
-                        }
-                    }
-                });
-            })
-            // lấy chi tiết đề
-            document.querySelectorAll('.showdetail').forEach((t) => {
-                t.addEventListener("click", function () {
-                    if (t.getAttribute('index') == '1') {
-                        document.querySelector('#pdfViewer').style.display = "block";
-                        document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[0]['Bảng A'])
-                        document.querySelector('body').setAttribute('style', 'overflow:hidden');
-                        document.querySelector('#out-pdfViewer').onclick = () => {
-                            document.querySelector('#pdfViewer').style.display = "none";
-                            document.querySelector('#pdfViewer-wrap').innerHTML = ''
-                            document.querySelector('body').setAttribute('style', 'overflow:auto');
-                        }
-                    }
-                    else if (t.getAttribute('index') == '2') {
-                        document.querySelector('#pdfViewer').style.display = "block";
-                        document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[0]['Bảng B'])
-                        document.querySelector('body').setAttribute('style', 'overflow:hidden');
-                        document.querySelector('#out-pdfViewer').onclick = () => {
-                            document.querySelector('#pdfViewer').style.display = "none";
-                            document.querySelector('#pdfViewer-wrap').innerHTML = ''
-                            document.querySelector('body').setAttribute('style', 'overflow:auto');
-                        }
-                    }
-                    else if (t.getAttribute('index') == '3') {
-                        document.querySelector('#pdfViewer').style.display = "block";
-                        document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[0]['Bảng C'])
-                        document.querySelector('body').setAttribute('style', 'overflow:hidden');
-                        document.querySelector('#out-pdfViewer').onclick = () => {
-                            document.querySelector('#pdfViewer').style.display = "none";
-                            document.querySelector('#pdfViewer-wrap').innerHTML = ''
-                            document.querySelector('body').setAttribute('style', 'overflow:auto');
-                        }
-                    }
-                    else if (t.getAttribute('index') == '4') {
-                        document.querySelector('#pdfViewer').style.display = "block";
-                        document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[0]['Bảng C++ đặc biệt'])
-                        document.querySelector('body').setAttribute('style', 'overflow:hidden');
-                        document.querySelector('#out-pdfViewer').onclick = () => {
-                            document.querySelector('#pdfViewer').style.display = "none";
-                            document.querySelector('#pdfViewer-wrap').innerHTML = ''
-                            document.querySelector('body').setAttribute('style', 'overflow:auto');
-                        }
-                    }
-                });
-            })
-            document.querySelectorAll('.showpoinvl').forEach((t) => {
-                t.onclick = () => {
+                if (t.getAttribute('index') == '1') {
                     document.querySelector('#pdfViewer').style.display = "block";
-                    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1Y9I1NPztq1CK3TVj9sCz3YfaYa4Z0SqC/preview')
+                    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[1]['Bảng A'])
                     document.querySelector('body').setAttribute('style', 'overflow:hidden');
                     document.querySelector('#out-pdfViewer').onclick = () => {
                         document.querySelector('#pdfViewer').style.display = "none";
@@ -235,276 +162,95 @@ function More() {
                         document.querySelector('body').setAttribute('style', 'overflow:auto');
                     }
                 }
-            })
-
-        });
-}
-
-
-
-/*
-vams('.dkthamgia').forEach((t) => {
-    t.onclick = () => {
-        vam('#popup').setAttribute('style', 'display:block')
-        vam('.background').onclick = () => {
-            vam('#popup').setAttribute('style', 'display:none')
-            vam('body').setAttribute('style', 'overflow:auto')
+                else if (t.getAttribute('index') == '2') {
+                    document.querySelector('#pdfViewer').style.display = "block";
+                    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[1]['Bảng B'])
+                    document.querySelector('body').setAttribute('style', 'overflow:hidden');
+                    document.querySelector('#out-pdfViewer').onclick = () => {
+                        document.querySelector('#pdfViewer').style.display = "none";
+                        document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                        document.querySelector('body').setAttribute('style', 'overflow:auto');
+                    }
+                }
+                else if (t.getAttribute('index') == '3') {
+                    document.querySelector('#pdfViewer').style.display = "block";
+                    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[1]['Bảng C'])
+                    document.querySelector('body').setAttribute('style', 'overflow:hidden');
+                    document.querySelector('#out-pdfViewer').onclick = () => {
+                        document.querySelector('#pdfViewer').style.display = "none";
+                        document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                        document.querySelector('body').setAttribute('style', 'overflow:auto');
+                    }
+                }
+                else if (t.getAttribute('index') == '4') {
+                    document.querySelector('#pdfViewer').style.display = "block";
+                    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[1]['Bảng C++ đặc biệt'])
+                    document.querySelector('body').setAttribute('style', 'overflow:hidden');
+                    document.querySelector('#out-pdfViewer').onclick = () => {
+                        document.querySelector('#pdfViewer').style.display = "none";
+                        document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                        document.querySelector('body').setAttribute('style', 'overflow:auto');
+                    }
+                }
+            });
+        })
+        // lấy chi tiết đề
+        document.querySelectorAll('.showdetail').forEach((t) => {
+            t.addEventListener("click", function () {
+                if (t.getAttribute('index') == '1') {
+                    document.querySelector('#pdfViewer').style.display = "block";
+                    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[0]['Bảng A'])
+                    document.querySelector('body').setAttribute('style', 'overflow:hidden');
+                    document.querySelector('#out-pdfViewer').onclick = () => {
+                        document.querySelector('#pdfViewer').style.display = "none";
+                        document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                        document.querySelector('body').setAttribute('style', 'overflow:auto');
+                    }
+                }
+                else if (t.getAttribute('index') == '2') {
+                    document.querySelector('#pdfViewer').style.display = "block";
+                    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[0]['Bảng B'])
+                    document.querySelector('body').setAttribute('style', 'overflow:hidden');
+                    document.querySelector('#out-pdfViewer').onclick = () => {
+                        document.querySelector('#pdfViewer').style.display = "none";
+                        document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                        document.querySelector('body').setAttribute('style', 'overflow:auto');
+                    }
+                }
+                else if (t.getAttribute('index') == '3') {
+                    document.querySelector('#pdfViewer').style.display = "block";
+                    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[0]['Bảng C'])
+                    document.querySelector('body').setAttribute('style', 'overflow:hidden');
+                    document.querySelector('#out-pdfViewer').onclick = () => {
+                        document.querySelector('#pdfViewer').style.display = "none";
+                        document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                        document.querySelector('body').setAttribute('style', 'overflow:auto');
+                    }
+                }
+                else if (t.getAttribute('index') == '4') {
+                    document.querySelector('#pdfViewer').style.display = "block";
+                    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink(rows[0]['Bảng C++ đặc biệt'])
+                    document.querySelector('body').setAttribute('style', 'overflow:hidden');
+                    document.querySelector('#out-pdfViewer').onclick = () => {
+                        document.querySelector('#pdfViewer').style.display = "none";
+                        document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                        document.querySelector('body').setAttribute('style', 'overflow:auto');
+                    }
+                }
+            });
+        })
+        vam('#desoloai').onclick = () => {
+            document.querySelector('#pdfViewer').style.display = "block";
+            document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1Y9I1NPztq1CK3TVj9sCz3YfaYa4Z0SqC/preview')
+            document.querySelector('body').setAttribute('style', 'overflow:hidden');
+            document.querySelector('#out-pdfViewer').onclick = () => {
+                document.querySelector('#pdfViewer').style.display = "none";
+                document.querySelector('#pdfViewer-wrap').innerHTML = ''
+                document.querySelector('body').setAttribute('style', 'overflow:auto');
+            }
         }
-        vam('#outpopup').onclick = () => {
-            vam('#popup').setAttribute('style', 'display:none')
-            vam('body').setAttribute('style', 'overflow:auto')
-        }
-        vam('body').setAttribute('style', 'overflow:hidden')
-        if (t.getAttribute('index') == '1') {
-            vam('#dethitenbang').innerText = 'ĐỀ THI BẢNG A'
-            vam('#chungket').innerHTML =
-                `
-                <p>
-                • Đề thi ở Vòng chung kết có 02 phần: cơ bản và nâng cao<br>
-                - Phần cơ bản: chỉ bao gồm các nhiệm vụ cố định (biết trước)<br>
-                - Phần nâng cao: ngoài các nhiệm vụ cố định còn có thêm một số nhiệm vụ trực tiếp do BTC
-                và BGK ra đề ngay tại buổi thi đấu (không biết trước).<br>
-                • Mỗi bảng có 1 chủ đề và bộ đề thi-bảng điểm cho phần thi cơ bản (đính kèm thiết kế sa
-                bàn và các mô hình nhiệm vụ trên sa bàn).<br>
-                • Thời gian tối đa hoàn thành mỗi đề thi ở mỗi lượt (lần) thi được quy định cho mỗi
-                bảng.<br>
-                • Các đội được phép lắp ráp, lập trình và chuẩn bị Robot AI trước khi bắt đầu thi đấu
-                cho tất cả các phần thi.<br>
-                • Sau khi bốc thăm đề thi và thứ tự thi đấu, các đội có thời gian để cập nhật Robot AI
-                tại khu vực tập trung.<br>
-                • Các Robot AI sẽ được BTC kiểm tra tại khu vực cách ly.<br>
-                • Đến lượt thi đấu, các đội mang Robot AI của mình từ khu vực cách ly đến khu vực thi
-                đấu và thực hiện nhiệm vụ. Sau khi ký xác nhận vào danh sách kết quả, các đội mang Robot
-                AI trở lại khu vực cách ly.<br>
-                • Sau khi tất cả các đội thi trong bảng hoàn thành nhiệm vụ ở một lượt, các đội nhận lại
-                Robot AI và có thời gian cập nhật Robot AI tại khu vực tập trung để chuẩn bị cho lượt
-                thi đấu tiếp theo (nếu có).<br>
-                • Mỗi đội sẽ nhận được điểm ở mỗi nhiệm vụ tương ứng với mức độ hoàn thành. Điểm số cho
-                mỗi phần thi sẽ dựa vào lượt thực hiện tốt nhất của mỗi đội.<br>
-                • Điểm cuối cùng của cuộc thi vòng chung kết là tổng điểm của 2 phần thi. Trong trường
-                hợp các đội xuất sắc bằng điểm nhau sẽ tính đến các tiêu chí phụ để căn cứ vào đó chọn
-                ra đội được giải thưởng tương ứng của bảng đấu.<br>
-            </p>
-            <p>
-                <b>CHỦ ĐỀ: THU THẬP TÀI NGUYÊN</b><br>
-                • Thông qua chủ đề Thu Thập Tài Nguyên, đề thi bảng A yêu cầu Robot AI thực hiện các
-                nhiệm
-                vụ thu thập các mô hình thi đấu khác nhau được đặt ở các vị trí khác nhau trên sa bàn
-                tương ứng với các mẫu tài nguyên nước, đất, khoáng chất, di tích sự sống và mang chúng
-                về đúng khu vực quy định cho từng loại đồng thời phải tránh các vật cản cố định trên sa
-                bàn.<br>
-                • Các đội thi được phép sử dụng các thiết bị kết nối không dây bất kì để lập trình điều
-                khiển Robot AI trong thời gian thi đấu (nhưng các thí sinh không được phép chạm vào
-                Robot AI)..<br>
-                <b>• Sản phẩm khuyến nghị: bộ giáo cụ AI Smart Life và máy tính bảng với ứng dụng uKit
-                    Edu.</b><br>
-            </p>
-            <img style="width: 100%;padding: 16px 0;"
-                src="https://lh3.googleusercontent.com/d/1RW1VJktMCCS2IYugs8XZrdgnMrDmXaUa">
-            <p>
-                <b>Thách thức cần giải quyết</b><br>
-                • Giải pháp chiến thuật thực hiện các nhiệm vụ<br>
-                • Giải pháp thiết kế Robot AI<br>
-                • Giải pháp lập trình cho Robot AI thực hiện các nhiệm vụ<br>
-                - Khả năng di chuyển<br>
-                - Khả năng tránh vật cản (nếu lập trình tự động)<br>
-                - Khả năng nhận diện màu sắc (nếu lập trình tự động)<br>
-                - Khả năng lấy và mang vật thể về đúng vị trí (nếu lập trình tự động)<br>
-                • Kỹ năng điều khiển Robot AI thực hiện các nhiệm vụ (mỗi thí sinh trong đội chỉ được
-                phép tham gia điều khiển tối đa 1 lượt thi ở mỗi phần thi nếu lập trình điều khiển trực
-                tiếp)<br>
-                - Di chuyển<br>
-                - Tránh vật cản<br>
-                - Lấy và mang vật thể về đúng vị trí<br>
-            </p>
-            <div style="padding-top: 50px;display: flex;gap:16px">
-            <button class="buttonvam"><a href="https://forms.gle/pYkZiaFH3EpxEJtD7"
-                    target="_blank">Đăng
-                    ký</a></button>
-            <button class="showpoin buttonvam" index="1">Xem bảng điểm</button>
-            <button class="buttonvam showdetail" index='1'>Đề thi chi tiết</button>
-        </div>`
-            More()
-        }
-        else if (t.getAttribute('index') == '2') {
-            vam('#dethitenbang').innerText = 'ĐỀ THI BẢNG B'
-            vam('#chungket').innerHTML =
-                `
-                <p>
-                            • Đề thi ở Vòng chung kết có 02 phần: cơ bản và nâng cao<br>
-                            - Phần cơ bản: chỉ bao gồm các nhiệm vụ cố định (biết trước)<br>
-                            - Phần nâng cao: ngoài các nhiệm vụ cố định còn có thêm một số nhiệm vụ trực tiếp do BTC
-                            và BGK ra đề ngay tại buổi thi đấu (không biết trước).<br>
-                            • Mỗi bảng có 1 chủ đề và bộ đề thi-bảng điểm cho phần thi cơ bản (đính kèm thiết kế sa
-                            bàn và các mô hình nhiệm vụ trên sa bàn).<br>
-                            • Thời gian tối đa hoàn thành mỗi đề thi ở mỗi lượt (lần) thi được quy định cho mỗi
-                            bảng.<br>
-                            • Các đội được phép lắp ráp, lập trình và chuẩn bị Robot AI trước khi bắt đầu thi đấu
-                            cho tất cả các phần thi.<br>
-                            • Sau khi bốc thăm đề thi và thứ tự thi đấu, các đội có thời gian để cập nhật Robot AI
-                            tại khu vực tập trung.<br>
-                            • Các Robot AI sẽ được BTC kiểm tra tại khu vực cách ly.<br>
-                            • Đến lượt thi đấu, các đội mang Robot AI của mình từ khu vực cách ly đến khu vực thi
-                            đấu và thực hiện nhiệm vụ. Sau khi ký xác nhận vào danh sách kết quả, các đội mang Robot
-                            AI trở lại khu vực cách ly.<br>
-                            • Sau khi tất cả các đội thi trong bảng hoàn thành nhiệm vụ ở một lượt, các đội nhận lại
-                            Robot AI và có thời gian cập nhật Robot AI tại khu vực tập trung để chuẩn bị cho lượt
-                            thi đấu tiếp theo (nếu có).<br>
-                            • Mỗi đội sẽ nhận được điểm ở mỗi nhiệm vụ tương ứng với mức độ hoàn thành. Điểm số cho
-                            mỗi phần thi sẽ dựa vào lượt thực hiện tốt nhất của mỗi đội.<br>
-                            • Điểm cuối cùng của cuộc thi vòng chung kết là tổng điểm của 2 phần thi. Trong trường
-                            hợp các đội xuất sắc bằng điểm nhau sẽ tính đến các tiêu chí phụ để căn cứ vào đó chọn
-                            ra đội được giải thưởng tương ứng của bảng đấu.<br>
-                        </p>
-                        <p>
-                            <b>CHỦ ĐỀ: DU HÀNH VŨ TRỤ</b><br>
-                            • Thông qua chủ đề Du Hành Vũ Trụ, đề thi bảng B yêu cầu Robot AI thực hiện các nhiệm vụ nhận diện các khối nhiệm vụ (năng lượng cạn và đầy) có màu sắc khác nhau đặt tại các khu vực khác nhau để thay thế và đưa về đúng các vị trí quy định (trạm sạc và phi thuyền) đồng thời vượt qua các địa hình khác nhau (line nét liền, line nét đứt, cầu dốc) để đưa phi thuyển về đúng vị trí quy định và về đích.<br>
-                            • Các đội thi phải lập trình điều khiển Robot AI hoàn toàn tự động trong thời gian thi đấu (không sử dụng bất kì thiết bị lập trình nào).<br>
-                            <b>• Sản phẩm khuyến nghị: bộ giáo cụ AI Super Engineer và laptop với phần mềm uCode/Arduino.</b><br>
-                        </p>
-                        <img style="width: 100%;padding: 16px 0;"
-                            src="https://lh3.googleusercontent.com/d/1Nji4f2696Z7WMwSvpTFDqtiJuoSKO66n">
-                        <p>
-                            <b>Thách thức cần giải quyết</b><br>
-                            • Giải pháp chiến thuật thực hiện các nhiệm vụ<br>
-                            • Giải pháp thiết kế Robot AI<br>
-                            • Giải pháp lập trình cho Robot AI thực hiện các nhiệm vụ<br>
-                            - Khả năng di chuyển theo line (nét liền, nét đứt)<br>
-                            - Khả năng di chuyển qua cầu dốc<br>
-                            - Khả năng phát hiện vật cản <br>
-                            - Khả năng nhận diện màu sắc <br>
-                            - Khả năng lấy và mang vật thể về đúng vị trí <br>
-                        </p>
-                        <div style="padding-top: 50px;display: flex;gap:16px">
-                                <button class="buttonvam"><a href="https://forms.gle/ko3fduTh8UtBVM1e6"
-                                        target="_blank">Đăng
-                                        ký</a></button>
-                                <button class="showpoin buttonvam" index="2">Xem bảng điểm</button>
-                                <button class="buttonvam showdetail" index='2'>Đề thi chi tiết</button>
-                            </div>`
-            More()
-        }
-        else if (t.getAttribute('index') == '3') {
-            vam('#dethitenbang').innerText = 'ĐỀ THI BẢNG C'
-            vam('#chungket').innerHTML =
-                `
-            <p>
-                        • Đề thi ở Vòng chung kết có 02 phần: cơ bản và nâng cao<br>
-                        - Phần cơ bản: chỉ bao gồm các nhiệm vụ cố định (biết trước)<br>
-                        - Phần nâng cao: ngoài các nhiệm vụ cố định còn có thêm một số nhiệm vụ trực tiếp do BTC
-                        và BGK ra đề ngay tại buổi thi đấu (không biết trước).<br>
-                        • Mỗi bảng có 1 chủ đề và bộ đề thi-bảng điểm cho phần thi cơ bản (đính kèm thiết kế sa
-                        bàn và các mô hình nhiệm vụ trên sa bàn).<br>
-                        • Thời gian tối đa hoàn thành mỗi đề thi ở mỗi lượt (lần) thi được quy định cho mỗi
-                        bảng.<br>
-                        • Các đội được phép lắp ráp, lập trình và chuẩn bị Robot AI trước khi bắt đầu thi đấu
-                        cho tất cả các phần thi.<br>
-                        • Sau khi bốc thăm đề thi và thứ tự thi đấu, các đội có thời gian để cập nhật Robot AI
-                        tại khu vực tập trung.<br>
-                        • Các Robot AI sẽ được BTC kiểm tra tại khu vực cách ly.<br>
-                        • Đến lượt thi đấu, các đội mang Robot AI của mình từ khu vực cách ly đến khu vực thi
-                        đấu và thực hiện nhiệm vụ. Sau khi ký xác nhận vào danh sách kết quả, các đội mang Robot
-                        AI trở lại khu vực cách ly.<br>
-                        • Sau khi tất cả các đội thi trong bảng hoàn thành nhiệm vụ ở một lượt, các đội nhận lại
-                        Robot AI và có thời gian cập nhật Robot AI tại khu vực tập trung để chuẩn bị cho lượt
-                        thi đấu tiếp theo (nếu có).<br>
-                        • Mỗi đội sẽ nhận được điểm ở mỗi nhiệm vụ tương ứng với mức độ hoàn thành. Điểm số cho
-                        mỗi phần thi sẽ dựa vào lượt thực hiện tốt nhất của mỗi đội.<br>
-                        • Điểm cuối cùng của cuộc thi vòng chung kết là tổng điểm của 2 phần thi. Trong trường
-                        hợp các đội xuất sắc bằng điểm nhau sẽ tính đến các tiêu chí phụ để căn cứ vào đó chọn
-                        ra đội được giải thưởng tương ứng của bảng đấu.<br>
-                    </p>
-                    <p>
-                        <b>CHỦ ĐỀ: XỬ LÝ THÔNG TIN</b><br>
-                        • Thông qua chủ đề Xử Lý Thông Tin, đề thi bảng C yêu cầu Robot AI đi theo đường line vượt qua các loại địa hình khác nhau (đường thẳng, đường cong hình chữ S, đường hẹp góc vuông, đường hầm, đường cụt, cầu dốc) từ vị trí xuất phát lựa chọn, để thực hiện các nhiệm vụ thu thập thông tin dưới dạng các mã QR tại các trạm tín hiệu có số thứ tự khác nhau và hiển thị đúng thông tin theo thứ tự trạm tín hiệu đồng thời lấy và mang mô hình nhiệm vụ về vị trí đích (vị trí quy định còn lại, khác với vị trí xuất phát đã chọn).<br>
-                        • Các đội thi phải lập trình điều khiển Robot AI hoàn toàn tự động trong thời gian thi đấu (không sử dụng bất kì thiết bị lập trình nào).<br>
-                        <b>• Sản phẩm khuyến nghị: bộ giáo cụ UGOT và laptop với phần mềm uCode/uPython.</b><br>
-                    </p>
-                    <img style="width: 100%;padding: 16px 0;"
-                        src="https://lh3.googleusercontent.com/d/1e_CoISYHD2RilvtL2FI4UM3cPMRAxtqS">
-                    <p>
-                        <b>Thách thức cần giải quyết</b><br>
-                        • Giải pháp chiến thuật thực hiện các nhiệm vụ<br>
-                        • Giải pháp thiết kế Robot AI<br>
-                        • Giải pháp lập trình cho Robot AI thực hiện các nhiệm vụ<br>
-                        - Khả năng nhận diện line để di chuyển<br>
-                        - Khả năng thay đổi độ cao để di chuyển hiệu quả qua một số loại địa hình<br>
-                        - Khả năng nhận diện các mã QR ở các vị trí khác nhau<br>
-                        - Khả năng nhận diện màu sắc<br>
-                        - Khả năng lấy và mang vật thể về đúng vị trí quy định<br>
-                        - Khả năng lưu trữ và sắp xếp dữ liệu thông tin<br>
-                    </p>
-                    <div style="padding-top: 50px;display: flex;gap:16px">
-                    <button class="buttonvam"><a href="https://forms.gle/5DcdVTHQtXm6ttay8"
-                            target="_blank">Đăng
-                            ký</a></button>
-                    <button class="showpoin buttonvam" index="3">Xem bảng điểm</button>
-                    <button class="buttonvam showdetail" index='3'>Đề thi chi tiết</button>
-                </div>`
 
-            More()
-        }
-        else if (t.getAttribute('index') == '4') {
-            vam('#dethitenbang').innerText = 'ĐỀ THI BẢNG C* ĐẶC BIỆT'
-            vam('#chungket').innerHTML =
-                `
-            <p>
-                        • Đề thi ở Vòng chung kết có 02 phần: cơ bản và nâng cao<br>
-                        - Phần cơ bản: chỉ bao gồm các nhiệm vụ cố định (biết trước)<br>
-                        - Phần nâng cao: ngoài các nhiệm vụ cố định còn có thêm một số nhiệm vụ trực tiếp do BTC
-                        và BGK ra đề ngay tại buổi thi đấu (không biết trước).<br>
-                        • Mỗi bảng có 1 chủ đề và bộ đề thi-bảng điểm cho phần thi cơ bản (đính kèm thiết kế sa
-                        bàn và các mô hình nhiệm vụ trên sa bàn).<br>
-                        • Thời gian tối đa hoàn thành mỗi đề thi ở mỗi lượt (lần) thi được quy định cho mỗi
-                        bảng.<br>
-                        • Các đội được phép lắp ráp, lập trình và chuẩn bị Robot AI trước khi bắt đầu thi đấu
-                        cho tất cả các phần thi.<br>
-                        • Sau khi bốc thăm đề thi và thứ tự thi đấu, các đội có thời gian để cập nhật Robot AI
-                        tại khu vực tập trung.<br>
-                        • Các Robot AI sẽ được BTC kiểm tra tại khu vực cách ly.<br>
-                        • Đến lượt thi đấu, các đội mang Robot AI của mình từ khu vực cách ly đến khu vực thi
-                        đấu và thực hiện nhiệm vụ. Sau khi ký xác nhận vào danh sách kết quả, các đội mang Robot
-                        AI trở lại khu vực cách ly.<br>
-                        • Sau khi tất cả các đội thi trong bảng hoàn thành nhiệm vụ ở một lượt, các đội nhận lại
-                        Robot AI và có thời gian cập nhật Robot AI tại khu vực tập trung để chuẩn bị cho lượt
-                        thi đấu tiếp theo (nếu có).<br>
-                        • Mỗi đội sẽ nhận được điểm ở mỗi nhiệm vụ tương ứng với mức độ hoàn thành. Điểm số cho
-                        mỗi phần thi sẽ dựa vào lượt thực hiện tốt nhất của mỗi đội.<br>
-                        • Điểm cuối cùng của cuộc thi vòng chung kết là tổng điểm của 2 phần thi. Trong trường
-                        hợp các đội xuất sắc bằng điểm nhau sẽ tính đến các tiêu chí phụ để căn cứ vào đó chọn
-                        ra đội được giải thưởng tương ứng của bảng đấu.<br>
-                    </p>
-                    <p>
-                        <b>CHỦ ĐỀ: THU THẬP TÀI NGUYÊN</b><br>
-                        • Thông qua chủ đề Tương Lai Của Robot AI, đề thi bảng C* Đặc biệt yêu cầu Robot AI hình người Yanshee nhận biết môi trường không gian xung quanh để vượt qua các chướng ngại vật (bậc thang và rào chắn), thực hiện nhận diện khuôn mặt và mã AprilTag, nghe lệnh bằng giọng nói để lấy và vận chuyển các vật phẩm có màu sắc (xanh và đỏ) được chỉ định đến đúng khu vực lưu trữ vật phẩm tương ứng.<br>
-                        • Các đội thi phải lập trình điều khiển Robot AI hoàn toàn tự động trong thời gian thi đấu (không sử dụng bất kì thiết bị lập trình nào).<br>
-                        <b>• Sản phẩm bắt buộc: Robot AI hình người Yanshee (Đấu trường AI đầu tiên tại Việt Nam sử dụng Robot hình người).</b><br>
-                    </p>
-                    <img style="width: 100%;padding: 16px 0;"
-                        src="https://lh3.googleusercontent.com/d/1RW1VJktMCCS2IYugs8XZrdgnMrDmXaUa">
-                    <p>
-                        <b>Thách thức cần giải quyết</b><br>
-                        • Giải pháp chiến thuật thực hiện các nhiệm vụ<br>
-                        • Giải pháp lập trình cho Robot AI thực hiện các nhiệm vụ<br>
-                        - Khả năng nhận biết môi trường không gian xung quanh<br>
-                        - Khả năng thay đổi tư thế và giữ thanh bằng để di chuyển hiệu quả qua một số loại địa hình.<br>
-                        - Khả năng nhận diện khuôn mặt và mã AprilTag.<br>
-                        - Khả năng nhận diện màu sắc.<br>
-                        - Khả năng nghe lệnh bằng giọng nói.<br>
-                        - Khả năng phát hiện vật cản.<br>
-                        - Khả năng lấy và mang vật thể về đúng vị trí quy định.<br>
-                    </p>
-                    <div style="padding-top: 50px;display: flex;gap:16px">
-                    <button class="buttonvam"><a href="https://forms.gle/xyQ8WACFfnGqcQTn9"
-                            target="_blank">Đăng
-                            ký</a></button>
-                    <!--<button class="buttonvam showdetail" index='4'>Đề thi chi tiết</button>-->
-                </div>`
-            More()
-        }
-    }
-})*/
-
+    });
 
 
 const intromain =
@@ -581,18 +327,23 @@ fetchSheet
         });
     });
 
+
+// Nội dung phần intro / banner
 fetchSheet
     .fetch({
         gSheetId: '1w0ZWTWCwLovFMRhTHiYAS9yst4qptwjLRcI2GncXUjI',
         wSheetName: 'intro',
     })
     .then((rows) => {
+        console.log(rows[0]['Nội dung']);
         document.querySelector('#intro_content').innerText = rows[0]['Nội dung']
         document.querySelector('#intro_title').innerText = rows[0]['Tiêu đề']
         document.querySelector('#intro_background').src = rows[0]['background']
         document.querySelector('#intro_logo').src = rows[0]['logo']
     });
 
+
+// Nội dung phần mục tiêu 
 fetchSheet
     .fetch({
         gSheetId: '1w0ZWTWCwLovFMRhTHiYAS9yst4qptwjLRcI2GncXUjI',
@@ -645,6 +396,8 @@ fetchSheet
         }
     });
 
+
+//
 fetchSheet
     .fetch({
         gSheetId: '1w0ZWTWCwLovFMRhTHiYAS9yst4qptwjLRcI2GncXUjI',
@@ -664,6 +417,12 @@ fetchSheet
                     items +=
                         `<li>
                         <p style="font-weight: 600"><span style="color: var(--color-main);font-weight: 600;">** </span>${t.ContentAll}<span id="linkg"> (Xem thêm thông tin tập huấn và trải nghiệm)</span></p>
+                    </li>`
+                }
+                else if (i == 5) {
+                    items +=
+                        `<li>
+                        <p style="font-weight: 600; color:#c30000"><span style="color: var(--color-main);font-weight: 600;">4. </span>${t.ContentAll}<span id="linkg"> (Xem thêm thông tin tập huấn và trải nghiệm)</span></p>
                     </li>`
                 }
                 else {
@@ -897,6 +656,7 @@ fetchSheet
                             <div class="iconvam"></div>
                             <p style="flex: 1;">${rows[2]['Sơ loại']}</p>
                         </div>`
+
                         vam('.device_box-img>img').src = 'https://lh3.googleusercontent.com/d/1jGKEoVVhylTpKoFLWk4gSzxQMm3kBm5V'
                     }
                     else if (t.getAttribute('index') == '2') {

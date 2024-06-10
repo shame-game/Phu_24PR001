@@ -1348,7 +1348,10 @@ body {
 
 
 .dieukien_bottom {
-    padding-bottom: 50px;
+    padding: 30px;
+    border: 1px solid var(--color-main);
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .dieukien_bottom>div {
@@ -1358,7 +1361,7 @@ body {
 }
 
 .dieukien_bottom>div>div {
-    border-radius: 16px;
+    border-radius: 8px;
     background-color: white;
     border: 3px solid var(--color-main);
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -1506,13 +1509,14 @@ body {
 
 /*/*/
 
-.dieukien_bottom button {
+.dieukien_bottom button,
+.dieukien_bottom .dkthamgia {
     margin: 16px;
     transition: all .3s linear;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 8px 25px;
+    padding: 8px;
     background-color: white;
     color: var(--color-text);
     border: 3px solid var(--color-text);
@@ -1521,6 +1525,25 @@ body {
     position: relative;
 }
 
+.dieukien_bottom .dkthamgia {
+    font-size: 13px;
+}
+
+.dieukien_bottom .dkthamgia:hover {
+    background-color: var(--color-text);
+    color: white;
+}
+
+#device {
+    cursor: pointer;
+    color: var(--color-text);
+}
+
+#desoloai {
+    color: var(--color-text);
+    cursor: pointer;
+    font-weight: 600;
+}
 
 .dieukien_bottom button:hover {
     background-color: var(--color-text);
@@ -1528,7 +1551,7 @@ body {
 }
 
 .dieukien_bottom a {
-    font-size: 16px;
+    font-size: 13px;
     font-family: "Roboto", sans-serif !important;
 }
 
