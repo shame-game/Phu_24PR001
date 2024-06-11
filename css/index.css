@@ -1114,7 +1114,8 @@ body {
 
 }
 
-#linkg {
+#linkg,
+#linktl {
     color: var(--color-text);
     cursor: pointer;
 }
