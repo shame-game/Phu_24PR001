@@ -334,8 +334,9 @@ fetchSheet
         wSheetName: 'intro',
     })
     .then((rows) => {
-        document.querySelector('#intro_content').innerText = rows[0]['Nội dung']
-        document.querySelector('#intro_title').innerText = rows[0]['Tiêu đề']
+        document.querySelector('#itro-spanns').innerText = rows[0]['slogan']
+        document.querySelector('#intro_content').innerText = rows[0]['content']
+        document.querySelector('#intro_title').innerText = rows[0]['title']
         document.querySelector('#intro_background').src = rows[0]['background']
         document.querySelector('#intro_logo').src = rows[0]['logo']
     });
