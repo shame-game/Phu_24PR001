@@ -241,7 +241,7 @@ fetchSheet
         })
         vam('#desoloai').onclick = () => {
             document.querySelector('#pdfViewer').style.display = "block";
-            document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1Y9I1NPztq1CK3TVj9sCz3YfaYa4Z0SqC/preview')
+            document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/15NKXhy-2dlf5uk8aaOdKd2LfJrujHYTA/preview')
             document.querySelector('body').setAttribute('style', 'overflow:hidden');
             document.querySelector('#out-pdfViewer').onclick = () => {
                 document.querySelector('#pdfViewer').style.display = "none";
