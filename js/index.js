@@ -415,7 +415,7 @@ fetchSheet
                 } else if (i == 6) {
                     items +=
                         `<li>
-                        <p style="font-weight: 600"><span style="color: var(--color-main);font-weight: 600;">** </span>${t.ContentAll}<span id="linkg"> (Xem thêm thông tin tập huấn và trải nghiệm)</span></p>
+                        <p style="font-weight: 600"><span style="color: var(--color-main);font-weight: 600;">** </span>${t.ContentAll}<span id="linkg"> (Xem thêm thông tin Thể lệ thi đấu)</span></p>
                     </li>`
                 }
                 else if (i == 5) {
