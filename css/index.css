@@ -585,8 +585,14 @@ body {
 }
 
 #intro_link,
-#intro_down {
+#intro_down,
+#intro_videosd {
     margin-top: 16px;
+}
+
+#intro_videosd {
+    display: flex;
+    gap: 7px;
 }
 
 #intro_down {
@@ -1114,6 +1120,20 @@ body {
 
 }
 
+#phongvan_video {
+    width: 100%;
+    margin: auto;
+    position: relative;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#phongvan_video iframe {
+    width: 60%;
+    border-radius: 7px;
+}
+
 #linkg,
 #linktl {
     color: var(--color-text);
@@ -1379,6 +1399,10 @@ body {
     ;
 }
 
+.dieukien_bottom>div>div {
+    position: relative;
+}
+
 .dieukien_title-bang {
     display: flex;
     align-items: end;
@@ -1386,10 +1410,68 @@ body {
     width: 100%;
     justify-content: center;
     gap: 16px;
+    padding-top: 30px;
+}
+
+.videodieukien {
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    padding: 5px 20px;
+    top: 0px;
+    left: 0px;
+    font-size: 16px;
+    border-radius: 6px 0 25px 0;
+    background-color: var(--color-main);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    transition: all .5s linear;
+    flex-direction: column;
+    align-items: center;
+    z-index: 9;
+}
+
+.videodieukien i {
+    color: white;
+    font-size: 24px;
+    margin: 0;
+    margin-right: 5px;
+    transition: all .4s linear;
+}
+
+.videodieukien>p {
+    opacity: 0;
+    width: 90%;
+    text-align: center !important;
+    transition: all .5s linear;
+    color: white !important;
+    font-size: 0px;
+    padding: 0 !important;
+}
+
+.videodieukien:hover {
+    width: 100%;
+    border: 5px;
+    height: 100%;
+    z-index: 99;
+
+}
+
+.videodieukien:hover i {
+    font-size: 40px;
+}
+
+.videodieukien:hover p {
+    opacity: 1;
+    font-size: 22px;
+    transition: all .1s linear;
+    transition-delay: 0s;
 }
 
 .dieukien_title-bang img {
-    width: 50%;
+    width: 40%;
     object-fit: cover;
 }
 
@@ -1404,6 +1486,7 @@ body {
     color: var(--color-p);
     text-align: justify;
 }
+
 
 .scroll-thongdiep_title ul {
     padding: 30px 0;

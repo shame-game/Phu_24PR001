@@ -27,6 +27,70 @@ function downloadZip() {
         })
 
 }
+vams('.videodieukien').forEach((t) => {
+    t.onclick = () => {
+        let g = t.getAttribute('index')
+        if (g == 1) {
+            vam('.c661412b2-background_click').setAttribute('style', 'display:flex')
+            vam('.c661412b2-iframe_click').setAttribute('style', 'display:flex')
+            var c661412b2Iframe = `<iframe class="c661412b2-iframe" src="https://drive.google.com/file/d/1wlqggn8xD0Nayj-7vY0RonP3Oe9aU8CA/preview" frameborder="0"
+                                                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+            vam('.c661412b2-iframe_click').innerHTML = c661412b2Iframe
+            vam('.c661412b2-background_click').addEventListener('click', () => {
+                vam('.c661412b2-background_click').setAttribute('style', 'display:none')
+                vam('.c661412b2-iframe_click').setAttribute('style', 'display:none')
+                vam('.c661412b2-iframe').remove()
+            })
+        } else if (g == 2) {
+            vam('.c661412b2-background_click').setAttribute('style', 'display:flex')
+            vam('.c661412b2-iframe_click').setAttribute('style', 'display:flex')
+            var c661412b2Iframe = `<iframe class="c661412b2-iframe" src="https://drive.google.com/file/d/1vIBg5cQ9KwG_ILw_DncOvsBfSvoeaLYP/preview" frameborder="0"
+                                                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+            vam('.c661412b2-iframe_click').innerHTML = c661412b2Iframe
+            vam('.c661412b2-background_click').addEventListener('click', () => {
+                vam('.c661412b2-background_click').setAttribute('style', 'display:none')
+                vam('.c661412b2-iframe_click').setAttribute('style', 'display:none')
+                vam('.c661412b2-iframe').remove()
+            })
+        }
+        else if (g == 3) {
+            vam('.c661412b2-background_click').setAttribute('style', 'display:flex')
+            vam('.c661412b2-iframe_click').setAttribute('style', 'display:flex')
+            var c661412b2Iframe = `<iframe class="c661412b2-iframe" src="https://drive.google.com/file/d/1umW2r3VMZOUPFvMkNd3BztCOxeHCE-Tv/preview" frameborder="0"
+                                                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+            vam('.c661412b2-iframe_click').innerHTML = c661412b2Iframe
+            vam('.c661412b2-background_click').addEventListener('click', () => {
+                vam('.c661412b2-background_click').setAttribute('style', 'display:none')
+                vam('.c661412b2-iframe_click').setAttribute('style', 'display:none')
+                vam('.c661412b2-iframe').remove()
+            })
+
+        } else if (g == 4) {
+            vam('.c661412b2-background_click').setAttribute('style', 'display:flex')
+            vam('.c661412b2-iframe_click').setAttribute('style', 'display:flex')
+            var c661412b2Iframe = `<iframe class="c661412b2-iframe" src="https://drive.google.com/file/d/147-GxDfnohuCWz6SoqAtiKpBPOsgVYwy/preview" frameborder="0"
+                                                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+            vam('.c661412b2-iframe_click').innerHTML = c661412b2Iframe
+            vam('.c661412b2-background_click').addEventListener('click', () => {
+                vam('.c661412b2-background_click').setAttribute('style', 'display:none')
+                vam('.c661412b2-iframe_click').setAttribute('style', 'display:none')
+                vam('.c661412b2-iframe').remove()
+            })
+        }
+    }
+})
+vam('#intro_videosd').onclick = () => {
+    vam('.c661412b2-background_click').setAttribute('style', 'display:flex')
+    vam('.c661412b2-iframe_click').setAttribute('style', 'display:flex')
+    var c661412b2Iframe = `<iframe class="c661412b2-iframe" src="https://drive.google.com/file/d/1hh7mlFd5A9811Gt6xXWI_xG0LTLlqwbR/preview" frameborder="0"
+                                                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+    vam('.c661412b2-iframe_click').innerHTML = c661412b2Iframe
+    vam('.c661412b2-background_click').addEventListener('click', () => {
+        vam('.c661412b2-background_click').setAttribute('style', 'display:none')
+        vam('.c661412b2-iframe_click').setAttribute('style', 'display:none')
+        vam('.c661412b2-iframe').remove()
+    })
+}
 /*
 fetchSheet
     .fetch({
@@ -695,3 +759,4 @@ fetchSheet
     });
 
 /* test */
+
