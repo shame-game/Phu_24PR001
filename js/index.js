@@ -179,16 +179,6 @@ function Loadlink(g) {
     return pdfEmbed
 }
 
-vam('#Detail_Prize').onclick = () => {
-    document.querySelector('#pdfViewer').style.display = "block";
-    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1ns6e2z9HUBYfraXz40J03mo4ePWj4eM1/preview')
-    document.querySelector('body').setAttribute('style', 'overflow:hidden');
-    document.querySelector('#out-pdfViewer').onclick = () => {
-        document.querySelector('#pdfViewer').style.display = "none";
-        document.querySelector('#pdfViewer-wrap').innerHTML = ''
-        document.querySelector('body').setAttribute('style', 'overflow:auto');
-    }
-}
 
 vam('#device').onclick = () => {
     document.querySelector('#pdfViewer').style.display = "block";
