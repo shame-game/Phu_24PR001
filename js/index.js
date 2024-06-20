@@ -511,7 +511,7 @@ fetchSheet
         vam('#loaddieukienall').innerHTML = items
         vam('#linkg').onclick = () => {
             document.querySelector('#pdfViewer').style.display = "block";
-            document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1NtoJ4I5uvhzSfRvl91iZ7gr0AGaOakuq/preview')
+            document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/17gam4-C8Z3gH9t-oOWltaS6WMv42EoDA/preview')
             document.querySelector('body').setAttribute('style', 'overflow:hidden');
             document.querySelector('#out-pdfViewer').onclick = () => {
                 document.querySelector('#pdfViewer').style.display = "none";
