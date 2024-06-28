@@ -190,7 +190,16 @@ vam('#device').onclick = () => {
         document.querySelector('body').setAttribute('style', 'overflow:auto');
     }
 }
-
+vam('#button_submitExam').onclick = () => {
+    document.querySelector('#pdfViewer').style.display = "block";
+    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1RKaRbMajt0cfQSkKRrjnEVCbTR8tB2Kh/preview')
+    document.querySelector('body').setAttribute('style', 'overflow:hidden');
+    document.querySelector('#out-pdfViewer').onclick = () => {
+        document.querySelector('#pdfViewer').style.display = "none";
+        document.querySelector('#pdfViewer-wrap').innerHTML = ''
+        document.querySelector('body').setAttribute('style', 'overflow:auto');
+    }
+}
 fetchSheet
     .fetch({
         gSheetId: '1w0ZWTWCwLovFMRhTHiYAS9yst4qptwjLRcI2GncXUjI',
@@ -567,7 +576,18 @@ fetchSheet
                 vam('.c661412b2-iframe').remove()
             })
         })
-
+        vam('#c661412b2-iframe_click2').addEventListener('click', () => {
+            vam('.c661412b2-background_click').setAttribute('style', 'display:flex')
+            vam('.c661412b2-iframe_click').setAttribute('style', 'display:flex')
+            var c661412b2Iframe = `<iframe class="c661412b2-iframe" src="https://drive.google.com/file/d/1MKHepOje_hpdr5y_C_K-Xt0DR-HTSTwg/preview" frameborder="0"
+                                                                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`
+            vam('.c661412b2-iframe_click').innerHTML = c661412b2Iframe
+            vam('.c661412b2-background_click').addEventListener('click', () => {
+                vam('.c661412b2-background_click').setAttribute('style', 'display:none')
+                vam('.c661412b2-iframe_click').setAttribute('style', 'display:none')
+                vam('.c661412b2-iframe').remove()
+            })
+        })
     });
 
 fetchSheet
