@@ -192,7 +192,7 @@ vam('#device').onclick = () => {
 }
 vam('#button_submitExam').onclick = () => {
     document.querySelector('#pdfViewer').style.display = "block";
-    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1RKaRbMajt0cfQSkKRrjnEVCbTR8tB2Kh/preview')
+    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1I0ZvlhERkMBcXuKVdSeMeHGEeWcgxiuc/preview')
     document.querySelector('body').setAttribute('style', 'overflow:hidden');
     document.querySelector('#out-pdfViewer').onclick = () => {
         document.querySelector('#pdfViewer').style.display = "none";
