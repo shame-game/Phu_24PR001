@@ -13,7 +13,7 @@ function downloadZip() {
         .then((rows) => {
             document.querySelector('#pdfViewer').style.display = "block";
             const pdfUrl = rows[0]['Thể Lệ']; // Thay đổi đường dẫn đến tệp PDF của bạn tại đây
-            const pdfEmbed = `<embed src="${pdfUrl}" type="application/pdf" width="100%" height="100%">
+            const pdfEmbed = `<iframe src="${pdfUrl}" type="application/pdf" width="100%" height="100%"></iframe>
                     <div id="out-pdfViewer"><i class="bi bi-box-arrow-left"></i>
                     <p>Thoát</p>
                 </div>`;
@@ -172,7 +172,7 @@ fetchSheet
         */
 function Loadlink(g) {
     let pdfEmbed =
-        `<embed src="${g}" type="application/pdf" width="100%" height="100%">
+        `<iframe src="${g}" type="application/pdf" width="100%" height="100%"></iframe>
         <div id="out-pdfViewer"><i class="bi bi-box-arrow-left"></i>
             <p>Thoát</p>
         </div>`

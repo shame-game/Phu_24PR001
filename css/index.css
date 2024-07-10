@@ -1684,10 +1684,13 @@ body {
 
 #out-pdfViewer {
     position: absolute;
-    left: 0;
-    top: 0;
-    color: white;
-    padding: 20px;
+    left: 10px;
+    top: 10px;
+    color: #1a68b3;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    font-weight: 700;
+    padding: 9px 20px;
     font-size: 20px;
     cursor: pointer;
     display: flex;
