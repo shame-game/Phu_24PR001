@@ -323,7 +323,7 @@ const intromain =
                                                                                                     <img src="https://lh3.googleusercontent.com/d/1PE-EtRbgsb7dBK3iPHG6INK8GPE4r1AZ">
                                                                                                 </div>
                                                                                                 <div class="intrologo-hiden">
-                                                                                                    <h2>ROBO G</h2>
+                                                                                                    <h2>ROBOG</h2>
                                                                                                     <p> Việt Nam </p><span>2024</span>
                                                                                                 </div>
                                                                                             </div>
@@ -425,7 +425,7 @@ fetchSheet
                     <div>
                         <div class="introd-vam_i"><i class="bi ${T.icon}"></i></div>
                         <h1 >${T.Title_nav}</h1>
-                        <p >${T.Content}<p id="loadtg" style="color:var(--color-text);cursor:pointer;margin-top:10px">Xem Thêm Thông Tin Cuộc Thi ROBO G 2024 Thế Giới</p></p>
+                        <p >${T.Content}<p id="loadtg" style="color:var(--color-text);cursor:pointer;margin-top:10px">Xem Thêm Thông Tin Cuộc Thi ROBOG 2024 Thế Giới</p></p>
                     </div>
                 </div>
             `
