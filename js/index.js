@@ -192,7 +192,7 @@ vam('#device').onclick = () => {
 }
 vam('#button_submitExam').onclick = () => {
     document.querySelector('#pdfViewer').style.display = "block";
-    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1I0ZvlhERkMBcXuKVdSeMeHGEeWcgxiuc/preview')
+    document.querySelector('#pdfViewer-wrap').innerHTML = Loadlink('https://drive.google.com/file/d/1OBKzopwdNadFjHsp1OAC14ujsY-PMi2U/preview')
     document.querySelector('body').setAttribute('style', 'overflow:hidden');
     document.querySelector('#out-pdfViewer').onclick = () => {
         document.querySelector('#pdfViewer').style.display = "none";
@@ -359,7 +359,7 @@ window.onscroll = () => {
 
 let w = screen.width
 if (w < 982) {
-    vam('#timeline_img').src = 'https://lh3.googleusercontent.com/d/1IqGm4m7OQ-4CJwJNSs-ya8YQsT56ql9o'
+    vam('#timeline_img').src = 'https://lh3.googleusercontent.com/d/1DNc1M6fpNttcCe74DlGsUiuKD0zKvKKq'
 }
 
 fetchSheet
