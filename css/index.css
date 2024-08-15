@@ -720,6 +720,7 @@ body {
 #intro_anim {
     display: flex;
     gap: 26px;
+    align-items: start;
 }
 
 @keyframes ali {
